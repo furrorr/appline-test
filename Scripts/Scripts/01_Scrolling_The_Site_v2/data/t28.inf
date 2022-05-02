@@ -1,0 +1,13 @@
+[t28]
+FileName1=t28_all_data.json
+URL1=https://www.advantageonlineshopping.com/catalog/api/v1/categories/all_data
+Total=2
+ContentType=application/json
+SnapshotXmlFile=snapshot_28.xml
+RequestHeaderFile=t28_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t28_ResponseHeader.txt
+FileName2=t28_FacebookLogo.png
+URL2=https://www.advantageonlineshopping.com/css/images/FacebookLogo.png
+[ProtocolInfo]
+ProtocolId=QTWeb

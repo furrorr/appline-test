@@ -1,0 +1,170 @@
+Action.c(217): Notify: Parameter Substitution: parameter "password" =  "1Qaz2Wsx"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "phone" =  "50000000000"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "region" =  "15"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "postalCode" =  "297040655"	[MsgId: MMSG-13992]
+Action.c(217): The request to server https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" is done with headers:
+Action.c(217):     :method = POST
+Action.c(217):     :scheme = https
+Action.c(217):     :path = /accountservice/ws/AccountCreateRequest
+Action.c(217):     :authority = www.advantageonlineshopping.com
+Action.c(217):     Content-Type = text/xml; charset=UTF-8
+Action.c(217):     Referer = https://www.advantageonlineshopping.com/
+Action.c(217):     Sec-Fetch-Site = same-origin
+Action.c(217):     Sec-Fetch-Mode = cors
+Action.c(217):     Sec-Fetch-Dest = empty
+Action.c(217):     DNT = 1
+Action.c(217):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(217):     sec-ch-ua-mobile = ?0
+Action.c(217):     sec-ch-ua-platform = "Windows"
+Action.c(217):     SOAPAction = com.advantage.online.store.accountserviceAccountCreateRequest
+Action.c(217):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(217):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(217):     Accept-Encoding = gzip, deflate
+Action.c(217):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(217):     Accept = */*
+Action.c(217):     content-length = 766
+Action.c(217):     cookie = _gat=1
+Action.c(217): The request to server "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" is done with body:
+Action.c(217):     <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(217):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(217):     www.w3.org/2001/XMLSchema"><soap:Body><AccountCreateRequest xmlns="com.advantage.online.st
+Action.c(217):     ore.accountservice"><accountType>USER</accountType><address>7842 Misty Bear Alley</address
+Action.c(217):     ><allowOffersPromotion>false</allowOffersPromotion><cityName>Bon Homme Colony</cityName><c
+Action.c(217):     ountryId>us</countryId><email>55555@gmail.com</email><firstName>Steven</firstName><lastNam
+Action.c(217):     e>Cox</lastName><loginName>75632686</loginName><password>1Qaz2Wsx</password><phoneNumber>5
+Action.c(217):     0000000000</phoneNumber><stateProvince>15</stateProvince><zipcode>297040655</zipcode></Acc
+Action.c(217):     ountCreateRequest></soap:Body></soap:Envelope>
+Action.c(217): t=5887643ms: 735-byte response headers for "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=2464)
+Action.c(217):     HTTP/2.0 200\r\n
+Action.c(217):     Status: 200\r\n
+Action.c(217):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(217):     date: Fri, 29 Apr 2022 20:22:18 GMT\r\n
+Action.c(217):     content-type: text/xml;charset=utf-8\r\n
+Action.c(217):     content-length: 415\r\n
+Action.c(217):     x-content-type-options: nosniff\r\n
+Action.c(217):     x-xss-protection: 1; mode=block\r\n
+Action.c(217):     cache-control: no-store\r\n
+Action.c(217):     pragma: no-cache\r\n
+Action.c(217):     expires: 0\r\n
+Action.c(217):     x-frame-options: DENY\r\n
+Action.c(217):     access-control-request-method: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     access-control-allow-methods: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     access-control-max-age: 3600\r\n
+Action.c(217):     access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapact
+Action.c(217):     ion\r\n
+Action.c(217):     access-control-allow-origin: *\r\n
+Action.c(217):     accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\n
+Action.c(217):     soapaction: ""\r\n
+Action.c(217):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(217):     \r\n
+Action.c(217): t=5887644ms: 415-byte response body for "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=2464)
+Action.c(217):     <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:He
+Action.c(217):     ader/><SOAP-ENV:Body><ns2:AccountCreateResponse xmlns:ns2="com.advantage.online.store.acco
+Action.c(217):     untservice"><ns2:StatusMessage><ns2:success>true</ns2:success><ns2:userId>339406541</ns2:u
+Action.c(217):     serId><ns2:reason>New user created successfully.</ns2:reason></ns2:StatusMessage></ns2:Acc
+Action.c(217):     ountCreateResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
+Action.c(217): t=5887644ms: Request done "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest"  	[MsgId: MMSG-26000]
+Action.c(217): Registered web_reg_find successful for "Text=New user created successfully." (count=1)  	[MsgId: MMSG-26364]
+Action.c(217): web_custom_request("AccountCreateRequest") was successful, 415 body bytes, 735 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): Notify: Transaction "Register" ended with a "Pass" status (Duration: 30,9705 Think Time: 30,0030 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(253): Notify: Transaction "02_User_Registration" ended with a "Pass" status (Duration: 46,4694 Think Time: 35,0070 Wasted Time: 0,0069).	[MsgId: MMSG-16870]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 56.	[MsgId: MMSG-15965]
+Waiting 56,5250 seconds for iteration pacing.	[MsgId: MMSG-15996]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=5899309ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 7 (thread 11220), ended OK."	[MsgId: MMSG-10695]
+Action.c(217): web_custom_request("AccountCreateRequest") started  	[MsgId: MMSG-26355]
+Action.c(217): Notify: Parameter Substitution: parameter "address" =  "7842 Misty Bear Alley"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "city" =  "Bon Homme Colony"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "country" =  "us"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "email" =  "55555@gmail.com"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "firstName" =  "Steven"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "lastName" =  "Cox"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "login" =  "87343893"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "password" =  "1Qaz2Wsx"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "phone" =  "50000000000"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "region" =  "15"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "postalCode" =  "297040655"	[MsgId: MMSG-13992]
+Action.c(217): The request to server https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" is done with headers:
+Action.c(217):     :method = POST
+Action.c(217):     :scheme = https
+Action.c(217):     :path = /accountservice/ws/AccountCreateRequest
+Action.c(217):     :authority = www.advantageonlineshopping.com
+Action.c(217):     Content-Type = text/xml; charset=UTF-8
+Action.c(217):     Referer = https://www.advantageonlineshopping.com/
+Action.c(217):     Sec-Fetch-Site = same-origin
+Action.c(217):     Sec-Fetch-Mode = cors
+Action.c(217):     Sec-Fetch-Dest = empty
+Action.c(217):     DNT = 1
+Action.c(217):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(217):     sec-ch-ua-mobile = ?0
+Action.c(217):     sec-ch-ua-platform = "Windows"
+Action.c(217):     SOAPAction = com.advantage.online.store.accountserviceAccountCreateRequest
+Action.c(217):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(217):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(217):     Accept-Encoding = gzip, deflate
+Action.c(217):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(217):     Accept = */*
+Action.c(217):     content-length = 766
+Action.c(217):     cookie = _gat=1
+Action.c(217): The request to server "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" is done with body:
+Action.c(217):     <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(217):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(217):     www.w3.org/2001/XMLSchema"><soap:Body><AccountCreateRequest xmlns="com.advantage.online.st
+Action.c(217):     ore.accountservice"><accountType>USER</accountType><address>7842 Misty Bear Alley</address
+Action.c(217):     ><allowOffersPromotion>false</allowOffersPromotion><cityName>Bon Homme Colony</cityName><c
+Action.c(217):     ountryId>us</countryId><email>55555@gmail.com</email><firstName>Steven</firstName><lastNam
+Action.c(217):     e>Cox</lastName><loginName>87343893</loginName><password>1Qaz2Wsx</password><phoneNumber>5
+Action.c(217):     0000000000</phoneNumber><stateProvince>15</stateProvince><zipcode>297040655</zipcode></Acc
+Action.c(217):     ountCreateRequest></soap:Body></soap:Envelope>
+Action.c(217): t=5908900ms: 735-byte response headers for "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=2464)
+Action.c(217):     HTTP/2.0 200\r\n
+Action.c(217):     Status: 200\r\n
+Action.c(217):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(217):     date: Fri, 29 Apr 2022 20:22:39 GMT\r\n
+Action.c(217):     content-type: text/xml;charset=utf-8\r\n
+Action.c(217):     content-length: 415\r\n
+Action.c(217):     x-content-type-options: nosniff\r\n
+Action.c(217):     x-xss-protection: 1; mode=block\r\n
+Action.c(217):     cache-control: no-store\r\n
+Action.c(217):     pragma: no-cache\r\n
+Action.c(217):     expires: 0\r\n
+Action.c(217):     x-frame-options: DENY\r\n
+Action.c(217):     access-control-request-method: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     access-control-allow-methods: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     access-control-max-age: 3600\r\n
+Action.c(217):     access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapact
+Action.c(217):     ion\r\n
+Action.c(217):     access-control-allow-origin: *\r\n
+Action.c(217):     accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\n
+Action.c(217):     soapaction: ""\r\n
+Action.c(217):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(217):     \r\n
+Action.c(217): t=5908900ms: 415-byte response body for "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=2464)
+Action.c(217):     <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:He
+Action.c(217):     ader/><SOAP-ENV:Body><ns2:AccountCreateResponse xmlns:ns2="com.advantage.online.store.acco
+Action.c(217):     untservice"><ns2:StatusMessage><ns2:success>true</ns2:success><ns2:userId>737542681</ns2:u
+Action.c(217):     serId><ns2:reason>New user created successfully.</ns2:reason></ns2:StatusMessage></ns2:Acc
+Action.c(217):     ountCreateResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
+Action.c(217): t=5908900ms: Request done "https://www.advantageonlineshopping.com/accountservice/ws/AccountCreateRequest"  	[MsgId: MMSG-26000]
+Action.c(217): Registered web_reg_find successful for "Text=New user created successfully." (count=1)  	[MsgId: MMSG-26364]
+Action.c(217): web_custom_request("AccountCreateRequest") was successful, 415 body bytes, 735 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): Notify: Transaction "Register" ended with a "Pass" status (Duration: 30,9006 Think Time: 30,0073 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(253): Notify: Transaction "02_User_Registration" ended with a "Pass" status (Duration: 46,7201 Think Time: 35,0126 Wasted Time: 0,0068).	[MsgId: MMSG-16870]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 56.	[MsgId: MMSG-15965]
+Waiting 56,2780 seconds for iteration pacing.	[MsgId: MMSG-15996]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=5920371ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 8 (thread 6300), ended OK."	[MsgId: MMSG-10695]

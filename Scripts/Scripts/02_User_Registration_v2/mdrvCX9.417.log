@@ -1,0 +1,1544 @@
+Action.c(101):     \r\n
+Action.c(101):     200\r\n
+Action.c(101): t=7231251ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=826)
+Action.c(101):     \r\n
+Action.c(101):     179\r\n
+Action.c(101): t=7231251ms: 5-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=826)
+Action.c(101):     \r\n
+Action.c(101):     a\r\n
+Action.c(101): t=7231251ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=826)
+Action.c(101):     \r\n
+Action.c(101):     0\r\n
+Action.c(101):     \r\n
+Action.c(101): t=7231251ms: 2555-byte ENCODED response body received for "http://18.212.178.84/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=826)
+Action.c(101): t=7231252ms: 10333-byte DECODED response body for "http://18.212.178.84/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=826)
+Action.c(101):     file is located in properties folder of 5 services: accountservice, MasterCredit, order, R
+Action.c(101):     OOT, SafePay.  For example: /accountservice/properties/services.properties.  1. Navigate t
+Action.c(101):     o the <service-name>.url.host line, and modify the URL/IP address string to the Service Vi
+Action.c(101):     rtualization URL and IP address.  2. Navigate to the <service-name>.url.port line and modi
+Action.c(101):     fy the port string to the Service Virtualization port.  3. Save the file, and repeat these
+Action.c(101):      steps for each service in the services.properties file, and in the services.properties fi
+Action.c(101):     les for each service.","attributeTools":"SV","locationInAdvantage":"ShipEx;MasterCredit;Sa
+Action.c(101):     fePay","locationInAdminTool":"Functional","parameterValue":"Tip"},{"parameterName":"Tips_H
+Action.c(101):     ow_To_Use_Product_Video","datatype":"enum:[Tip]","description":"ADM performance tools supp
+Action.c(101):     ort HTML5 video streaming via: native browsers, plugins such as Adobe Flash, or standalone
+Action.c(101):      software.  To demonstrate this feature, browse to one of the following products and view 
+Action.c(101):     the demo video:  - HP ROAR WIRELESS SPEAKER (Product ID: 22)  - BEATS STUDIO 2 OVER-EAR MA
+Action.c(101):     TTE BLACK HEADPHONES (product ID: 15)  - HP ELITEPAD 1000 G2 TABLET (product ID: 16)","att
+Action.c(101):     ributeTools":"LoadRunner","locationInAdvantage":"Selected Products","locationInAdminTool":
+Action.c(101):     "Performance","parameterValue":"Tip"},{"parameterName":"Tips_regular_expression","datatype
+Action.c(101):     ":"enum:[Tip]","description":"The button text always starts with Pay to allow for demonstr
+Action.c(101):     ating regular expressions in object identification.","attributeTools":"LeanFT;UFT","locati
+Action.c(101):     onInAdvantage":"Pay button in cart sum","locationInAdminTool":"Functional","parameterValue
+Action.c(101):     ":"Tip"},{"parameterName":"Tips_correlation_example","datatype":"enum:[Tip]","description"
+Action.c(101):     :"To demonstrate correlation, make sure that you include a login step in your flow.  The c
+Action.c(101):     orrelation is implemented with the session ID.","attributeTools":"LoadRunner","locationInA
+Action.c(101):     dvantage":"Web Application Login","locationInAdminTool":"Performance","parameterValue":"Ti
+Action.c(101):     p"},{"parameterName":"Tips_async_example","datatype":"enum:[Tip]","description":"ADM perfo
+Action.c(101):     rmance tools support asynchronous communication.  To demonstrate this feature, browse to a
+Action.c(101):     ny of the products in the HEADPHONES category, and record the comments (web only).","attri
+Action.c(101):     buteTools":"LoadRunner","locationInAdvantage":"Performance","locationInAdminTool":"Perform
+Action.c(101):     ance","parameterValue":"Tip"},{"parameterName":"Tips_Swagger_Interface_For_REST_APIs","dat
+Action.c(101):     atype":"enum:[Tip]","description":"To use Swagger interface for REST APIs change the URL t
+Action.c(101):     o http://<your-server>:<port>/<service>/api/docs.  <service> can be on of the following (c
+Action.c(101):     ase sensitive): catalog, order, MasterCredit or SafePay.  For example: http://www.advantag
+Action.c(101):     eonlineshopping.com:80/catalog/api/docs.","attributeTools":"","locationInAdvantage":"catal
+Action.c(101):     og,MasterCredit,order,SafePay services","locationInAdminTool":"General","parameterValue":"
+Action.c(101):     Tip"},{"parameterName":"Tips_REST_API_Params_In_Request_URL","datatype":"enum:[Tip]","desc
+Action.c(101):     ription":"Send the REST API request and parameters in request URL. Example: http://www.adv
+Action.c(101):     antageonlineshopping.com/catalog/api/v1/products/1.","attributeTools":"UFT","locationInAdv
+Action.c(101):     antage":"catalog,MasterCredit,order,SafePay services","locationInAdminTool":"Functional","
+Action.c(101):     parameterValue":"Tip"},{"parameterName":"Tips_REST_API_Params_In_Request_Body","datatype":
+Action.c(101):     "enum:[Tip]","description":"Send the REST API parameters in the request body. Example: htt
+Action.c(101):     p://www.advantageonlineshopping.com/MasterCredit/api/v1/payments/payment, body: { \\"MCCVV
+Action.c(101):     Number\\": 666, \\"MCCardNumber\\": 6543210987654321, \\"MCCustomerName\\": \\"King David\\
+Action.c(101):     ", \\"MCCustomerPhone\\": \\"+12025551969\\", \\"MCExpirationDate\\": \\"032017\\", \\"MCR
+Action.c(101):     ecevingAmount.Value\\": 2011.03, \\"MCRecevingCard.AccountNumber\\": 112987298763, \\"MCRe
+Action.c(101):     cevingCard.Currency\\": \\"USD\\", \\"MCTransactionDate\\": \\"02092016\\", \\"MCTransacti
+Action.c(101):     onType\\": \\"PAYMENT\\" }.","attributeTools":"UFT","locationInAdvantage":"catalog,MasterC
+Action.c(101):     redit,order,SafePay services","locationInAdminTool":"Functional","parameterValue":"Tip"},{
+Action.c(101):     "parameterName":"Tips_DFE","datatype":"enum:[Tip]","description":"Send login request and r
+Action.c(101):     esponse in Base-64 encoded, instead of in plain text, to show DFE in snapshot (display onl
+Action.c(101):     y).","attributeTools":"LoadRunner","locationInAdvantage":"Web Application Login","location
+Action.c(101):     InAdminTool":"Performance","parameterValue":"Tip"},{"parameterName":"Tips_validation_examp
+Action.c(101):     le","datatype":"enum:[Tip]","description":"To demonstrate validation: Perform a flow where
+Action.c(101):      you buy the contents of the cart, then go to the My Orders page and look for the order by
+Action.c(101):      its order number (shows positive\xC2\xA0validation). Delete the order, then look for the 
+Action.c(101):     order by its number again (shows negative\xC2\xA0validation).","attributeTools":"LoadRunne
+Action.c(101):     r","locationInAdvantage":"My Orders","locationInAdminTool":"Performance","parameterValue":
+Action.c(101):     "Tip"},{"parameterName":"Mobile_crash","datatype":"enum:[Tip]","description":"To generate 
+Action.c(101):     a crash, login with AppPulse user and change\xC2\xA0the device orientation from\xC2\xA0por
+Action.c(101):     trait to landscape","attributeTools":"AppPulse","locationInAdvantage":"Mobile: entire app"
+Action.c(101):     ,"locationInAdminTool":"Mobile;Functional;ITOM","parameterValue":"Tip"},{"parameterName":"
+Action.c(101):     Slow_launch_of_the_native_app","datatype":"enum:[Tip]","description":"To show a slow launc
+Action.c(101):     h, log in as the AppPulse user and kill the app. From this point on, any launch will be sl
+Action.c(101):     ow until you log in with a different user","attributeTools":"AppPulse","locationInAdvantag
+Action.c(101):     e":"Android\xC2\xA0native app: Launch","locationInAdminTool":"Mobile;Performance","paramet
+Action.c(101):     erValue":"Tip"},{"parameterName":"Error_500","datatype":"enum:[Tip]","description":"To gen
+Action.c(101):     erate error 500, login with AppPulse user, add items to\xC2\xA0the the cart, checkout and 
+Action.c(101):     click on pay now","attributeTools":"AppPulse","locationInAdvantage":"Order Payment","locat
+Action.c(101):     ionInAdminTool":"Mobile;Functional;ITOM","parameterValue":"Tip"},{"parameterName":"Error_4
+Action.c(101):     03","datatype":"enum:[Tip]","description":"To generate error 403, click on the 'Sign in wi
+Action.c(101):     th Facebook' button.","attributeTools":"AppPulse","locationInAdvantage":"Login page","loca
+Action.c(101):     tionInAdminTool":"Mobile;Functional;ITOM","parameterValue":"Tip"},{"parameterName":"Use_Ca
+Action.c(101):     mera_Capability","datatype":"enum:[Tip]","description":"Add an option to enable the user t
+Action.c(101):     o take a picture with the camera . This picture will be added to the current product page.
+Action.c(101):      In offline mode, the picture is retained for the current session only. When using MC, if 
+Action.c(101):     \xE2\x80\x9CCamera Sensor\xE2\x80\x9D is enabled, this picture will be replaced with the p
+Action.c(101):     icture the user previously uploaded to MC.","attributeTools":"MobileCenter","locationInAdv
+Action.c(101):     antage":"Mobile apps: Product page","locationInAdminTool":"Mobile","parameterValue":"Tip"}
+Action.c(101):     ,{"parameterName":"Tips_SQL_injection_vulnerability","datatype":"enum:[Tip]","description"
+Action.c(101):     :"A functional test finds the following defect: The user creates a user with any\xC2\xA0Us
+Action.c(101):     ername, but the\xC2\xA0name that is actually created is duplicated, as displayed at\xC2\xA0
+Action.c(101):     the top right side of the site.\xC2\xA0\xC2\xA0 The user opens a defect, fixes the code, a
+Action.c(101):     nd commits the change. This triggers a Fortify scan (provided that you added the Fortify s
+Action.c(101):     can trigger in the code change) that will find an\xC2\xA0SQL injection\xC2\xA0vulnerabilit
+Action.c(101):     y.  To achieve this, you must edit the\xC2\xA0accountservice\\\\src\\\\main\\\\java\\\\com
+Action.c(101):     \\\\advantage\\\\accountsoap\\\\dao\\\\impl\\\\DefaultAccountRepository\xC2\xA0file. In th
+Action.c(101):     is file, first uncomment the\xC2\xA0code that is located\xC2\xA0between the\xC2\xA0'SQL in
+Action.c(101):     jection vulnerability' tags. \xC2\xA0Then, comment out the code that is located between th
+Action.c(101):     e 'Code without\xC2\xA0SQL injection vulnerability' tags. Note that there are 2 locations 
+Action.c(101):     in the code in which you need to make these changes.","attributeTools":"Fortify, LeanFT, U
+Action.c(101):     FT","locationInAdvantage":"Create Account page","locationInAdminTool":"Security","paramete
+Action.c(101):     rValue":"Tip"},{"parameterName":"Enable_Warranty","datatype":"enum:[Yes,No]","description"
+Action.c(101):     :"Determines whether a warranty checkbox is added to each laptop product screen. Use this 
+Action.c(101):     parameter to demonstrate an integration between AOS and COBOL, during checkout AOS backend
+Action.c(101):      invoke a COBOL service to activate a warranty for laptop. Default = No. Yes = Add a check
+Action.c(101):     box to the laptop product page.","attributeTools":"AMC","locationInAdvantage":"Laptops","l
+Action.c(101):     ocationInAdminTool":"General","parameterValue":"No"},{"parameterName":"Warranty_Service_UR
+Action.c(101):     L","datatype":"string","description":"The URL of the COBOL web service to be used for the 
+Action.c(101):     warranty, the default service is located on AZURE. the default URL is: https://aoswarranty
+Action.c(101):     function.azurewebsites.net/api/Function1?code=KEK/GaiTZ0lfJdRkJGgNdsn8qfenPseDGaS3j3n8noI6
+Action.c(101):     AGtSIriLAg== note: mouse over on the text field to view the current URL.","attributeTools"
+Action.c(101):     :"AMC","locationInAdvantage":"Laptops","locationInAdminTool":"General","parameterValue":"h
+Action.c(101):     ttps://aoswarrantyfunction.azurewebsites.net/api/Function1?code=KEK/GaiTZ0lfJdRkJGgNdsn8qf
+Action.c(101):     enPseDGaS3j3n8noI6AGtSIriLAg=="},{"parameterName":"Enable_Voltage_Encryption","datatype":"
+Action.c(101):     enum:[Yes,No]","description":"Use this parameter to demonstrate an integration between Vol
+Action.c(101):     tage Data Encryption And AOS. The MasterCredit number is encrypted when the flag is set to
+Action.c(101):      'Yes'","attributeTools":"AMC","locationInAdvantage":"Payment page","locationInAdminTool":
+Action.c(101):     "General","parameterValue":"No"},{"parameterName":"Voltage_Service_URL","datatype":"string
+Action.c(101):     ","description":"The URL of the Voltage Data Encryption service to be used for the encrypt
+Action.c(101):     ion, the default service is located on AZURE. the default URL is: https://voltage-pp-0000.
+Action.c(101):     dataprotection.voltage.com note: mouse over on the text field to view the current URL.","a
+Action.c(101):     ttributeTools":"ITOM","locationInAdvantage":"Payment page","locationInAdminTool":"General"
+Action.c(101):     ,"parameterValue":"https://voltage-pp-0000.dataprotection.voltage.com"},{"parameterName":"
+Action.c(101):     duplicate_countries","datatype":"enum:[Yes,No]","description":"Duplicates the countries in
+Action.c(101):      adv_account DB, causing error during registration. Note: Restart required.","attributeToo
+Action.c(101):     ls":"ITOM","locationInAdvantage":"Registration page","locationInAdminTool":"General","para
+Action.c(101):     meterValue":"No"},{"parameterName":"AOB_Endpoint","datatype":"string","description":"Purch
+Action.c(101):     ases made using AOB user, will create a transaction on AOB system, on the current endpoint
+Action.c(101):     ","attributeTools":"","locationInAdvantage":"Purchase Page","locationInAdminTool":"General
+Action.c(101):     ","parameterValue":"http://advantageonlinebanking.com/api/accounts/purchase"}]}
+Action.c(101): t=7231256ms: Request done "http://18.212.178.84/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL"  	[MsgId: MMSG-26000]
+Action.c(101): web_url("ALL") was successful, 6541 body bytes, 335 header bytes, 106 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(111): web_add_cookie started  	[MsgId: MMSG-26355]
+Action.c(111): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(113): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(113): An unrecognized header ("Origin") is being added  	[MsgId: MMSG-26595]
+Action.c(113): "Origin: http://18.212.178.84" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(113): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+Action.c(116): web_add_header("SOAPAction") started  	[MsgId: MMSG-26355]
+Action.c(116): "SOAPAction: com.advantage.online.store.accountserviceGetAccountConfigurationRequest" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(116): web_add_header("SOAPAction") was successful  	[MsgId: MMSG-26392]
+Action.c(119): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+Action.c(119): An unrecognized header ("X-Requested-With") is being added  	[MsgId: MMSG-26595]
+Action.c(119): "X-Requested-With: XMLHttpRequest" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(119): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+Action.c(122): web_custom_request("GetAccountConfigurationRequest") started  	[MsgId: MMSG-26355]
+Action.c(122): t=7231258ms: Closed connection [0] to 18.212.178.84:80 after completing 9 request(s)  	[MsgId: MMSG-26000]
+Action.c(122): t=7231258ms: Connecting [0] to host 18.212.178.84:8081  	[MsgId: MMSG-26000]
+Action.c(122): t=7231421ms: Connected socket [0] from 192.168.0.181:26162 to 18.212.178.84:8081 in 163 ms  	[MsgId: MMSG-26000]
+Action.c(122): t=7231421ms: 801-byte request headers for "http://18.212.178.84:8081//accountservice/ws/GetAccountConfigurationRequest" (RelFrameId=1, Internal ID=827)
+Action.c(122):     POST //accountservice/ws/GetAccountConfigurationRequest HTTP/1.1\r\n
+Action.c(122):     Content-Type: text/xml; charset=UTF-8\r\n
+Action.c(122):     Referer: http://18.212.178.84/\r\n
+Action.c(122):     Origin: http://18.212.178.84\r\n
+Action.c(122):     SOAPAction: com.advantage.online.store.accountserviceGetAccountConfigurationRequest\r\n
+Action.c(122):     X-Requested-With: XMLHttpRequest\r\n
+Action.c(122):     Sec-Fetch-Site: same-origin\r\n
+Action.c(122):     Sec-Fetch-Mode: cors\r\n
+Action.c(122):     Sec-Fetch-Dest: empty\r\n
+Action.c(122):     DNT: 1\r\n
+Action.c(122):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(122):     sec-ch-ua-mobile: ?0\r\n
+Action.c(122):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(122):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(122):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(122):     Accept-Encoding: gzip, deflate\r\n
+Action.c(122):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(122):     Accept: */*\r\n
+Action.c(122):     Connection: Keep-Alive\r\n
+Action.c(122):     Host: 18.212.178.84:8081\r\n
+Action.c(122):     Content-Length: 361\r\n
+Action.c(122):     \r\n
+Action.c(122): t=7231422ms: 361-byte request body for "http://18.212.178.84:8081//accountservice/ws/GetAccountConfigurationRequest" (RelFrameId=1, Internal ID=827)
+Action.c(122):     <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(122):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(122):     www.w3.org/2001/XMLSchema"><soap:Body><GetAccountConfigurationRequest xmlns="com.advantage
+Action.c(122):     .online.store.accountservice"></GetAccountConfigurationRequest></soap:Body></soap:Envelope
+Action.c(122):     >
+Action.c(122): t=7231578ms: 619-byte response headers for "http://18.212.178.84:8081//accountservice/ws/GetAccountConfigurationRequest" (RelFrameId=1, Internal ID=827)
+Action.c(122):     HTTP/1.1 200 \r\n
+Action.c(122):     X-Content-Type-Options: nosniff\r\n
+Action.c(122):     X-XSS-Protection: 1; mode=block\r\n
+Action.c(122):     Cache-Control: no-store\r\n
+Action.c(122):     Pragma: no-cache\r\n
+Action.c(122):     Expires: 0\r\n
+Action.c(122):     X-Frame-Options: DENY\r\n
+Action.c(122):     Access-Control-Request-Method: POST, GET, OPTIONS, DELETE\r\n
+Action.c(122):     Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\n
+Action.c(122):     Access-Control-Max-Age: 3600\r\n
+Action.c(122):     Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapact
+Action.c(122):     ion\r\n
+Action.c(122):     Access-Control-Allow-Origin: *\r\n
+Action.c(122):     Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\n
+Action.c(122):     SOAPAction: ""\r\n
+Action.c(122):     Content-Type: text/xml;charset=utf-8\r\n
+Action.c(122):     Content-Length: 823\r\n
+Action.c(122):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(122):     \r\n
+Action.c(122): t=7231579ms: 823-byte response body for "http://18.212.178.84:8081//accountservice/ws/GetAccountConfigurationRequest" (RelFrameId=1, Internal ID=827)
+Action.c(122):     <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:He
+Action.c(122):     ader/><SOAP-ENV:Body><ns2:GetAccountConfigurationResponse xmlns:ns2="com.advantage.online.
+Action.c(122):     store.accountservice"><ns2:numberOfFailedLoginAttemptsBeforeBlocking>3</ns2:numberOfFailed
+Action.c(122):     LoginAttemptsBeforeBlocking><ns2:loginBlockingIntervalInSeconds>300</ns2:loginBlockingInte
+Action.c(122):     rvalInSeconds><ns2:productInStockDefaultValue>10</ns2:productInStockDefaultValue><ns2:user
+Action.c(122):     SecondWsdl>false</ns2:userSecondWsdl><ns2:userLoginTimeout>60</ns2:userLoginTimeout><ns2:a
+Action.c(122):     llowUserConfiguration>true</ns2:allowUserConfiguration><ns2:productionHostIp>http://54.175
+Action.c(122):     .138.128:8081</ns2:productionHostIp><ns2:productionHostName>http://advantageonlineshopping
+Action.c(122):     .com</ns2:productionHostName></ns2:GetAccountConfigurationResponse></SOAP-ENV:Body></SOAP-
+Action.c(122):     ENV:Envelope>
+Action.c(122): t=7231580ms: Request done "http://18.212.178.84:8081//accountservice/ws/GetAccountConfigurationRequest"  	[MsgId: MMSG-26000]
+Action.c(122): web_custom_request("GetAccountConfigurationRequest") was successful, 823 body bytes, 619 header bytes  	[MsgId: MMSG-26386]
+Action.c(135): web_url("categories") started  	[MsgId: MMSG-26355]
+Action.c(135): t=7231580ms: Already connected [1] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(135): t=7231580ms: 562-byte request headers for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     GET /catalog/api/v1/categories HTTP/1.1\r\n
+Action.c(135):     Referer: http://18.212.178.84/\r\n
+Action.c(135):     Sec-Fetch-Site: same-origin\r\n
+Action.c(135):     Sec-Fetch-Mode: cors\r\n
+Action.c(135):     Sec-Fetch-Dest: empty\r\n
+Action.c(135):     DNT: 1\r\n
+Action.c(135):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(135):     sec-ch-ua-mobile: ?0\r\n
+Action.c(135):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(135):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(135):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(135):     Accept-Encoding: gzip, deflate\r\n
+Action.c(135):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(135):     Accept: */*\r\n
+Action.c(135):     Connection: Keep-Alive\r\n
+Action.c(135):     Host: 18.212.178.84\r\n
+Action.c(135):     \r\n
+Action.c(135): t=7231824ms: 335-byte response headers for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     HTTP/1.1 200 \r\n
+Action.c(135):     Expires: 0\r\n
+Action.c(135):     Cache-Control: no-store\r\n
+Action.c(135):     X-Content-Type-Options: nosniff\r\n
+Action.c(135):     X-XSS-Protection: 1; mode=block\r\n
+Action.c(135):     X-Frame-Options: DENY\r\n
+Action.c(135):     vary: accept-encoding\r\n
+Action.c(135):     Content-Encoding: gzip\r\n
+Action.c(135):     Content-Type: application/json\r\n
+Action.c(135):     Transfer-Encoding: chunked\r\n
+Action.c(135):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(135):     Keep-Alive: timeout=20\r\n
+Action.c(135):     Connection: keep-alive\r\n
+Action.c(135):     \r\n
+Action.c(135): t=7231824ms: 3-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     a\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     200\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     165\r\n
+Action.c(135): t=7231824ms: 5-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     a\r\n
+Action.c(135): t=7231824ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     \r\n
+Action.c(135):     0\r\n
+Action.c(135):     \r\n
+Action.c(135): t=7231825ms: 4473-byte ENCODED response body received for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135): t=7231825ms: 12288-byte DECODED response body for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     [{"categoryId":1,"categoryName":"LAPTOPS","managedImageId":"laptops","products":[{"id":6,"
+Action.c(135):     productName":"HP ENVY x360 - 15t Laptop","price":699.99,"description":"We took our remarka
+Action.c(135):     ble 360\xC2\xB0 convertible PC and enhanced it with premium features to give you ultimate 
+Action.c(135):     flexibility and enviable looks.","productStatus":"Active","managedImageId":"1600"},{"id":3
+Action.c(135):     ,"productName":"HP Pavilion 15z Touch Laptop","price":449.99,"description":"Redesigned wit
+Action.c(135):     h you in mind, the HP Pavilion keeps getting better. Our best-selling notebook is now more
+Action.c(135):      powerful so you can watch more, play more, and store more, all in style.","productStatus"
+Action.c(135):     :"Active","managedImageId":"1300"},{"id":4,"productName":"HP Spectre x360 - 13-4102dx","pr
+Action.c(135):     ice":1399.99,"description":"Stunning, ultra-slim convertible PC with a 360\xC2\xB0 hinge",
+Action.c(135):     "productStatus":"Active","managedImageId":"1400"},{"id":11,"productName":"HP Pavilion x360
+Action.c(135):      - 11t Touch Laptop","price":319.99,"description":"There\xE2\x80\x99s no limit to what thi
+Action.c(135):     s value-packed convertible PC can do. Easily convert from notebook to stand to tent to tab
+Action.c(135):     let mode. It\xE2\x80\x99s an app-loving, friend-connecting, 360\xC2\xB0-bending machine.",
+Action.c(135):     "productStatus":"Active","managedImageId":"11100"},{"id":1,"productName":"HP Pavilion 15t 
+Action.c(135):     Touch Laptop","price":519.99,"description":"Redesigned with you in mind, the HP Pavilion k
+Action.c(135):     eeps getting better. Our best-selling notebook is now more powerful so you can watch more,
+Action.c(135):      play more, and store more, all in style.","productStatus":"Active","managedImageId":"1100
+Action.c(135):     "},{"id":8,"productName":"HP ZBook 17 G2 Mobile Workstation","price":1799.0,"description":
+Action.c(135):     "On the go creativity knows no limits on a vivid 17.3 inch diagonal HP ZBook 17 G2. Showca
+Action.c(135):     se your best work in the office or on the go and take advantage of HP\xE2\x80\x99s most po
+Action.c(135):     werful processing, graphics, simple scalability, and blazing-fast connectivity to perform 
+Action.c(135):     and collaborate at the speed of creativity.","productStatus":"Active","managedImageId":"18
+Action.c(135):     00"},{"id":7,"productName":"HP ENVY - 17t Touch Laptop","price":849.99,"description":"We t
+Action.c(135):     ook our remarkable 360\xC2\xB0 convertible PC and enhanced it with premium features to giv
+Action.c(135):     e you ultimate flexibility and enviable looks.","productStatus":"Active","managedImageId":
+Action.c(135):     "1700"},{"id":9,"productName":"HP Chromebook 14 G1(ENERGY STAR)","price":299.99,"descripti
+Action.c(135):     on":"This HP notebook is all about getting the perfect combination of design, reliability,
+Action.c(135):      and features. Style and productivity while keeping your wallet in mind - now that's somet
+Action.c(135):     hing to get excited about.","productStatus":"Active","managedImageId":"1249"},{"id":10,"pr
+Action.c(135):     oductName":"HP Chromebook 14 G1(ES)","price":1261.99,"description":"Introducing the next g
+Action.c(135):     eneration HP EliteBook Folio 9480m Ultrabook\xE2\x84\xA2[2]. Timeless, ultra slim profile 
+Action.c(135):     in an all metal design with optional 4G Broadband wWAN, and 4th Generation Intel\xC2\xAE C
+Action.c(135):     ore\xE2\x84\xA2 Processing Technology.","productStatus":"Active","managedImageId":"1250"},
+Action.c(135):     {"id":2,"productName":"HP Pavilion 15z Laptop","price":549.99,"description":"Redesigned wi
+Action.c(135):     th you in mind, the HP Pavilion keeps getting better. Our best-selling notebook is now mor
+Action.c(135):     e powerful so you can watch more, play more, and store more, all in style.","productStatus
+Action.c(135):     ":"Active","managedImageId":"1200"},{"id":5,"productName":"HP Stream - 11-d020nr Laptop","
+Action.c(135):     price":179.99,"description":"Work from a happy place with a stylish, affordable, Windows-b
+Action.c(135):     ased PC. Store your content in the cloud for easy access from anywhere you have internet."
+Action.c(135):     ,"productStatus":"Active","managedImageId":"1245"}]},{"categoryId":2,"categoryName":"HEADP
+Action.c(135):     HONES","managedImageId":"headphones","products":[{"id":12,"productName":"HP H2310 In-ear H
+Action.c(135):     eadset","price":13.99,"description":"Enjoy an acoustic concert in your ears with HP\xE2\x80
+Action.c(135):     \x99s In-Ear Headset H2310. Available in trend-setting design in four color options and co
+Action.c(135):     mpatible with most smartphones, MP3 players and tablets \xE2\x80\x93 including Android\xE2
+Action.c(135):     \x84\xA2 and Apple\xC2\xAE. Easily switch from jamming to tunes to connecting with friends
+Action.c(135):      using the inline microphone. Quality craftsmanship, value priced, and awesome sound.","pr
+Action.c(135):     oductStatus":"Active","managedImageId":"2100"},{"id":14,"productName":"Logitech USB Headse
+Action.c(135):     t H390","price":39.99,"description":"Features on this product will exceeded your expectati
+Action.c(135):     ons.","productStatus":"Active","managedImageId":"2400"},{"id":15,"productName":"Beats Stud
+Action.c(135):     io 2 Over-Ear Matte Black Headphones","price":179.99,"description":"The world\xE2\x80\x99s
+Action.c(135):      most famous headphone has been completely redesigned and reimagined. The new Beats Studio
+Action.c(135):     \xC2\xAE is lighter, sexier, stronger, and more comfortable, with precision sound, Adaptiv
+Action.c(135):     e Noise Canceling, a 20-hour rechargeable battery, and RemoteTalk\xE2\x84\xA2. It has all 
+Action.c(135):     the energy and excitement you expect from Beats, plus a powerful, reengineered sound.","pr
+Action.c(135):     oductStatus":"Active","managedImageId":"2200"},{"id":13,"productName":"Bose SoundLink Arou
+Action.c(135):     nd-ear Wireless Headphones II","price":279.95,"description":"Wireless freedom meets best-i
+Action.c(135):     n-class sound.","productStatus":"OutOfStock","managedImageId":"2300"}]},{"categoryId":3,"c
+Action.c(135):     ategoryName":"TABLETS","managedImageId":"tablets","products":[{"id":17,"productName":"HP E
+Action.c(135):     lite x2 1011 G1 Tablet","price":1279.0,"description":"Ultrabook\xE2\x84\xA2[2] Power\\nPow
+Action.c(135):     er up for ultimate power with Windows 8.1,[1] 5th Gen Intel\xC2\xAE Core\xE2\x84\xA2 M pro
+Action.c(135):     cessors,[4] with optional vPro\xE2\x84\xA2[5] and long battery life provided by dual table
+Action.c(135):     t and keyboard base batteries.","productStatus":"Active","managedImageId":"3200"},{"id":16
+Action.c(135):     ,"productName":"HP ElitePad 1000 G2 Tablet","price":1009.0,"description":"More than a tabl
+Action.c(135):     et\xE2\x80\x94a total business solution. The elegant and sleek HP ElitePad 1000 G2 has the
+Action.c(135):      performance and flexibility to transform the way you work. Redefine productivity and stay
+Action.c(135):      light with the confidence of the leading manageability, security, and support you expect 
+Action.c(135):     from HP.","productStatus":"Active","managedImageId":"3100"},{"id":18,"productName":"HP Pro
+Action.c(135):      Tablet 608 G1","price":479.0,"description":"Transform your business with this small styli
+Action.c(135):     sh business tablet equipped with a brilliant, high definition display and the pervasive co
+Action.c(135):     nnectivity to mobilize nearly any business process. Choose from an expansive choice of acc
+Action.c(135):     essories[2] for a customized experience.","productStatus":"Active","managedImageId":"3300"
+Action.c(135):     }]},{"categoryId":4,"categoryName":"SPEAKERS","managedImageId":"speakers","products":[{"id
+Action.c(135):     ":23,"productName":"Logitech X100 Speaker System - Wireless Speaker(s)","price":49.99,"des
+Action.c(135):     cription":"Pump up the volume and enjoy crystal-clear sound from this mobile speaker. This
+Action.c(135):      portable speaker is perfect for life on-the-go. Take it on the road or relax and listen a
+Action.c(135):     t home because this mobile speaker goes everywhere. Simple, intuitive design lets you wire
+Action.c(135):     lessly connect and stream music from your Bluetooth-enabled device from up to 30' away. Ea
+Action.c(135):     sily manage phone calls and volume control from your mobile phone. Enjoy five hours of con
+Action.c(135):     tinuous play before you need to recharge. Recharge the built-in, lithium-ion battery with 
+Action.c(135):     the convenience of the included micro-USB cable.","productStatus":"Active","managedImageId
+Action.c(135):     ":"4500"},{"id":20,"productName":"Bose Soundlink Bluetooth Speaker III","price":269.99,"de
+Action.c(135):     scription":"Meet the speaker that brings your music and friends together-with a style that
+Action.c(135):     's all your own. The SoundLink\xC2\xAE Bluetooth speaker III is our best-performing mobile
+Action.c(135):      Bluetooth speaker. It plays louder and longer than its popular predecessor, with advanced
+Action.c(135):      Bose\xC2\xAE technologies that reproduce the fullness, clarity and depth of your music. A
+Action.c(135):     nd a colorful assortment of optional covers let you personalize your speaker.","productSta
+Action.c(135):     tus":"Active","managedImageId":"4200"},{"id":24,"productName":"HP Roar Mini Wireless Speak
+Action.c(135):     er","price":44.99,"description":"Attention-getting design, color, and sound - the HP Roar 
+Action.c(135):     Mini Wireless Speaker. Exceptional size-defying audio while streaming music and calls from
+Action.c(135):      a distinctively compact speaker.","productStatus":"Active","managedImageId":"4600"},{"id"
+Action.c(135):     :22,"productName":"HP Roar Wireless Speaker","price":84.99,"description":"Showcase your mu
+Action.c(135):     sic anywhere with the ease of wireless Bluetooth\xC2\xAE connectivity.","productStatus":"A
+Action.c(135):     ctive","managedImageId":"4400"},{"id":25,"productName":"Bose SoundLink Wireless Speaker","
+Action.c(135):     price":129.0,"description":"If music is your motivation, wait until you hear the SoundLink
+Action.c(135):     \xC2\xAE Color Bluetooth speaker. It plays your favorite tunes from your favorite Bluetoot
+Action.c(135):     h device-out loud in clear, full audio-just about anywhere you want to go. It's small, dur
+Action.c(135):     able and simple to use. And it comes in a spectrum of colors to match almost any style.","
+Action.c(135):     productStatus":"Active","managedImageId":"4700"},{"id":21,"productName":"HP Roar Plus Wire
+Action.c(135):     less Speaker","price":169.99,"description":"Showcase your music anywhere with the ease of 
+Action.c(135):     wireless Bluetooth\xC2\xAE connectivity.","productStatus":"Active","managedImageId":"4300"
+Action.c(135):     },{"id":19,"productName":"HP S9500 Bluetooth Wireless Speaker","price":200.0,"description"
+Action.c(135):     :"Impress \xE2\x80\xA6 everyone! Futuristic design with perforated steel formed into subtl
+Action.c(135):     e angles. Requiring only minimal space, this speaker is the ideal complement to any settin
+Action.c(135):     g.","productStatus":"Active","managedImageId":"4100"}]},{"categoryId":5,"categoryName":"MI
+Action.c(135):     CE","managedImageId":"mice","products":[{"id":30,"productName":"HP Z4000 Wireless Mouse","
+Action.c(135):     price":9.99,"description":"The sleek and low-profiled design make the Z4000 the must-have 
+Action.c(135):     companion to every thin notebook or tablet. Style and comfort within a dynamic ultra-mobil
+Action.c(135):     e wireless mouse.","productStatus":"Active","managedImageId":"5505"},{"id":32,"productName
+Action.c(135):     ":"Kensington Orbit 72337 Trackball with Scroll Ring","price":39.99,"description":"All-day
+Action.c(135):      comfort and scrolling come together in the Kensington Orbit Trackball with Scroll Ring. T
+Action.c(135):     he scroll ring allows you to fly through web pages and documents. And all while delivering
+Action.c(135):      comfort and space savings no mouse can match.","productStatus":"Active","managedImageId":
+Action.c(135):     "5700"},{"id":34,"productName":"Microsoft Sculpt Touch Mouse","price":49.99,"description":
+Action.c(135):     "Looking for a portable mouse that helps you get things done? Sculpt Touch Mouse saves tim
+Action.c(135):     e in long documents and works virtually anywhere, with no cables or transceivers to connec
+Action.c(135):     t. And it's designed to fit comfortably in either hand.\\nThe four-way touch scrolling pad
+Action.c(135):      on the Sculpt Touch Mouse lets you breeze up and down, left and right, and through window
+Action.c(135):     s and documents with just the swipe of your finger. While you scroll, you'll feel the nice
+Action.c(135):      surprise of tactile feedback. Sculpt Touch Mouse is also a powerful complement to Windows
+Action.c(135):      8, navigating fluidly and intuitively around the Start Screen.\\n","productStatus":"Activ
+Action.c(135):     e","managedImageId":"5900"},{"id":26,"productName":"Kensington Orbit 72352 Trackball","pri
+Action.c(135):     ce":59.99,"description":"The Kensington Orbit Wireless Mobile Trackball offers a precise, 
+Action.c(135):     compact and versatile experience with a centered-ball design. With no wires to tie you dow
+Action.c(135):     n, the 2.4 GHz wireless with storable nano receiver works wherever you do -- at your home 
+Action.c(135):     or office. And the unique touch scrolling lets you glide effortlessly through web pages an
+Action.c(135):     d documents.","productStatus":"Active","managedImageId":"5100"},{"id":28,"productName":"HP
+Action.c(135):      Z3200 Wireless Mouse","price":29.99,"description":"The HP Wireless Mouse Z3200 provides p
+Action.c(135):     owerful Blue LED optical tracking. Its ambidextrous shape and familiar button controls are
+Action.c(135):      easy to use. Compact contoured control.","productStatus":"Active","managedImageId":"5300"
+Action.c(135):     },{"id":33,"productName":"HP Z8000 Bluetooth Mouse","price":50.99,"description":"The exqui
+Action.c(135):     site HP Z8000 Bluetooth Mouse is only 18mm (.7in) height, saves power with Bluetooth\xC2\xAE
+Action.c(135):      Low Energy connectivity, and provides effortless capacitive touch control. The future is 
+Action.c(135):     here.","productStatus":"Active","managedImageId":"5800"},{"id":29,"productName":"HP USB 3 
+Action.c(135):     Button Optical Mouse","price":9.99,"description":"Smooth and Accurate - The HP USB 3-Butto
+Action.c(135):     n Optical Mouse is the affordable desktop optical mouse solution that combines functionali
+Action.c(135):     ty with style","productStatus":"Active","managedImageId":"5400"},{"id":31,"productName":"L
+Action.c(135):     ogitech G502 Proteus Core","price":79.99,"description":"MAKE IT YOURS!\\nProteus Core perf
+Action.c(135):     ectly tuned by you.\\nProteus Core allows you to change the weight, balance, and enables y
+Action.c(135):     ou to adapt to wherever you choose to play. Customize it to the way you game and make it 
+Action.c(135): t=7231827ms: 666-byte DECODED response body for "http://18.212.178.84/catalog/api/v1/categories" (RelFrameId=1, Internal ID=828)
+Action.c(135):     yours!\\n\\nPERSONALLY-TUNED PERFORMANCE\\nAdapts to your environment\\nFine tune the opti
+Action.c(135):     cal sensor in Proteus Core to your playing surface for better accuracy, precision and resp
+Action.c(135):     onsiveness. A quick tuning process, and you are battle ready.","productStatus":"Active","m
+Action.c(135):     anagedImageId":"5600"},{"id":27,"productName":"HP Z3600 Wireless Mouse","price":15.99,"des
+Action.c(135):     cription":"The tiny HP Wireless Mouse Z3600 provides stylish comfort and control for your 
+Action.c(135):     mobile computing needs. With optical tracking, 3 button controls, and the freedom to conne
+Action.c(135):     ct up to 30ft (10m) away, this compact mouse provides oversized performance.","productStat
+Action.c(135):     us":"Active","managedImageId":"5200"}]}]
+Action.c(135): t=7231827ms: Request done "http://18.212.178.84/catalog/api/v1/categories"  	[MsgId: MMSG-26000]
+Action.c(135): web_url("categories") was successful, 4473 body bytes, 335 header bytes, 78 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(145): web_url("search") started  	[MsgId: MMSG-26355]
+Action.c(145): t=7231827ms: Already connected [1] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(145): t=7231827ms: 582-byte request headers for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145):     GET /catalog/api/v1/deals/search?dealOfTheDay=true HTTP/1.1\r\n
+Action.c(145):     Referer: http://18.212.178.84/\r\n
+Action.c(145):     Sec-Fetch-Site: same-origin\r\n
+Action.c(145):     Sec-Fetch-Mode: cors\r\n
+Action.c(145):     Sec-Fetch-Dest: empty\r\n
+Action.c(145):     DNT: 1\r\n
+Action.c(145):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(145):     sec-ch-ua-mobile: ?0\r\n
+Action.c(145):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(145):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(145):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(145):     Accept-Encoding: gzip, deflate\r\n
+Action.c(145):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(145):     Accept: */*\r\n
+Action.c(145):     Connection: Keep-Alive\r\n
+Action.c(145):     Host: 18.212.178.84\r\n
+Action.c(145):     \r\n
+Action.c(145): t=7232066ms: 335-byte response headers for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145):     HTTP/1.1 200 \r\n
+Action.c(145):     Expires: 0\r\n
+Action.c(145):     Cache-Control: no-store\r\n
+Action.c(145):     X-Content-Type-Options: nosniff\r\n
+Action.c(145):     X-XSS-Protection: 1; mode=block\r\n
+Action.c(145):     X-Frame-Options: DENY\r\n
+Action.c(145):     vary: accept-encoding\r\n
+Action.c(145):     Content-Encoding: gzip\r\n
+Action.c(145):     Content-Type: application/json\r\n
+Action.c(145):     Transfer-Encoding: chunked\r\n
+Action.c(145):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(145):     Keep-Alive: timeout=20\r\n
+Action.c(145):     Connection: keep-alive\r\n
+Action.c(145):     \r\n
+Action.c(145): t=7232067ms: 3-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145):     a\r\n
+Action.c(145): t=7232067ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145):     \r\n
+Action.c(145):     14b\r\n
+Action.c(145): t=7232067ms: 5-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145):     \r\n
+Action.c(145):     a\r\n
+Action.c(145): t=7232067ms: 7-byte chunked response overhead for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145):     \r\n
+Action.c(145):     0\r\n
+Action.c(145):     \r\n
+Action.c(145): t=7232067ms: 351-byte ENCODED response body received for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145): t=7232067ms: 681-byte DECODED response body for "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=829)
+Action.c(145):     [{"id":1,"dealType":10,"description":"Redesigned with you in mind, the HP Pavilion keeps g
+Action.c(145):     etting better. Our best-selling notebook is now more powerful so you can watch more, play 
+Action.c(145):     more, and store more, all in style.","promotionHeader":"EXPLORE THE NEW DESIGN","promotion
+Action.c(145):     SubHeader":"Supremely thin, yet incredibly durable","staringPrice":"650","discount":0.0,"p
+Action.c(145):     roduct":{"id":3,"productName":"HP Pavilion 15z Touch Laptop","price":449.99,"description":
+Action.c(145):     "Redesigned with you in mind, the HP Pavilion keeps getting better. Our best-selling noteb
+Action.c(145):     ook is now more powerful so you can watch more, play more, and store more, all in style.",
+Action.c(145):     "productStatus":"Active","managedImageId":"1300"}}]
+Action.c(145): t=7232068ms: Request done "http://18.212.178.84/catalog/api/v1/deals/search?dealOfTheDay=true"  	[MsgId: MMSG-26000]
+Action.c(145): web_url("search") was successful, 351 body bytes, 335 header bytes, 22 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(155): web_url("popularProducts.json") started  	[MsgId: MMSG-26355]
+Action.c(155): t=7232068ms: Already connected [1] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(155): t=7232068ms: 571-byte request headers for "http://18.212.178.84/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=830)
+Action.c(155):     GET /app/tempFiles/popularProducts.json HTTP/1.1\r\n
+Action.c(155):     Referer: http://18.212.178.84/\r\n
+Action.c(155):     Sec-Fetch-Site: same-origin\r\n
+Action.c(155):     Sec-Fetch-Mode: cors\r\n
+Action.c(155):     Sec-Fetch-Dest: empty\r\n
+Action.c(155):     DNT: 1\r\n
+Action.c(155):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(155):     sec-ch-ua-mobile: ?0\r\n
+Action.c(155):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(155):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(155):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(155):     Accept-Encoding: gzip, deflate\r\n
+Action.c(155):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(155):     Accept: */*\r\n
+Action.c(155):     Connection: Keep-Alive\r\n
+Action.c(155):     Host: 18.212.178.84\r\n
+Action.c(155):     \r\n
+Action.c(155): t=7232223ms: 373-byte response headers for "http://18.212.178.84/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=830)
+Action.c(155):     HTTP/1.1 200 \r\n
+Action.c(155):     Accept-Ranges: bytes\r\n
+Action.c(155):     ETag: W/"2323-1650802202000"\r\n
+Action.c(155):     Last-Modified: Sun, 24 Apr 2022 12:10:02 GMT\r\n
+Action.c(155):     Cache-Control: max-age=0\r\n
+Action.c(155):     Expires: Mon, 02 May 2022 15:31:23 GMT\r\n
+Action.c(155):     vary: accept-encoding\r\n
+Action.c(155):     Content-Encoding: gzip\r\n
+Action.c(155):     Content-Type: application/json\r\n
+Action.c(155):     Transfer-Encoding: chunked\r\n
+Action.c(155):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(155):     Keep-Alive: timeout=20\r\n
+Action.c(155):     Connection: keep-alive\r\n
+Action.c(155):     \r\n
+Action.c(155): t=7232224ms: 3-byte chunked response overhead for "http://18.212.178.84/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=830)
+Action.c(155):     a\r\n
+Action.c(155): t=7232224ms: 7-byte chunked response overhead for "http://18.212.178.84/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=830)
+Action.c(155):     \r\n
+Action.c(155):     1ea\r\n
+Action.c(155): t=7232224ms: 7-byte chunked response overhead for "http://18.212.178.84/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=830)
+Action.c(155):     \r\n
+Action.c(155):     0\r\n
+Action.c(155):     \r\n
+Action.c(155): t=7232224ms: 500-byte ENCODED response body received for "http://18.212.178.84/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=830)
+Action.c(155): t=7232224ms: 2323-byte DECODED response body for "http://18.212.178.84/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=830)
+Action.c(155):     [{"id": 16,\n
+Action.c(155):       "productName": "HP ELITEPAD 1000 G2 TABLET",\n
+Action.c(155):       "price": 550,\n
+Action.c(155):       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",\n
+Action.c(155):       "imageUrl" : "css/images/Popular-item3.jpg",\n
+Action.c(155):       "attributes" : [\n
+Action.c(155):         {"attributeName" : "PRICE", "attributeValue" : 400},\n
+Action.c(155):         {"attributeName" : "COLOR", "attributeValue" : "FFFFFF"},\n
+Action.c(155):         {"attributeName" : "OPERATING SYSTEM", "attributeValue" : "Chrome"},\n
+Action.c(155):         {"attributeName" : "CUSTOMIZATION", "attributeValue" : "Gaming"},\n
+Action.c(155):         {"attributeName" : "PROCESSOR", "attributeValue" : "intel(R) Core(TM) i5-6300HQ"},\n
+Action.c(155):         {"attributeName" : "DISPLAY", "attributeValue" : "15.6-inch diagonal HD BrightView WLE
+Action.c(155):     D-backlit Display (1366x768)"},\n
+Action.c(155):         {"attributeName" : "MEMORY", "attributeValue" : "16GB DDR3 - 2 DIMM"}\n
+Action.c(155):       ]},{"id": 10,\n
+Action.c(155):       "productName": "HP EliteBook Folio",\n
+Action.c(155):       "price": 550,\n
+Action.c(155):       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",\n
+Action.c(155):       "imageUrl" : "css/images/Popular-item2.jpg",\n
+Action.c(155):       "attributes" : [\n
+Action.c(155):         {"attributeName" : "PRICE", "attributeValue" : 400},\n
+Action.c(155):         {"attributeName" : "COLOR", "attributeValue" : "FFFFFF"},\n
+Action.c(155):         {"attributeName" : "OPERATING SYSTEM", "attributeValue" : "Chrome"},\n
+Action.c(155):         {"attributeName" : "CUSTOMIZATION", "attributeValue" : "Gaming"},\n
+Action.c(155):         {"attributeName" : "PROCESSOR", "attributeValue" : "intel(R) Core(TM) i5-6300HQ"},\n
+Action.c(155):         {"attributeName" : "DISPLAY", "attributeValue" : "15.6-inch diagonal HD BrightView WLE
+Action.c(155):     D-backlit Display (1366x768)"},\n
+Action.c(155):         {"attributeName" : "MEMORY", "attributeValue" : "16GB DDR3 - 2 DIMM"}\n
+Action.c(155):       ]},\n
+Action.c(155):       {"id": 21,\n
+Action.c(155):         "productName": "HP ROAR PLUS WIRELESS SPEAKER",\n
+Action.c(155):         "price": 550,\n
+Action.c(155):         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",\n
+Action.c(155):         "imageUrl" : "css/images/Popular-item1.jpg",\n
+Action.c(155):         "attributes" : [\n
+Action.c(155):           {"attributeName" : "PRICE", "attributeValue" : 400},\n
+Action.c(155):           {"attributeName" : "COLOR", "attributeValue" : "FFFFFF"},\n
+Action.c(155):           {"attributeName" : "OPERATING SYSTEM", "attributeValue" : "Chrome"},\n
+Action.c(155):           {"attributeName" : "CUSTOMIZATION", "attributeValue" : "Gaming"},\n
+Action.c(155):           {"attributeName" : "PROCESSOR", "attributeValue" : "intel(R) Core(TM) i5-6300HQ"},\n
+Action.c(155):           {"attributeName" : "DISPLAY", "attributeValue" : "15.6-inch diagonal HD BrightView W
+Action.c(155):     LED-backlit Display (1366x768)"},\n
+Action.c(155):           {"attributeName" : "MEMORY", "attributeValue" : "16GB DDR3 - 2 DIMM"}\n
+Action.c(155):         ]}]
+Action.c(155): t=7232226ms: Request done "http://18.212.178.84/app/tempFiles/popularProducts.json"  	[MsgId: MMSG-26000]
+Action.c(155): web_url("popularProducts.json") was successful, 500 body bytes, 373 header bytes, 17 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(165): web_url("home-page.html") started  	[MsgId: MMSG-26355]
+Action.c(165): t=7232227ms: Already connected [1] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(165): t=7232227ms: 561-byte request headers for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     GET /app/views/home-page.html HTTP/1.1\r\n
+Action.c(165):     Referer: http://18.212.178.84/\r\n
+Action.c(165):     Sec-Fetch-Site: same-origin\r\n
+Action.c(165):     Sec-Fetch-Mode: cors\r\n
+Action.c(165):     Sec-Fetch-Dest: empty\r\n
+Action.c(165):     DNT: 1\r\n
+Action.c(165):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(165):     sec-ch-ua-mobile: ?0\r\n
+Action.c(165):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(165):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(165):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(165):     Accept-Encoding: gzip, deflate\r\n
+Action.c(165):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(165):     Accept: */*\r\n
+Action.c(165):     Connection: Keep-Alive\r\n
+Action.c(165):     Host: 18.212.178.84\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232381ms: 367-byte response headers for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     HTTP/1.1 200 \r\n
+Action.c(165):     Accept-Ranges: bytes\r\n
+Action.c(165):     ETag: W/"12463-1650802202000"\r\n
+Action.c(165):     Last-Modified: Sun, 24 Apr 2022 12:10:02 GMT\r\n
+Action.c(165):     Cache-Control: max-age=0\r\n
+Action.c(165):     Expires: Mon, 02 May 2022 15:31:23 GMT\r\n
+Action.c(165):     vary: accept-encoding\r\n
+Action.c(165):     Content-Encoding: gzip\r\n
+Action.c(165):     Content-Type: text/html\r\n
+Action.c(165):     Transfer-Encoding: chunked\r\n
+Action.c(165):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(165):     Keep-Alive: timeout=20\r\n
+Action.c(165):     Connection: keep-alive\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232382ms: 3-byte chunked response overhead for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     a\r\n
+Action.c(165): t=7232382ms: 7-byte chunked response overhead for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     \r\n
+Action.c(165):     200\r\n
+Action.c(165): t=7232382ms: 7-byte chunked response overhead for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     \r\n
+Action.c(165):     200\r\n
+Action.c(165): t=7232382ms: 7-byte chunked response overhead for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     \r\n
+Action.c(165):     200\r\n
+Action.c(165): t=7232382ms: 7-byte chunked response overhead for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     \r\n
+Action.c(165):     200\r\n
+Action.c(165): t=7232382ms: 6-byte chunked response overhead for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     \r\n
+Action.c(165):     ae\r\n
+Action.c(165): t=7232382ms: 7-byte chunked response overhead for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     \r\n
+Action.c(165):     0\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232382ms: 2232-byte ENCODED response body received for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165): t=7232382ms: 12288-byte DECODED response body for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):     <scroll-to-top></scroll-to-top>\n
+Action.c(165):     <section>\n
+Action.c(165):     \n
+Action.c(165):         <!--  five pictures  -->\n
+Action.c(165):         <article id="our_products">\n
+Action.c(165):     \n
+Action.c(165):             <search mobile-search></search>\n
+Action.c(165):     \n
+Action.c(165):             <div class="container ">\n
+Action.c(165):     \n
+Action.c(165):                 <div class="rowSection">\n
+Action.c(165):                     <div id="speakersImg" aria-label="SpeakersCategory" ng-click="redirect('/c
+Action.c(165):     ategory/' + categories[3].categoryName + '/' + categories[3].categoryId)"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          class="SpeakersImg categoryCell"\n
+Action.c(165):                          a-sec-back-img="{{categories[3].managedImageId}}" a-slow-page="{{ mai
+Action.c(165):     nCtrl.config.slowPage }}" >\n
+Action.c(165):                         <div class="shop_now_slider">\n
+Action.c(165):                             <span id="speakersTxt" aria-label="SpeakersCategoryTxt" class="sho
+Action.c(165):     p_now roboto-bold" role="link" href="javascript:void(0)">{{::categories[3].categoryName | 
+Action.c(165):     uppercase}}</span>\n
+Action.c(165):                             <label id="speakersLink" class="shop_nowSub roboto-regular" transl
+Action.c(165):     ate="Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div id="tabletsImg" aria-label="TabletsCategory" ng-click="redirect('/cat
+Action.c(165):     egory/' + categories[2].categoryName + '/' + categories[2].categoryId)"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          a-sec-back-img="{{categories[2].managedImageId}}" class="categoryCell
+Action.c(165):     ">\n
+Action.c(165):                         <div class="shop_now_slider" aria-label="TabletsCategoryTxt">\n
+Action.c(165):                             <span id="tabletsTxt" aria-label="TabletsCategoryTxt" class="shop_
+Action.c(165):     now roboto-bold" role="link" href="javascript:void(0)">{{::categories[2].categoryName | up
+Action.c(165):     percase}}</span>\n
+Action.c(165):                             <label id="tabletsLink" class="shop_nowSub roboto-regular" transla
+Action.c(165):     te="Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div class="emptyCell">\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):                 <div class="rowSection">\n
+Action.c(165):                     <div id="laptopsImg" aria-label="LaptopsCategory" ng-click="redirect('/cat
+Action.c(165):     egory/' + categories[0].categoryName + '/' + categories[0].categoryId)" class="laptopImg c
+Action.c(165):     ategoryCell"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          a-sec-back-img="{{categories[0].managedImageId}}">\n
+Action.c(165):                         <div class="shop_now_slider">\n
+Action.c(165):                             <span id="laptopsTxt" aria-label="LaptopsCategoryTxt" class="shop_
+Action.c(165):     now roboto-bold" role="link" href="javascript:void(0)">{{::categories[0].categoryName | up
+Action.c(165):     percase}}</span>\n
+Action.c(165):                             <label id="laptopsLink" class="shop_nowSub roboto-regular" transla
+Action.c(165):     te="Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div id="miceImg" aria-label="MiceCategory" ng-click="redirect('/category/
+Action.c(165):     ' + categories[4].categoryName + '/' + categories[4].categoryId)" class="miceImg categoryC
+Action.c(165):     ell"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          a-sec-back-img="{{categories[4].managedImageId}}">\n
+Action.c(165):                         <div class="shop_now_slider">\n
+Action.c(165):                             <span id="miceTxt" aria-label="MiceCategoryTxt" class="shop_now ro
+Action.c(165):     boto-bold" role="link" href="javascript:void(0)">{{::categories[4].categoryName | uppercas
+Action.c(165):     e}}</span>\n
+Action.c(165):                             <label id="miceLink" class="shop_nowSub roboto-regular" translate=
+Action.c(165):     "Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div id="headphonesImg" aria-label="HeadphonesCategory" ng-click="redirect
+Action.c(165):     ('/category/' + categories[1].categoryName + '/' + categories[1].categoryId)" class="twoRo
+Action.c(165):     ws categoryCell"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          a-sec-back-img="{{categories[1].managedImageId}}">\n
+Action.c(165):                         <div class="shop_now_slider">\n
+Action.c(165):                             <span id="headphonesTxt" aria-label="HeadphonesCategoryTxt" class=
+Action.c(165):     "shop_now roboto-bold" role="link" href="javascript:void(0)">{{::categories[1].categoryNam
+Action.c(165):     e | uppercase}}</span>\n
+Action.c(165):                             <label id="headphonesLink" class="shop_nowSub roboto-regular" tran
+Action.c(165):     slate="Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end five pictures -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- SPACIAL OFFER -->\n
+Action.c(165):         <article id="special_offer_items">\n
+Action.c(165):             <h3 class="roboto-regular center" translate="SPACIAL_OFFER"></h3>\n
+Action.c(165):             <div>\n
+Action.c(165):                 <div id="img-special-offer">\n
+Action.c(165):                     <figure>\n
+Action.c(165):                         <img src="css/images/Special-offer.jpg" alt="Special-offer">\n
+Action.c(165):                     </figure>\n
+Action.c(165):                 </div>\n
+Action.c(165):                 <div id="div-special-offer">\n
+Action.c(165):                     <div>\n
+Action.c(165):                         <span class="roboto-light"> {{specialOffer[0].promotionHeader}} </span
+Action.c(165):     >\n
+Action.c(165):     \n
+Action.c(165):                         <h1 class="roboto-thin"> {{specialOffer[0].product.productName}} </h1>
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):                         <p> {{specialOffer[0].promotionSubHeader}} </p>\n
+Action.c(165):                         <a href="#/product/{{specialOffer[0].product.id}}">\n
+Action.c(165):                             <button id="see_offer_btn" translate="SEE_OFFER" role="button"></b
+Action.c(165):     utton>\n
+Action.c(165):                         </a>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end SPACIAL OFFER -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- check directive -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- slider -->\n
+Action.c(165):         <article id="slider_explore_now">\n
+Action.c(165):             <div class="slider">\n
+Action.c(165):                 <div class="slider-length transition">\n
+Action.c(165):                     <div ng-repeat="img in images" class="imgSection">\n
+Action.c(165):                         <div class="imgContainer">\n
+Action.c(165):                             <img data-ng-src="../../css/images/{{img.imageName}}"\n
+Action.c(165):                                  ng-click="redirect('/category/' + categories[img.categoryId].
+Action.c(165):     categoryId)"/>\n
+Action.c(165):                         </div>\n
+Action.c(165):                         <div class="container">\n
+Action.c(165):                             <h2 ng-bind-html='img.message | trustHtml' class="roboto-light"></
+Action.c(165):     h2>\n
+Action.c(165):                             <button name="explore_now_btn" ng-click="redirect('/category/' + c
+Action.c(165):     ategories[img.categoryId].categoryName + '/' + categories[img.categoryId].categoryId)"\n
+Action.c(165):                                     translate="EXPLORE_NOW" role="button"></button>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div class="imgSection">\n
+Action.c(165):                         <div class="imgContainer">\n
+Action.c(165):                             <img data-ng-src="../../css/images/{{images[0].imageName}}"\n
+Action.c(165):                                  ng-click="redirect('/category/' + categories[img.categoryId].
+Action.c(165):     categoryName + '/' + categories[0].categoryId)"/>\n
+Action.c(165):                         </div>\n
+Action.c(165):                         <div class="container">\n
+Action.c(165):                             <h2 class="roboto-light">{{images[0].message}}</h2>\n
+Action.c(165):                             <button name="explore_now_btn" ng-click="redirect('/category/' + c
+Action.c(165):     ategories[img.categoryId].categoryName + '/' + categories[0].categoryId)"\n
+Action.c(165):                                     class="white" translate="EXPLORE_NOW" role="button"></butt
+Action.c(165):     on>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):                 <div class="slider-steps">\n
+Action.c(165):                     <span href="javascript:void(0)" role="link"\n
+Action.c(165):                             ng-repeat="img in images" ng-class="{selected : ({{img.imageId ===
+Action.c(165):      0}})}"></span>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end slider -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- POPULAR ITEMS\n
+Action.c(165):         <popular-items-drtv popular-products="popularProducts"></popular-items-drtv>\n
+Action.c(165):         -->\n
+Action.c(165):     \n
+Action.c(165):         <article id="popular_items">\n
+Action.c(165):             <h3 class="roboto-regular center" translate="POPULAR_ITEMS"></h3>\n
+Action.c(165):     \n
+Action.c(165):             <div class="grid-table center">\n
+Action.c(165):                 <div name="popular_item_{{product.id}}" ng-repeat="product in popularProducts"
+Action.c(165):      ng-if="popularProducts.length > 0">\n
+Action.c(165):                     <figure>\n
+Action.c(165):                         <img name="popular_item_{{product.id}}_img" data-ng-src="{{product.ima
+Action.c(165):     geUrl}}" alt="Special-offer"\n
+Action.c(165):                             href="javascript:void(0)" role="link">\n
+Action.c(165):                     </figure>\n
+Action.c(165):                     <p name="popular_item_{{product.id}}_name" class="center productName robot
+Action.c(165):     o-medium">{{product.productName | uppercase}}</p>\n
+Action.c(165):                     <a href="#/product/{{product.id}}" role="link">\n
+Action.c(165):                         <label id="details_{{product.id}}" class="shop_nowSub viewDetail" tran
+Action.c(165):     slate="View_details"></label>\n
+Action.c(165):                     </a>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end POPULAR ITEMS -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <article id="contact_us">\n
+Action.c(165):     \n
+Action.c(165):             <div data-ng-hide="supportSuccess">\n
+Action.c(165):     \n
+Action.c(165):                 <div id="supportCover">\n
+Action.c(165):     \n
+Action.c(165):                     <div>\n
+Action.c(165):     \n
+Action.c(165):                         <div name="chat_with_us" class="chat" data-ng-click="openChat()">\n
+Action.c(165):     \n
+Action.c(165):                             <div>\n
+Action.c(165):                                 <img id="chatLogo" src="../../css/images/chat_logo.png" alt="c
+Action.c(165):     hat logo" />\n
+Action.c(165):                                 <label class="roboto-bold" translate="CHAT_WITH_US"></label>\n
+Action.c(165):                             </div>\n
+Action.c(165):     \n
+Action.c(165):                         </div>\n
+Action.c(165):     \n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div>\n
+Action.c(165):     \n
+Action.c(165):                         <h1 class="roboto-bold contact_us" translate="CONTACT_US"></h1>\n
+Action.c(165):     \n
+Action.c(165):                         <sec-form>\n
+Action.c(165):     \n
+Action.c(165):                             <div class="splitter">\n
+Action.c(165):                                 <div class="inputMargin">\n
+Action.c(165):                                     <sec-view a-hint="Category"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               a-type="select"\n
+Action.c(165):                                               a-show="categoryName"\n
+Action.c(165):                                               sec-select-options="categories"\n
+Action.c(165):                                               sec-model="categories.category"\n
+Action.c(165):                                               sec-select-change="categoryChange(value)">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):                                     <sec-view a-hint="Product"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               a-type="select"\n
+Action.c(165):                                               a-show="productName"\n
+Action.c(165):                                               sec-model="supportModel.product"\n
+Action.c(165):                                               sec-select-options="products"\n
+Action.c(165):                                               sec-select-change="productChange(value)">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):                                     <sec-view a-hint="{{'Email' | translate}}"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               sec-model="supportModel.email"\n
+Action.c(165):                                               sec-require="mainCtrl.getRequire('Email')">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):                                 </div>\n
+Action.c(165):                             </div>\n
+Action.c(165):                             <div class="splitter" >\n
+Action.c(165):                                 <div class="smollPadding  margin-right">\n
+Action.c(165):                                     <label class="Subject"><span class="star">*</span> {{'Subj
+Action.c(165):     ect' | translate }}</label>\n
+Action.c(165):     \n
+Action.c(165):                                     <sec-view class="textarea"\n
+Action.c(165):                                               a-hint="subjectTextarea"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               a-type="textarea"\n
+Action.c(165):                                               a-star="false"\n
+Action.c(165):                                               sec-model="supportModel.subject"\n
+Action.c(165):                                               sec-require="mainCtrl.getRequire('Email')">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):     \n
+Action.c(165):                                     <sec-sender a-value="{{'SEND' | translate}}" sec-send="sen
+Action.c(165):     dSupportEmail()"></sec-sender>\n
+Action.c(165):     \n
+Action.c(165):                                 </div>\n
+Action.c(165):                             </div>\n
+Action.c(165):     \n
+Action.c(165):                             <label class="{{registerAnswer.class}} invalid center"> {{register
+Action.c(165):     Answer.message}} </label>\n
+Action.c(165):     \n
+Action.c(165):                         </sec-form>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):     \n
+Action.c(165):             <div id="registerSuccessCover" data-ng-show="supportSuccess">\n
+Action.c(165):                 <div class="center">\n
+Action.c(165):                     <p class="roboto-regular successMessage">{{ registerAnswer.message }}</p>\n
+Action.c(165):                     <br/>\n
+Action.c(165):                     <a class="a-button" href="#/" ng-click="continueShopping()" > {{ 'CONTINUE
+Action.c(165):     _SHOPPING' | translate}} </a>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <div data-ng-if="mainCtrl.config.slowPage">\n
+Action.c(165):     \n
+Action.c(165):             <script href="" type="text/javascript"></script>\n
+Action.c(165):             <script href="" type="text/javascript"></script>\n
+Action.c(165):             <script href="" type="text/javascript"></script>\n
+Action.c(165):     \n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):         
+Action.c(165): Found resource "http://18.212.178.84/app/views/css/images/Special-offer.jpg" in HTML "http://18.212.178.84/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(165): Found resource "http://18.212.178.84/css/images/chat_logo.png" in HTML "http://18.212.178.84/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(165): Found resource "http://18.212.178.84/app/views/" in HTML "http://18.212.178.84/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(165): t=7232389ms: 175-byte DECODED response body for "http://18.212.178.84/app/views/home-page.html" (RelFrameId=1, Internal ID=831)
+Action.c(165):         <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):     \n
+Action.c(165):         </div>\n
+Action.c(165):     \n
+Action.c(165):     </section>\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):     <social-media-drtv></social-media-drtv>\n
+Action.c(165): t=7232389ms: Request done "http://18.212.178.84/app/views/home-page.html"  	[MsgId: MMSG-26000]
+Action.c(165): t=7232389ms: Already connected [2] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(165): t=7232389ms: 599-byte request headers for "http://18.212.178.84/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=832)
+Action.c(165):     GET /app/views/css/images/Special-offer.jpg HTTP/1.1\r\n
+Action.c(165):     Referer: http://18.212.178.84/app/views/home-page.html\r\n
+Action.c(165):     Sec-Fetch-Site: same-origin\r\n
+Action.c(165):     Sec-Fetch-Mode: cors\r\n
+Action.c(165):     Sec-Fetch-Dest: empty\r\n
+Action.c(165):     DNT: 1\r\n
+Action.c(165):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(165):     sec-ch-ua-mobile: ?0\r\n
+Action.c(165):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(165):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(165):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(165):     Accept-Encoding: gzip, deflate\r\n
+Action.c(165):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(165):     Accept: */*\r\n
+Action.c(165):     Connection: Keep-Alive\r\n
+Action.c(165):     Host: 18.212.178.84\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232390ms: Already connected [3] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(165): t=7232390ms: 585-byte request headers for "http://18.212.178.84/css/images/chat_logo.png" (RelFrameId=, Internal ID=833)
+Action.c(165):     GET /css/images/chat_logo.png HTTP/1.1\r\n
+Action.c(165):     Referer: http://18.212.178.84/app/views/home-page.html\r\n
+Action.c(165):     Sec-Fetch-Site: same-origin\r\n
+Action.c(165):     Sec-Fetch-Mode: cors\r\n
+Action.c(165):     Sec-Fetch-Dest: empty\r\n
+Action.c(165):     DNT: 1\r\n
+Action.c(165):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(165):     sec-ch-ua-mobile: ?0\r\n
+Action.c(165):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(165):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(165):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(165):     Accept-Encoding: gzip, deflate\r\n
+Action.c(165):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(165):     Accept: */*\r\n
+Action.c(165):     Connection: Keep-Alive\r\n
+Action.c(165):     Host: 18.212.178.84\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232390ms: Already connected [4] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(165): t=7232390ms: 571-byte request headers for "http://18.212.178.84/app/views/" (RelFrameId=, Internal ID=834)
+Action.c(165):     GET /app/views/ HTTP/1.1\r\n
+Action.c(165):     Referer: http://18.212.178.84/app/views/home-page.html\r\n
+Action.c(165):     Sec-Fetch-Site: same-origin\r\n
+Action.c(165):     Sec-Fetch-Mode: cors\r\n
+Action.c(165):     Sec-Fetch-Dest: empty\r\n
+Action.c(165):     DNT: 1\r\n
+Action.c(165):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(165):     sec-ch-ua-mobile: ?0\r\n
+Action.c(165):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(165):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(165):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(165):     Accept-Encoding: gzip, deflate\r\n
+Action.c(165):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(165):     Accept: */*\r\n
+Action.c(165):     Connection: Keep-Alive\r\n
+Action.c(165):     Host: 18.212.178.84\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232540ms: 318-byte response headers for "http://18.212.178.84/css/images/chat_logo.png" (RelFrameId=, Internal ID=833)
+Action.c(165):     HTTP/1.1 200 \r\n
+Action.c(165):     Accept-Ranges: bytes\r\n
+Action.c(165):     ETag: W/"3003-1650802202000"\r\n
+Action.c(165):     Last-Modified: Sun, 24 Apr 2022 12:10:02 GMT\r\n
+Action.c(165):     Cache-Control: max-age=864000\r\n
+Action.c(165):     Expires: Thu, 12 May 2022 15:31:23 GMT\r\n
+Action.c(165):     Content-Type: image/png\r\n
+Action.c(165):     Content-Length: 3003\r\n
+Action.c(165):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(165):     Keep-Alive: timeout=20\r\n
+Action.c(165):     Connection: keep-alive\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232541ms: 3003-byte response body for "http://18.212.178.84/css/images/chat_logo.png" (RelFrameId=, Internal ID=833)
+Action.c(165): t=7232541ms: Request done "http://18.212.178.84/css/images/chat_logo.png"  	[MsgId: MMSG-26000]
+Action.c(165): t=7232541ms: 250-byte response headers for "http://18.212.178.84/app/views/" (RelFrameId=, Internal ID=834)
+Action.c(165):     HTTP/1.1 404 \r\n
+Action.c(165):     Cache-Control: max-age=0\r\n
+Action.c(165):     Expires: Mon, 02 May 2022 15:31:23 GMT\r\n
+Action.c(165):     Content-Type: text/html;charset=utf-8\r\n
+Action.c(165):     Content-Language: ru\r\n
+Action.c(165):     Content-Length: 747\r\n
+Action.c(165):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(165):     Keep-Alive: timeout=20\r\n
+Action.c(165):     Connection: keep-alive\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232541ms: 747-byte response body for "http://18.212.178.84/app/views/" (RelFrameId=, Internal ID=834)
+Action.c(165):     <!doctype html><html lang="ru"><head><title>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 
+Action.c(165):     \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5\xD0\xBD\xD0\xBE</title><style type="text/css">bod
+Action.c(165):     y {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D
+Action.c(165):     76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a 
+Action.c(165):     {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+Action.c(165):     y><h1>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5
+Action.c(165):     \xD0\xBD\xD0\xBE</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> 
+Action.c(165):     &#47;app&#47;views&#47;</p><p><b>Description</b> The origin server did not find a current 
+Action.c(165):     representation for the target resource or is not willing to disclose that one exists.</p><
+Action.c(165):     hr class="line" /><h3>Apache Tomcat/9.0.30</h3></body></html>
+Action.c(165): Warning -26627: HTTP Status-Code=404 (Not Found) for "http://18.212.178.84/app/views/"  	[MsgId: MWAR-26627]
+Action.c(165): t=7232542ms: Closing connection [4] to 18.212.178.84 after receiving status code 404  	[MsgId: MMSG-26000]
+Action.c(165): t=7232542ms: Closed connection [4] to 18.212.178.84:80 after completing 4 request(s)  	[MsgId: MMSG-26000]
+Action.c(165): t=7232542ms: Request done "http://18.212.178.84/app/views/"  	[MsgId: MMSG-26000]
+Action.c(165): t=7232542ms: 250-byte response headers for "http://18.212.178.84/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=832)
+Action.c(165):     HTTP/1.1 404 \r\n
+Action.c(165):     Cache-Control: max-age=0\r\n
+Action.c(165):     Expires: Mon, 02 May 2022 15:31:23 GMT\r\n
+Action.c(165):     Content-Type: text/html;charset=utf-8\r\n
+Action.c(165):     Content-Language: ru\r\n
+Action.c(165):     Content-Length: 783\r\n
+Action.c(165):     Date: Mon, 02 May 2022 15:31:22 GMT\r\n
+Action.c(165):     Keep-Alive: timeout=20\r\n
+Action.c(165):     Connection: keep-alive\r\n
+Action.c(165):     \r\n
+Action.c(165): t=7232543ms: 783-byte response body for "http://18.212.178.84/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=832)
+Action.c(165):     <!doctype html><html lang="ru"><head><title>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 
+Action.c(165):     \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5\xD0\xBD\xD0\xBE</title><style type="text/css">bod
+Action.c(165):     y {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D
+Action.c(165):     76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a 
+Action.c(165):     {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+Action.c(165):     y><h1>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5
+Action.c(165):     \xD0\xBD\xD0\xBE</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> 
+Action.c(165):     &#47;app&#47;views&#47;css&#47;images&#47;Special-offer.jpg</p><p><b>Description</b> The o
+Action.c(165):     rigin server did not find a current representation for the target resource or is not willi
+Action.c(165):     ng to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.30</h3></body>
+Action.c(165):     </html>
+Action.c(165): Warning -26627: HTTP Status-Code=404 (Not Found) for "http://18.212.178.84/app/views/css/images/Special-offer.jpg"  	[MsgId: MWAR-26627]
+Action.c(165): t=7232543ms: Closing connection [2] to 18.212.178.84 after receiving status code 404  	[MsgId: MMSG-26000]
+Action.c(165): t=7232543ms: Closed connection [2] to 18.212.178.84:80 after completing 6 request(s)  	[MsgId: MMSG-26000]
+Action.c(165): t=7232544ms: Request done "http://18.212.178.84/app/views/css/images/Special-offer.jpg"  	[MsgId: MMSG-26000]
+Action.c(165): web_url("home-page.html") highest severity level was "warning", 6765 body bytes, 1185 header bytes, 44 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(175): Notify: Transaction "Home" ended with a "Pass" status (Duration: 3,7664 Wasted Time: 0,0080).	[MsgId: MMSG-16871]
+Action.c(182): lr_think_time: 5,00 seconds.	[MsgId: MMSG-15948]
+Action.c(184): Notify: Transaction "Create New Account" started.	[MsgId: MMSG-16999]
+Action.c(186): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(186): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(189): web_url("register-page.html") started  	[MsgId: MMSG-26355]
+Action.c(189): t=7237557ms: Already connected [1] to 18.212.178.84:80  	[MsgId: MMSG-26000]
+Action.c(189): t=7237557ms: 570-byte request headers for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     GET /app/user/views/register-page.html HTTP/1.1\r\n
+Action.c(189):     Referer: http://18.212.178.84/\r\n
+Action.c(189):     Sec-Fetch-Site: same-origin\r\n
+Action.c(189):     Sec-Fetch-Mode: cors\r\n
+Action.c(189):     Sec-Fetch-Dest: empty\r\n
+Action.c(189):     DNT: 1\r\n
+Action.c(189):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(189):     sec-ch-ua-mobile: ?0\r\n
+Action.c(189):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(189):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(189):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(189):     Accept-Encoding: gzip, deflate\r\n
+Action.c(189):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(189):     Accept: */*\r\n
+Action.c(189):     Connection: Keep-Alive\r\n
+Action.c(189):     Host: 18.212.178.84\r\n
+Action.c(189):     \r\n
+Action.c(189): t=7237715ms: 366-byte response headers for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     HTTP/1.1 200 \r\n
+Action.c(189):     Accept-Ranges: bytes\r\n
+Action.c(189):     ETag: W/"9751-1650802202000"\r\n
+Action.c(189):     Last-Modified: Sun, 24 Apr 2022 12:10:02 GMT\r\n
+Action.c(189):     Cache-Control: max-age=0\r\n
+Action.c(189):     Expires: Mon, 02 May 2022 15:31:28 GMT\r\n
+Action.c(189):     vary: accept-encoding\r\n
+Action.c(189):     Content-Encoding: gzip\r\n
+Action.c(189):     Content-Type: text/html\r\n
+Action.c(189):     Transfer-Encoding: chunked\r\n
+Action.c(189):     Date: Mon, 02 May 2022 15:31:28 GMT\r\n
+Action.c(189):     Keep-Alive: timeout=20\r\n
+Action.c(189):     Connection: keep-alive\r\n
+Action.c(189):     \r\n
+Action.c(189): t=7237716ms: 3-byte chunked response overhead for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     a\r\n
+Action.c(189): t=7237716ms: 7-byte chunked response overhead for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     \r\n
+Action.c(189):     200\r\n
+Action.c(189): t=7237716ms: 7-byte chunked response overhead for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     \r\n
+Action.c(189):     200\r\n
+Action.c(189): t=7237716ms: 7-byte chunked response overhead for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     \r\n
+Action.c(189):     1b3\r\n
+Action.c(189): t=7237716ms: 7-byte chunked response overhead for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     \r\n
+Action.c(189):     0\r\n
+Action.c(189):     \r\n
+Action.c(189): t=7237716ms: 1469-byte ENCODED response body received for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189): t=7237717ms: 9751-byte DECODED response body for "http://18.212.178.84/app/user/views/register-page.html" (RelFrameId=1, Internal ID=835)
+Action.c(189):     <nav class="pages">\n
+Action.c(189):         <a translate="HOME" href="#/"></a>\n
+Action.c(189):         <a class="select" translate="CREATE_ACCOUNT"> </a>\n
+Action.c(189):     </nav>\n
+Action.c(189):     <section id="registerPage">\n
+Action.c(189):         <article>\n
+Action.c(189):             <h3 class="roboto-regular sticky fixedImportant fixed" translate="CREATE_ACCOUNT">
+Action.c(189):     </h3>\n
+Action.c(189):     \n
+Action.c(189):             <sec-form sec-is-valid-form="isValidForm(valid)">\n
+Action.c(189):     \n
+Action.c(189):                 <div id="registerCover" data-ng-hide="registerSuccess">\n
+Action.c(189):                     <div id="infoDemo">\n
+Action.c(189):                         <info-demo a-title="{{'NOTICE' | translate }}" a-lines="{{mainCtrl.get
+Action.c(189):     NoticeInfo()}}"></info-demo>\n
+Action.c(189):                     </div>\n
+Action.c(189):                     <div id="form">\n
+Action.c(189):     \n
+Action.c(189):                         <div id="formCover">\n
+Action.c(189):     \n
+Action.c(189):                             <div>\n
+Action.c(189):                                 <h3 translate="ACCOUNT_DETAILS"></h3>\n
+Action.c(189):     \n
+Action.c(189):                                 <div class="spliter">\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view a-hint="{{'User_name' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.username"\n
+Action.c(189):                                               sec-require="mainCtrl.getRequire('User_name')"\n
+Action.c(189):                                               sec-min-length="mainCtrl.getMin(5)"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(15)"\n
+Action.c(189):     \n
+Action.c(189):                                               sec-disable-validation="true"\n
+Action.c(189):                                               sec-name="userName">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userEmail"\n
+Action.c(189):                                               a-hint="{{'Email' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.email"\n
+Action.c(189):                                               sec-require="mainCtrl.getRequire('Email')"\n
+Action.c(189):                                               sec-pattern="mainCtrl.getPattern('Email')">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                 </div>\n
+Action.c(189):                                 <div class="spliter">\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userPassword"\n
+Action.c(189):                                               a-hint="{{'Password' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               a-type="password"\n
+Action.c(189):                                               sec-model="model.password"\n
+Action.c(189):                                               sec-require="mainCtrl.getRequire('Password')"\n
+Action.c(189):                                               sec-min-length="mainCtrl.getMin(4)"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(12)"\n
+Action.c(189):                                               sec-pattern="mainCtrl.getPattern('Password')">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userPassword"\n
+Action.c(189):                                               a-hint="{{'Confirm_password' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               a-type="password"\n
+Action.c(189):                                               sec-model="model.confirm_password"\n
+Action.c(189):                                               sec-require="mainCtrl.getRequire('Confirm_passwo
+Action.c(189):     rd')"\n
+Action.c(189):                                               sec-compare-to="mainCtrl.getCompare('Password', 
+Action.c(189):     model.password)"\n
+Action.c(189):                                               sec-model-compare-to="model.password">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                 </div>\n
+Action.c(189):                             </div>\n
+Action.c(189):     \n
+Action.c(189):                             <div>\n
+Action.c(189):                                 <h3 translate="PERSONAL_DETAILS"></h3>\n
+Action.c(189):     \n
+Action.c(189):                                 <div class="spliter">\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userFirstName"\n
+Action.c(189):                                               a-hint="{{'First_Name' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.firstName"\n
+Action.c(189):                                               sec-min-length="mainCtrl.getMin(2)"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(30)">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userLastName"\n
+Action.c(189):                                               a-hint="{{'Last_Name' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.lastName"\n
+Action.c(189):                                               sec-min-length="mainCtrl.getMin(2)"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(30)">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                 </div>\n
+Action.c(189):                                 <div class="spliter">\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userPhone"\n
+Action.c(189):                                               a-hint="{{'Phone_Number' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(20)"\n
+Action.c(189):                                               sec-model="model.phoneNumber">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                 </div>\n
+Action.c(189):                             </div>\n
+Action.c(189):     \n
+Action.c(189):     \n
+Action.c(189):                             <div>\n
+Action.c(189):                                 <h3 translate="ADDRESS"></h3>\n
+Action.c(189):     \n
+Action.c(189):                                 <div class="spliter">\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userCountry"\n
+Action.c(189):                                               a-hint="Country"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               a-type="select"\n
+Action.c(189):                                               a-show="name"\n
+Action.c(189):                                               sec-model="model.country"\n
+Action.c(189):                                               sec-select-options="countries">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userCity"\n
+Action.c(189):                                               a-hint="{{'City' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.city"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(25)">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                 </div>\n
+Action.c(189):                                 <div class="spliter">\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userAdress"\n
+Action.c(189):                                               a-hint="{{'Address' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.address"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(50)">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userState"\n
+Action.c(189):                                               a-hint="{{'State__Province__Region' | translate}
+Action.c(189):     }"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.state"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(10)">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                 </div>\n
+Action.c(189):                                 <div class="spliter">\n
+Action.c(189):     \n
+Action.c(189):                                     <sec-view sec-name="userPostalCode"\n
+Action.c(189):                                               a-hint="{{'Postal_Code' | translate}}"\n
+Action.c(189):                                               a-hint-description="RegisterPage"\n
+Action.c(189):                                               sec-model="model.postalCode"\n
+Action.c(189):                                               sec-max-length="mainCtrl.getMax(10)">\n
+Action.c(189):                                     </sec-view>\n
+Action.c(189):     \n
+Action.c(189):                                 </div>\n
+Action.c(189):                             </div>\n
+Action.c(189):     \n
+Action.c(189):                             <div class="option marginTop">\n
+Action.c(189):                                 <input name="allowOffersPromotion" ng-model="model.offers_prom
+Action.c(189):     otion" type="checkbox" autocomplete="off"/>\n
+Action.c(189):                                 <span class="roboto-light" translate="offers_promotion"></span
+Action.c(189):     >\n
+Action.c(189):                             </div>\n
+Action.c(189):     \n
+Action.c(189):                             <sec-view\n
+Action.c(189):                                     sec-name="registrationAgreement"\n
+Action.c(189):                                     a-dont-change="true"\n
+Action.c(189):                                     sec-model="agree_Agreement"\n
+Action.c(189):                                     a-type="checkbox"\n
+Action.c(189):                                     sec-require="mainCtrl.getAgreeAgreementRequire()"\n
+Action.c(189):                             ></sec-view>\n
+Action.c(189):     \n
+Action.c(189):                         </div>\n
+Action.c(189):                     </div>\n
+Action.c(189):                 </div>\n
+Action.c(189):                 <div class="center">\n
+Action.c(189):     \n
+Action.c(189):                     <sec-sender class="roboto-medium" a-value="{{'REGISTER' | translate}}"\n
+Action.c(189):                                 sec-send="register()" ></sec-sender>\n
+Action.c(189):     \n
+Action.c(189):                     <label class="{{registerAnswer.class}} center block smollMargin" data-ng-s
+Action.c(189):     how="!registerSuccess">\n
+Action.c(189):                         {{registerAnswer.message}}\n
+Action.c(189):                     </label>\n
+Action.c(189):     \n
+Action.c(189):                     <label class="ALREADY_HAVE_AN_ACCOUNT roboto-medium" data-ng-show="!regist
+Action.c(189):     erSuccess">\n
+Action.c(189):                         <a href="javascript:void(0)" role="link" translate="ALREADY_HAVE_AN_AC
+Action.c(189):     COUNT" ng-click="login()"></a>\n
+Action.c(189):                     </label>\n
+Action.c(189):     \n
+Action.c(189):                 </div>\n
+Action.c(189):     \n
+Action.c(189):             </sec-form>\n
+Action.c(189):     \n
+Action.c(189):             <div id="registerSuccessCover" data-ng-show="registerSuccess">\n
+Action.c(189):                 <div class="center">\n
+Action.c(189):                     <h1 class="roboto-medium"> {{ 'Hi' | translate }} {{ WellcomeName }}, </h1
+Action.c(189):     >\n
+Action.c(189):     \n
+Action.c(189):                     <p class="roboto-regular successMessage">\n
+Action.c(189):                         {{ 'your_Account_was_created_successfully' | translate}}\n
+Action.c(189):                     </p>\n
+Action.c(189):                     <br/>\n
+Action.c(189):                     <a class="a-button" href="/"> {{ 'CONTINUE_SHOPPING' | translate}} </a>\n
+Action.c(189):                 </div>\n
+Action.c(189):             </div>\n
+Action.c(189):     \n
+Action.c(189):         </article>\n
+Action.c(189):     </section>\n
+Action.c(189):     \n
+Action.c(189):     <social-media-drtv></social-media-drtv>\n
+Action.c(189): t=7237725ms: Request done "http://18.212.178.84/app/user/views/register-page.html"  	[MsgId: MMSG-26000]
+Action.c(189): Registered web_reg_find successful for "Text=CREATE_ACCOUNT" (count=2)  	[MsgId: MMSG-26364]
+Action.c(189): web_url("register-page.html") was successful, 1469 body bytes, 366 header bytes, 31 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(199): Notify: Transaction "Create New Account" ended with a "Pass" status (Duration: 0,1690 Wasted Time: 0,0000).	[MsgId: MMSG-16871]
+Action.c(207): Notify: Transaction "Register" started.	[MsgId: MMSG-16999]
+Action.c(209): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(209): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(212): web_add_auto_header("SOAPAction") started  	[MsgId: MMSG-26355]
+Action.c(212): "SOAPAction: com.advantage.online.store.accountserviceAccountCreateRequest" header registered for adding to requests from all following Action functions  	[MsgId: MMSG-26505]
+Action.c(212): web_add_auto_header("SOAPAction") was successful  	[MsgId: MMSG-26392]
+Action.c(215): lr_think_time: 30,00 seconds.	[MsgId: MMSG-15948]
+Action.c(217): web_custom_request("AccountCreateRequest") started  	[MsgId: MMSG-26355]
+Action.c(217): Notify: Parameter Substitution: parameter "address" =  "1212 Wishing Avenue"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "city" =  "Cherry Hill"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "country" =  "us"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "email" =  "88888@gmail.com"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "firstName" =  "Margaret"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "lastName" =  "Ruiz"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "login" =  "26610109"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "password" =  "1Qaz2Wsx"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "phone" =  "80000000000"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "region" =  "18"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "postalCode" =  "19219246"	[MsgId: MMSG-13992]
+Action.c(217): t=7246619ms: Closed connection [0] to 18.212.178.84:8081 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7246620ms: Connecting [0] to host 18.212.178.84:8081  	[MsgId: MMSG-26000]
+Action.c(217): t=7246620ms: Inactive socket [1] was closed by 18.212.178.84:80, probably due to Keep-Alive timeout  	[MsgId: MMSG-26000]
+Action.c(217): t=7246620ms: Closed connection [1] to 18.212.178.84:80 after completing 11 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7246620ms: Inactive socket [3] was closed by 18.212.178.84:80, probably due to Keep-Alive timeout  	[MsgId: MMSG-26000]
+Action.c(217): t=7246621ms: Closed connection [3] to 18.212.178.84:80 after completing 5 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7246621ms: Inactive socket [5] was closed by 18.212.178.84:80, probably due to Keep-Alive timeout  	[MsgId: MMSG-26000]
+Action.c(217): t=7246621ms: Closed connection [5] to 18.212.178.84:80 after completing 6 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7246769ms: Connected socket [0] from 192.168.0.181:26175 to 18.212.178.84:8081 in 149 ms  	[MsgId: MMSG-26000]
+Action.c(217): t=7246769ms: 717-byte request headers for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     POST //accountservice/ws/AccountCreateRequest HTTP/1.1\r\n
+Action.c(217):     Content-Type: text/xml; charset=UTF-8\r\n
+Action.c(217):     Referer: http://18.212.178.84/\r\n
+Action.c(217):     Sec-Fetch-Site: same-origin\r\n
+Action.c(217):     Sec-Fetch-Mode: cors\r\n
+Action.c(217):     Sec-Fetch-Dest: empty\r\n
+Action.c(217):     DNT: 1\r\n
+Action.c(217):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(217):     sec-ch-ua-mobile: ?0\r\n
+Action.c(217):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(217):     SOAPAction: com.advantage.online.store.accountserviceAccountCreateRequest\r\n
+Action.c(217):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(217):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(217):     Accept-Encoding: gzip, deflate\r\n
+Action.c(217):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(217):     Accept: */*\r\n
+Action.c(217):     Connection: Keep-Alive\r\n
+Action.c(217):     Host: 18.212.178.84:8081\r\n
+Action.c(217):     Content-Length: 761\r\n
+Action.c(217):     \r\n
+Action.c(217): t=7246770ms: 761-byte request body for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(217):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(217):     www.w3.org/2001/XMLSchema"><soap:Body><AccountCreateRequest xmlns="com.advantage.online.st
+Action.c(217):     ore.accountservice"><accountType>USER</accountType><address>1212 Wishing Avenue</address><
+Action.c(217):     allowOffersPromotion>false</allowOffersPromotion><cityName>Cherry Hill</cityName><countryI
+Action.c(217):     d>us</countryId><email>88888@gmail.com</email><firstName>Margaret</firstName><lastName>Rui
+Action.c(217):     z</lastName><loginName>26610109</loginName><password>1Qaz2Wsx</password><phoneNumber>80000
+Action.c(217):     000000</phoneNumber><stateProvince>18</stateProvince><zipcode>19219246</zipcode></AccountC
+Action.c(217):     reateRequest></soap:Body></soap:Envelope>
+Action.c(217): t=7247221ms: 619-byte response headers for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     HTTP/1.1 200 \r\n
+Action.c(217):     X-Content-Type-Options: nosniff\r\n
+Action.c(217):     X-XSS-Protection: 1; mode=block\r\n
+Action.c(217):     Cache-Control: no-store\r\n
+Action.c(217):     Pragma: no-cache\r\n
+Action.c(217):     Expires: 0\r\n
+Action.c(217):     X-Frame-Options: DENY\r\n
+Action.c(217):     Access-Control-Request-Method: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     Access-Control-Max-Age: 3600\r\n
+Action.c(217):     Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapact
+Action.c(217):     ion\r\n
+Action.c(217):     Access-Control-Allow-Origin: *\r\n
+Action.c(217):     Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\n
+Action.c(217):     SOAPAction: ""\r\n
+Action.c(217):     Content-Type: text/xml;charset=utf-8\r\n
+Action.c(217):     Content-Length: 415\r\n
+Action.c(217):     Date: Mon, 02 May 2022 15:31:38 GMT\r\n
+Action.c(217):     \r\n
+Action.c(217): t=7247222ms: 415-byte response body for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:He
+Action.c(217):     ader/><SOAP-ENV:Body><ns2:AccountCreateResponse xmlns:ns2="com.advantage.online.store.acco
+Action.c(217):     untservice"><ns2:StatusMessage><ns2:success>true</ns2:success><ns2:userId>339468873</ns2:u
+Action.c(217):     serId><ns2:reason>New user created successfully.</ns2:reason></ns2:StatusMessage></ns2:Acc
+Action.c(217):     ountCreateResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
+Action.c(217): t=7247222ms: Request done "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest"  	[MsgId: MMSG-26000]
+Action.c(217): Registered web_reg_find successful for "Text=New user created successfully." (count=1)  	[MsgId: MMSG-26364]
+Action.c(217): web_custom_request("AccountCreateRequest") was successful, 415 body bytes, 619 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): Notify: Transaction "Register" ended with a "Pass" status (Duration: 30,6175 Think Time: 30,0130 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(253): Notify: Transaction "02_User_Registration" ended with a "Pass" status (Duration: 39,6017 Think Time: 35,0230 Wasted Time: 0,0083).	[MsgId: MMSG-16870]
+Ending action Action.	[MsgId: MMSG-15918]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=7247223ms: Closed connection [0] to 18.212.178.84:8081 after completing 1 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 13 (thread 2372), ended OK."	[MsgId: MMSG-10695]
+Action.c(217): web_custom_request("AccountCreateRequest") started  	[MsgId: MMSG-26355]
+Action.c(217): Notify: Parameter Substitution: parameter "address" =  "1212 Wishing Avenue"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "city" =  "Cherry Hill"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "country" =  "us"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "email" =  "88888@gmail.com"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "firstName" =  "Margaret"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "lastName" =  "Ruiz"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "login" =  "79385017"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "password" =  "1Qaz2Wsx"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "phone" =  "80000000000"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "region" =  "18"	[MsgId: MMSG-13992]
+Action.c(217): Notify: Parameter Substitution: parameter "postalCode" =  "19219246"	[MsgId: MMSG-13992]
+Action.c(217): t=7267734ms: Closed connection [0] to 18.212.178.84:8081 after completing 1 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7267734ms: Connecting [0] to host 18.212.178.84:8081  	[MsgId: MMSG-26000]
+Action.c(217): t=7267735ms: Inactive socket [1] was closed by 18.212.178.84:80, probably due to Keep-Alive timeout  	[MsgId: MMSG-26000]
+Action.c(217): t=7267735ms: Closed connection [1] to 18.212.178.84:80 after completing 10 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7267735ms: Inactive socket [3] was closed by 18.212.178.84:80, probably due to Keep-Alive timeout  	[MsgId: MMSG-26000]
+Action.c(217): t=7267735ms: Closed connection [3] to 18.212.178.84:80 after completing 5 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7267735ms: Inactive socket [5] was closed by 18.212.178.84:80, probably due to Keep-Alive timeout  	[MsgId: MMSG-26000]
+Action.c(217): t=7267735ms: Closed connection [5] to 18.212.178.84:80 after completing 6 request(s)  	[MsgId: MMSG-26000]
+Action.c(217): t=7267887ms: Connected socket [0] from 192.168.0.181:26182 to 18.212.178.84:8081 in 153 ms  	[MsgId: MMSG-26000]
+Action.c(217): t=7267887ms: 717-byte request headers for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     POST //accountservice/ws/AccountCreateRequest HTTP/1.1\r\n
+Action.c(217):     Content-Type: text/xml; charset=UTF-8\r\n
+Action.c(217):     Referer: http://18.212.178.84/\r\n
+Action.c(217):     Sec-Fetch-Site: same-origin\r\n
+Action.c(217):     Sec-Fetch-Mode: cors\r\n
+Action.c(217):     Sec-Fetch-Dest: empty\r\n
+Action.c(217):     DNT: 1\r\n
+Action.c(217):     sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"\r\n
+Action.c(217):     sec-ch-ua-mobile: ?0\r\n
+Action.c(217):     sec-ch-ua-platform: "Windows"\r\n
+Action.c(217):     SOAPAction: com.advantage.online.store.accountserviceAccountCreateRequest\r\n
+Action.c(217):     User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Geck
+Action.c(217):     o) Chrome/100.0.4896.88 Safari/537.36\r\n
+Action.c(217):     Accept-Encoding: gzip, deflate\r\n
+Action.c(217):     Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7\r\n
+Action.c(217):     Accept: */*\r\n
+Action.c(217):     Connection: Keep-Alive\r\n
+Action.c(217):     Host: 18.212.178.84:8081\r\n
+Action.c(217):     Content-Length: 761\r\n
+Action.c(217):     \r\n
+Action.c(217): t=7267888ms: 761-byte request body for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(217):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(217):     www.w3.org/2001/XMLSchema"><soap:Body><AccountCreateRequest xmlns="com.advantage.online.st
+Action.c(217):     ore.accountservice"><accountType>USER</accountType><address>1212 Wishing Avenue</address><
+Action.c(217):     allowOffersPromotion>false</allowOffersPromotion><cityName>Cherry Hill</cityName><countryI
+Action.c(217):     d>us</countryId><email>88888@gmail.com</email><firstName>Margaret</firstName><lastName>Rui
+Action.c(217):     z</lastName><loginName>79385017</loginName><password>1Qaz2Wsx</password><phoneNumber>80000
+Action.c(217):     000000</phoneNumber><stateProvince>18</stateProvince><zipcode>19219246</zipcode></AccountC
+Action.c(217):     reateRequest></soap:Body></soap:Envelope>
+Action.c(217): t=7268359ms: 619-byte response headers for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     HTTP/1.1 200 \r\n
+Action.c(217):     X-Content-Type-Options: nosniff\r\n
+Action.c(217):     X-XSS-Protection: 1; mode=block\r\n
+Action.c(217):     Cache-Control: no-store\r\n
+Action.c(217):     Pragma: no-cache\r\n
+Action.c(217):     Expires: 0\r\n
+Action.c(217):     X-Frame-Options: DENY\r\n
+Action.c(217):     Access-Control-Request-Method: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE\r\n
+Action.c(217):     Access-Control-Max-Age: 3600\r\n
+Action.c(217):     Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapact
+Action.c(217):     ion\r\n
+Action.c(217):     Access-Control-Allow-Origin: *\r\n
+Action.c(217):     Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\n
+Action.c(217):     SOAPAction: ""\r\n
+Action.c(217):     Content-Type: text/xml;charset=utf-8\r\n
+Action.c(217):     Content-Length: 415\r\n
+Action.c(217):     Date: Mon, 02 May 2022 15:31:59 GMT\r\n
+Action.c(217):     \r\n
+Action.c(217): t=7268360ms: 415-byte response body for "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest" (RelFrameId=1, Internal ID=836)
+Action.c(217):     <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:He
+Action.c(217):     ader/><SOAP-ENV:Body><ns2:AccountCreateResponse xmlns:ns2="com.advantage.online.store.acco
+Action.c(217):     untservice"><ns2:StatusMessage><ns2:success>true</ns2:success><ns2:userId>315163837</ns2:u
+Action.c(217):     serId><ns2:reason>New user created successfully.</ns2:reason></ns2:StatusMessage></ns2:Acc
+Action.c(217):     ountCreateResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
+Action.c(217): t=7268361ms: Request done "http://18.212.178.84:8081//accountservice/ws/AccountCreateRequest"  	[MsgId: MMSG-26000]
+Action.c(217): Registered web_reg_find successful for "Text=New user created successfully." (count=1)  	[MsgId: MMSG-26364]
+Action.c(217): web_custom_request("AccountCreateRequest") was successful, 415 body bytes, 619 header bytes  	[MsgId: MMSG-26386]
+Action.c(246): Notify: Transaction "Register" ended with a "Pass" status (Duration: 30,6351 Think Time: 30,0064 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(253): Notify: Transaction "02_User_Registration" ended with a "Pass" status (Duration: 39,5837 Think Time: 35,0188 Wasted Time: 0,0080).	[MsgId: MMSG-16870]
+Ending action Action.	[MsgId: MMSG-15918]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=7268362ms: Closed connection [0] to 18.212.178.84:8081 after completing 1 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 14 (thread 5408), ended OK."	[MsgId: MMSG-10695]

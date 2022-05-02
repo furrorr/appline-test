@@ -1,0 +1,474 @@
+Action.c(165):                     </div>\n
+Action.c(165):                     <div class="emptyCell">\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):                 <div class="rowSection">\n
+Action.c(165):                     <div id="laptopsImg" aria-label="LaptopsCategory" ng-click="redirect('/cat
+Action.c(165):     egory/' + categories[0].categoryName + '/' + categories[0].categoryId)" class="laptopImg c
+Action.c(165):     ategoryCell"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          a-sec-back-img="{{categories[0].managedImageId}}">\n
+Action.c(165):                         <div class="shop_now_slider">\n
+Action.c(165):                             <span id="laptopsTxt" aria-label="LaptopsCategoryTxt" class="shop_
+Action.c(165):     now roboto-bold" role="link" href="javascript:void(0)">{{::categories[0].categoryName | up
+Action.c(165):     percase}}</span>\n
+Action.c(165):                             <label id="laptopsLink" class="shop_nowSub roboto-regular" transla
+Action.c(165):     te="Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div id="miceImg" aria-label="MiceCategory" ng-click="redirect('/category/
+Action.c(165):     ' + categories[4].categoryName + '/' + categories[4].categoryId)" class="miceImg categoryC
+Action.c(165):     ell"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          a-sec-back-img="{{categories[4].managedImageId}}">\n
+Action.c(165):                         <div class="shop_now_slider">\n
+Action.c(165):                             <span id="miceTxt" aria-label="MiceCategoryTxt" class="shop_now ro
+Action.c(165):     boto-bold" role="link" href="javascript:void(0)">{{::categories[4].categoryName | uppercas
+Action.c(165):     e}}</span>\n
+Action.c(165):                             <label id="miceLink" class="shop_nowSub roboto-regular" translate=
+Action.c(165):     "Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div id="headphonesImg" aria-label="HeadphonesCategory" ng-click="redirect
+Action.c(165):     ('/category/' + categories[1].categoryName + '/' + categories[1].categoryId)" class="twoRo
+Action.c(165):     ws categoryCell"\n
+Action.c(165):                          role="link" href="javascript:void(0)"\n
+Action.c(165):                          a-sec-back-img="{{categories[1].managedImageId}}">\n
+Action.c(165):                         <div class="shop_now_slider">\n
+Action.c(165):                             <span id="headphonesTxt" aria-label="HeadphonesCategoryTxt" class=
+Action.c(165):     "shop_now roboto-bold" role="link" href="javascript:void(0)">{{::categories[1].categoryNam
+Action.c(165):     e | uppercase}}</span>\n
+Action.c(165):                             <label id="headphonesLink" class="shop_nowSub roboto-regular" tran
+Action.c(165):     slate="Shop_Now"></label>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end five pictures -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- SPACIAL OFFER -->\n
+Action.c(165):         <article id="special_offer_items">\n
+Action.c(165):             <h3 class="roboto-regular center" translate="SPACIAL_OFFER"></h3>\n
+Action.c(165):             <div>\n
+Action.c(165):                 <div id="img-special-offer">\n
+Action.c(165):                     <figure>\n
+Action.c(165):                         <img src="css/images/Special-offer.jpg" alt="Special-offer">\n
+Action.c(165):                     </figure>\n
+Action.c(165):                 </div>\n
+Action.c(165):                 <div id="div-special-offer">\n
+Action.c(165):                     <div>\n
+Action.c(165):                         <span class="roboto-light"> {{specialOffer[0].promotionHeader}} </span
+Action.c(165):     >\n
+Action.c(165):     \n
+Action.c(165):                         <h1 class="roboto-thin"> {{specialOffer[0].product.productName}} </h1>
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):                         <p> {{specialOffer[0].promotionSubHeader}} </p>\n
+Action.c(165):                         <a href="#/product/{{specialOffer[0].product.id}}">\n
+Action.c(165):                             <button id="see_offer_btn" translate="SEE_OFFER" role="button"></b
+Action.c(165):     utton>\n
+Action.c(165):                         </a>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end SPACIAL OFFER -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- check directive -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- slider -->\n
+Action.c(165):         <article id="slider_explore_now">\n
+Action.c(165):             <div class="slider">\n
+Action.c(165):                 <div class="slider-length transition">\n
+Action.c(165):                     <div ng-repeat="img in images" class="imgSection">\n
+Action.c(165):                         <div class="imgContainer">\n
+Action.c(165):                             <img data-ng-src="../../css/images/{{img.imageName}}"\n
+Action.c(165):                                  ng-click="redirect('/category/' + categories[img.categoryId].
+Action.c(165):     categoryId)"/>\n
+Action.c(165):                         </div>\n
+Action.c(165):                         <div class="container">\n
+Action.c(165):                             <h2 ng-bind-html='img.message | trustHtml' class="roboto-light"></
+Action.c(165):     h2>\n
+Action.c(165):                             <button name="explore_now_btn" ng-click="redirect('/category/' + c
+Action.c(165):     ategories[img.categoryId].categoryName + '/' + categories[img.categoryId].categoryId)"\n
+Action.c(165):                                     translate="EXPLORE_NOW" role="button"></button>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div class="imgSection">\n
+Action.c(165):                         <div class="imgContainer">\n
+Action.c(165):                             <img data-ng-src="../../css/images/{{images[0].imageName}}"\n
+Action.c(165):                                  ng-click="redirect('/category/' + categories[img.categoryId].
+Action.c(165):     categoryName + '/' + categories[0].categoryId)"/>\n
+Action.c(165):                         </div>\n
+Action.c(165):                         <div class="container">\n
+Action.c(165):                             <h2 class="roboto-light">{{images[0].message}}</h2>\n
+Action.c(165):                             <button name="explore_now_btn" ng-click="redirect('/category/' + c
+Action.c(165):     ategories[img.categoryId].categoryName + '/' + categories[0].categoryId)"\n
+Action.c(165):                                     class="white" translate="EXPLORE_NOW" role="button"></butt
+Action.c(165):     on>\n
+Action.c(165):                         </div>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):                 <div class="slider-steps">\n
+Action.c(165):                     <span href="javascript:void(0)" role="link"\n
+Action.c(165):                             ng-repeat="img in images" ng-class="{selected : ({{img.imageId ===
+Action.c(165):      0}})}"></span>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end slider -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <!-- POPULAR ITEMS\n
+Action.c(165):         <popular-items-drtv popular-products="popularProducts"></popular-items-drtv>\n
+Action.c(165):         -->\n
+Action.c(165):     \n
+Action.c(165):         <article id="popular_items">\n
+Action.c(165):             <h3 class="roboto-regular center" translate="POPULAR_ITEMS"></h3>\n
+Action.c(165):     \n
+Action.c(165):             <div class="grid-table center">\n
+Action.c(165):                 <div name="popular_item_{{product.id}}" ng-repeat="product in popularProducts"
+Action.c(165):      ng-if="popularProducts.length > 0">\n
+Action.c(165):                     <figure>\n
+Action.c(165):                         <img name="popular_item_{{product.id}}_img" data-ng-src="{{product.ima
+Action.c(165):     geUrl}}" alt="Special-offer"\n
+Action.c(165):                             href="javascript:void(0)" role="link">\n
+Action.c(165):                     </figure>\n
+Action.c(165):                     <p name="popular_item_{{product.id}}_name" class="center productName robot
+Action.c(165):     o-medium">{{product.productName | uppercase}}</p>\n
+Action.c(165):                     <a href="#/product/{{product.id}}" role="link">\n
+Action.c(165):                         <label id="details_{{product.id}}" class="shop_nowSub viewDetail" tran
+Action.c(165):     slate="View_details"></label>\n
+Action.c(165):                     </a>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <!-- end POPULAR ITEMS -->\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):         <article id="contact_us">\n
+Action.c(165):     \n
+Action.c(165):             <div data-ng-hide="supportSuccess">\n
+Action.c(165):     \n
+Action.c(165):                 <div id="supportCover">\n
+Action.c(165):     \n
+Action.c(165):                     <div>\n
+Action.c(165):     \n
+Action.c(165):                         <div name="chat_with_us" class="chat" data-ng-click="openChat()">\n
+Action.c(165):     \n
+Action.c(165):                             <div>\n
+Action.c(165):                                 <img id="chatLogo" src="../../css/images/chat_logo.png" alt="c
+Action.c(165):     hat logo" />\n
+Action.c(165):                                 <label class="roboto-bold" translate="CHAT_WITH_US"></label>\n
+Action.c(165):                             </div>\n
+Action.c(165):     \n
+Action.c(165):                         </div>\n
+Action.c(165):     \n
+Action.c(165):                     </div>\n
+Action.c(165):                     <div>\n
+Action.c(165):     \n
+Action.c(165):                         <h1 class="roboto-bold contact_us" translate="CONTACT_US"></h1>\n
+Action.c(165):     \n
+Action.c(165):                         <sec-form>\n
+Action.c(165):     \n
+Action.c(165):                             <div class="splitter">\n
+Action.c(165):                                 <div class="inputMargin">\n
+Action.c(165):                                     <sec-view a-hint="Category"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               a-type="select"\n
+Action.c(165):                                               a-show="categoryName"\n
+Action.c(165):                                               sec-select-options="categories"\n
+Action.c(165):                                               sec-model="categories.category"\n
+Action.c(165):                                               sec-select-change="categoryChange(value)">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):                                     <sec-view a-hint="Product"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               a-type="select"\n
+Action.c(165):                                               a-show="productName"\n
+Action.c(165):                                               sec-model="supportModel.product"\n
+Action.c(165):                                               sec-select-options="products"\n
+Action.c(165):                                               sec-select-change="productChange(value)">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):                                     <sec-view a-hint="{{'Email' | translate}}"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               sec-model="supportModel.email"\n
+Action.c(165):                                               sec-require="mainCtrl.getRequire('Email')">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):                                 </div>\n
+Action.c(165):                             </div>\n
+Action.c(165):                             <div class="splitter" >\n
+Action.c(165):                                 <div class="smollPadding  margin-right">\n
+Action.c(165):                                     <label class="Subject"><span class="star">*</span> {{'Subj
+Action.c(165):     ect' | translate }}</label>\n
+Action.c(165):     \n
+Action.c(165):                                     <sec-view class="textarea"\n
+Action.c(165):                                               a-hint="subjectTextarea"\n
+Action.c(165):                                               a-hint-description="ContactUs"\n
+Action.c(165):                                               a-type="textarea"\n
+Action.c(165):                                               a-star="false"\n
+Action.c(165):                                               sec-model="supportModel.subject"\n
+Action.c(165):                                               sec-require="mainCtrl.getRequire('Email')">\n
+Action.c(165):                                     </sec-view>\n
+Action.c(165):     \n
+Action.c(165):                                     <sec-sender a-value="{{'SEND' | translate}}" sec-send="sen
+Action.c(165):     dSupportEmail()"></sec-sender>\n
+Action.c(165):     \n
+Action.c(165):                                 </div>\n
+Action.c(165):                             </div>\n
+Action.c(165):     \n
+Action.c(165):                             <label class="{{registerAnswer.class}} invalid center"> {{register
+Action.c(165):     Answer.message}} </label>\n
+Action.c(165):     \n
+Action.c(165):                         </sec-form>\n
+Action.c(165):                     </div>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):     \n
+Action.c(165):             <div id="registerSuccessCover" data-ng-show="supportSuccess">\n
+Action.c(165):                 <div class="center">\n
+Action.c(165):                     <p class="roboto-regular successMessage">{{ registerAnswer.message }}</p>\n
+Action.c(165):                     <br/>\n
+Action.c(165):                     <a class="a-button" href="#/" ng-click="continueShopping()" > {{ 'CONTINUE
+Action.c(165):     _SHOPPING' | translate}} </a>\n
+Action.c(165):                 </div>\n
+Action.c(165):             </div>\n
+Action.c(165):         </article>\n
+Action.c(165):         <div data-ng-if="mainCtrl.config.slowPage">\n
+Action.c(165):     \n
+Action.c(165):             <script href="" type="text/javascript"></script>\n
+Action.c(165):             <script href="" type="text/javascript"></script>\n
+Action.c(165):             <script href="" type="text/javascript"></script>\n
+Action.c(165):     \n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):         
+Action.c(165): Found resource "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" in HTML "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(165): The request to server https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" is done with headers:
+Action.c(165):     :method = GET
+Action.c(165):     :scheme = https
+Action.c(165):     :path = /app/views/css/images/Special-offer.jpg
+Action.c(165):     :authority = www.advantageonlineshopping.com
+Action.c(165):     Referer = https://www.advantageonlineshopping.com/app/views/home-page.html
+Action.c(165):     Sec-Fetch-Site = same-origin
+Action.c(165):     Sec-Fetch-Mode = cors
+Action.c(165):     Sec-Fetch-Dest = empty
+Action.c(165):     DNT = 1
+Action.c(165):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(165):     sec-ch-ua-mobile = ?0
+Action.c(165):     sec-ch-ua-platform = "Windows"
+Action.c(165):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(165):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(165):     Accept-Encoding = gzip, deflate
+Action.c(165):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(165):     Accept = */*
+Action.c(165):     cookie = _gat=1
+Action.c(165): Found resource "https://www.advantageonlineshopping.com/css/images/chat_logo.png" in HTML "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(165): The request to server https://www.advantageonlineshopping.com/css/images/chat_logo.png" is done with headers:
+Action.c(165):     :method = GET
+Action.c(165):     :scheme = https
+Action.c(165):     :path = /css/images/chat_logo.png
+Action.c(165):     :authority = www.advantageonlineshopping.com
+Action.c(165):     Referer = https://www.advantageonlineshopping.com/app/views/home-page.html
+Action.c(165):     Sec-Fetch-Site = same-origin
+Action.c(165):     Sec-Fetch-Mode = cors
+Action.c(165):     Sec-Fetch-Dest = empty
+Action.c(165):     DNT = 1
+Action.c(165):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(165):     sec-ch-ua-mobile = ?0
+Action.c(165):     sec-ch-ua-platform = "Windows"
+Action.c(165):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(165):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(165):     Accept-Encoding = gzip, deflate
+Action.c(165):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(165):     Accept = */*
+Action.c(165):     cookie = _gat=1
+Action.c(165): Found resource "https://www.advantageonlineshopping.com/app/views/" in HTML "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(165): The request to server https://www.advantageonlineshopping.com/app/views/" is done with headers:
+Action.c(165):     :method = GET
+Action.c(165):     :scheme = https
+Action.c(165):     :path = /app/views/
+Action.c(165):     :authority = www.advantageonlineshopping.com
+Action.c(165):     Referer = https://www.advantageonlineshopping.com/app/views/home-page.html
+Action.c(165):     Sec-Fetch-Site = same-origin
+Action.c(165):     Sec-Fetch-Mode = cors
+Action.c(165):     Sec-Fetch-Dest = empty
+Action.c(165):     DNT = 1
+Action.c(165):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(165):     sec-ch-ua-mobile = ?0
+Action.c(165):     sec-ch-ua-platform = "Windows"
+Action.c(165):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(165):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(165):     Accept-Encoding = gzip, deflate
+Action.c(165):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(165):     Accept = */*
+Action.c(165):     cookie = _gat=1
+Action.c(165): t=701466ms: 175-byte DECODED response body for "https://www.advantageonlineshopping.com/app/views/home-page.html" (RelFrameId=1, Internal ID=259)
+Action.c(165):         <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):             <img src="" alt="">\n
+Action.c(165):     \n
+Action.c(165):         </div>\n
+Action.c(165):     \n
+Action.c(165):     </section>\n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):     \n
+Action.c(165):     <social-media-drtv></social-media-drtv>\n
+Action.c(165): t=701467ms: Request done "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=701564ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+t=701567ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=701567ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=701568ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=701569ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=701570ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 1 (thread 6492), ended OK."	[MsgId: MMSG-10695]
+Vuser 4 (thread 18600), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 8 (thread 16936), ended OK."	[MsgId: MMSG-10695]
+Vuser 5 (thread 17752), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 0 (thread 4088), ended OK."	[MsgId: MMSG-10695]
+Vuser 3 (thread 4468), ended OK."	[MsgId: MMSG-10695]
+Action.c(165): t=701813ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/chat_logo.png" (RelFrameId=, Internal ID=261)
+Action.c(165):     HTTP/2.0 200\r\n
+Action.c(165):     Status: 200\r\n
+Action.c(165):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(165):     date: Fri, 29 Apr 2022 16:49:21 GMT\r\n
+Action.c(165):     content-type: image/png\r\n
+Action.c(165):     content-length: 3003\r\n
+Action.c(165):     accept-ranges: bytes\r\n
+Action.c(165):     etag: W/"3003-1641810512000"\r\n
+Action.c(165):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(165):     cache-control: max-age=864000\r\n
+Action.c(165):     expires: Mon, 09 May 2022 16:49:21 GMT\r\n
+Action.c(165):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(165):     \r\n
+Action.c(165): t=701814ms: 3003-byte response body for "https://www.advantageonlineshopping.com/css/images/chat_logo.png" (RelFrameId=, Internal ID=261)
+Action.c(165): t=701814ms: Request done "https://www.advantageonlineshopping.com/css/images/chat_logo.png"  	[MsgId: MMSG-26000]
+Action.c(165): t=701814ms: 321-byte response headers for "https://www.advantageonlineshopping.com/app/views/" (RelFrameId=, Internal ID=262)
+Action.c(165):     HTTP/2.0 404\r\n
+Action.c(165):     Status: 404\r\n
+Action.c(165):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(165):     date: Fri, 29 Apr 2022 16:49:21 GMT\r\n
+Action.c(165):     content-type: text/html;charset=utf-8\r\n
+Action.c(165):     cache-control: max-age=0\r\n
+Action.c(165):     expires: Fri, 29 Apr 2022 16:49:21 GMT\r\n
+Action.c(165):     content-language: ru\r\n
+Action.c(165):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(165):     content-encoding: gzip\r\n
+Action.c(165):     \r\n
+Action.c(165): t=701815ms: 471-byte ENCODED response body received for "https://www.advantageonlineshopping.com/app/views/" (RelFrameId=, Internal ID=262)
+Action.c(165): t=701815ms: 747-byte DECODED response body for "https://www.advantageonlineshopping.com/app/views/" (RelFrameId=, Internal ID=262)
+Action.c(165):     <!doctype html><html lang="ru"><head><title>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 
+Action.c(165):     \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5\xD0\xBD\xD0\xBE</title><style type="text/css">bod
+Action.c(165):     y {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D
+Action.c(165):     76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a 
+Action.c(165):     {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+Action.c(165):     y><h1>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5
+Action.c(165):     \xD0\xBD\xD0\xBE</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> 
+Action.c(165):     &#47;app&#47;views&#47;</p><p><b>Description</b> The origin server did not find a current 
+Action.c(165):     representation for the target resource or is not willing to disclose that one exists.</p><
+Action.c(165):     hr class="line" /><h3>Apache Tomcat/9.0.30</h3></body></html>
+Action.c(165): Warning -26627: HTTP Status-Code=404 (Not Found) for "https://www.advantageonlineshopping.com/app/views/"  	[MsgId: MWAR-26627]
+Action.c(165): t=701815ms: Request done "https://www.advantageonlineshopping.com/app/views/"  	[MsgId: MMSG-26000]
+Action.c(165): t=701824ms: 321-byte response headers for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=260)
+Action.c(165):     HTTP/2.0 404\r\n
+Action.c(165):     Status: 404\r\n
+Action.c(165):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(165):     date: Fri, 29 Apr 2022 16:49:21 GMT\r\n
+Action.c(165):     content-type: text/html;charset=utf-8\r\n
+Action.c(165):     cache-control: max-age=0\r\n
+Action.c(165):     expires: Fri, 29 Apr 2022 16:49:21 GMT\r\n
+Action.c(165):     content-language: ru\r\n
+Action.c(165):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(165):     content-encoding: gzip\r\n
+Action.c(165):     \r\n
+Action.c(165): t=701825ms: 493-byte ENCODED response body received for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=260)
+Action.c(165): t=701825ms: 783-byte DECODED response body for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=260)
+Action.c(165):     <!doctype html><html lang="ru"><head><title>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 
+Action.c(165):     \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5\xD0\xBD\xD0\xBE</title><style type="text/css">bod
+Action.c(165):     y {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D
+Action.c(165):     76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a 
+Action.c(165):     {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+Action.c(165):     y><h1>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5
+Action.c(165):     \xD0\xBD\xD0\xBE</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> 
+Action.c(165):     &#47;app&#47;views&#47;css&#47;images&#47;Special-offer.jpg</p><p><b>Description</b> The o
+Action.c(165):     rigin server did not find a current representation for the target resource or is not willi
+Action.c(165):     ng to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.30</h3></body>
+Action.c(165):     </html>
+Action.c(165): Warning -26627: HTTP Status-Code=404 (Not Found) for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg"  	[MsgId: MWAR-26627]
+Action.c(165): t=701826ms: Request done "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg"  	[MsgId: MMSG-26000]
+Action.c(165): web_url("home-page.html") highest severity level was "warning", 6199 body bytes, 1435 header bytes  	[MsgId: MMSG-26388]
+Action.c(175): Notify: Transaction "Home" ended with a "Pass" status (Duration: 11,0469 Wasted Time: 0,0131).	[MsgId: MMSG-16871]
+Action.c(182): lr_think_time: 5,00 seconds.	[MsgId: MMSG-15948]
+Action.c(215): Notify: Transaction "Register" ended with a "Stop" status (Duration: 18,7306).	[MsgId: MMSG-16873]
+Action.c(182): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 13,1841 Wasted Time: 0,0131).	[MsgId: MMSG-16871]
+Action.c(215): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 34,2633 Think Time: 5,0084 Wasted Time: 0,0069).	[MsgId: MMSG-16870]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(215): Notify: Transaction "Register" ended with a "Stop" status (Duration: 13,8512).	[MsgId: MMSG-16873]
+Action.c(215): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 29,4909 Think Time: 5,0112 Wasted Time: 0,0067).	[MsgId: MMSG-16870]
+Action.c(182): t=703964ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(215): t=703965ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 2 (thread 17500), ended OK."	[MsgId: MMSG-10695]
+Vuser 7 (thread 3696), ended OK."	[MsgId: MMSG-10695]
+Action.c(215): t=703969ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 6 (thread 16504), ended OK."	[MsgId: MMSG-10695]

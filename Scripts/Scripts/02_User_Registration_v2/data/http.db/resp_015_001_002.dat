@@ -1,0 +1,509 @@
+{
+    "api_url": "https://heike.northghost.com",
+    "servers": [
+        {
+            "address": "ext-zx-ex-us-njs-pr-p-2.northghost.com",
+            "country": "us",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-us-njs-pr-p-1.northghost.com",
+            "country": "us",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-ca-yvr-pr-p-2.northghost.com",
+            "country": "ca",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ru-ams-pr-p-5.northghost.com",
+            "country": "ru",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-16.northghost.com",
+            "country": "de",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-10.northghost.com",
+            "country": "nl",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-gb-lon-pr-p-9.northghost.com",
+            "country": "gb",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-ca-yvr-pr-p-10.northghost.com",
+            "country": "ca",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-gb-lon-pr-p-7.northghost.com",
+            "country": "gb",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-9.northghost.com",
+            "country": "de",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-15.northghost.com",
+            "country": "de",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-7.northghost.com",
+            "country": "nl",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-8.northghost.com",
+            "country": "nl",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-9.northghost.com",
+            "country": "nl",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-5.northghost.com",
+            "country": "de",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-do-ex-us-sfo-st-v-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-11.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-fr-par-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ru-ams-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-gb-lon-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-13.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-6.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-gb-lon-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-ca-yvr-pr-p-8.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-fr-par-pr-p-4.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-fr-par-pr-p-6.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-fr-par-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-6.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-gb-lon-pr-p-10.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ru-ams-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ca-mon-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-fr-par-pr-p-7.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-4.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ru-ams-pr-p-4.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-4.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-us-sjc-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-7.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ca-mon-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-nl-ams-pr-p-5.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-us-sjc-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ca-mon-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-gb-lon-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-tb-ex-ru-ams-pr-p-5.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-8.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-gb-lon-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-ca-yvr-pr-p-6.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-ca-yvr-pr-p-7.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-fr-par-pr-p-5.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-ca-yvr-pr-p-9.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-gb-lon-pr-p-6.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-nl-ams-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-tb-ex-ru-ams-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-nl-ams-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-tb-ex-ru-ams-pr-p-4.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-ca-yvr-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-us-sjc-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-gb-lon-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-nl-ams-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-tb-ex-ru-ams-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-us-sjc-pr-p-4.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-ru-ams-pr-p-1.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-fr-par-pr-p-2.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-nl-ams-pr-p-4.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-us-sjc-pr-p-5.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-gb-lon-pr-p-8.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-zx-ex-de-fra-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-ms-ex-nl-ams-pr-p-5.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        },
+        {
+            "address": "ext-tb-ex-ru-ams-pr-p-3.northghost.com",
+            "country": "",
+            "port": 443,
+            "priority": 1000,
+            "scheme": "https"
+        }
+    ]
+}

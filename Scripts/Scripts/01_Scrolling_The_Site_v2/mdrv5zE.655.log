@@ -1,0 +1,264 @@
+Action.c(218):     rl | getImageId}}">\n
+Action.c(218):                     </figure>\n
+Action.c(218):                     <div id="coverImages" ng-show="imagesArray.length > 1">\n
+Action.c(218):                         <div id="lengthAllImages"> <!--regular font-->\n
+Action.c(218):                             <div class="imageAlias" data-ng-click="changeImage(img)"\n
+Action.c(218):                                  data-ng-repeat="img in imagesArray">\n
+Action.c(218):                                 <img alt="" data-ng-src="/catalog/fetchImage?image_id={{img | 
+Action.c(218):     getImageId}}">\n
+Action.c(218):                             </div>\n
+Action.c(218):                         </div>\n
+Action.c(218):                     </div>\n
+Action.c(218):                 </div>\n
+Action.c(218):                 <div id="Description" class="half">\n
+Action.c(218):                     <h1 class="roboto-regular screen768"> {{::product.productName | uppercase}
+Action.c(218):     } </h1>\n
+Action.c(218):     \n
+Action.c(218):                     <h2 class="roboto-thin screen768"> {{product.price | currency:'$'}}\n
+Action.c(218):                     <span class="roboto-medium" data-ng-show="product.productStatus == 'OutOfS
+Action.c(218):     tock'" translate="SOUL_OUT"></span>\n
+Action.c(218):                     </h2>\n
+Action.c(218):     \n
+Action.c(218):                     <p class="roboto-light"> {{::product.description }} </p>\n
+Action.c(218):     \n
+Action.c(218):                     <div id="productProperties">\n
+Action.c(218):                         <div class="colors" ng-if="product.colors.length > 0">\n
+Action.c(218):                             <h2 translate="Color" class="Colors roboto-light" class="roboto-li
+Action.c(218):     ght"></h2>\n
+Action.c(218):                             <!--If you are confused by the classes 'bunny rabbit' read this->-
+Action.c(218):     ->\n
+Action.c(218):                             <!--Testing issue over here. Since there are two identical element
+Action.c(218):     s here  'leanFT ' gets confused, this is the reason for this classes.-->\n
+Action.c(218):                             <div ng-show="!firstImageToShow">\n
+Action.c(218):                                 <span title="{{color.name}}"\n
+Action.c(218):                                       id="rabbit"\n
+Action.c(218):                                       data-ng-repeat="color in [] | sortArrayByColorName:produ
+Action.c(218):     ct.colors"\n
+Action.c(218):                                       class="rabbit productColor"\n
+Action.c(218):                                       data-ng-hide="color.code == 'ABCDEF'" data-ng-style="col
+Action.c(218):     or.code == 'FFFFFF' ?\n
+Action.c(218):                                               {'backgroundColor': '#' + color.code, 'border': 
+Action.c(218):     'solid 1px #9d9d9d' } :\n
+Action.c(218):                                               {'backgroundColor': '#' + color.code, 'border': 
+Action.c(218):     'solid 1px transparent'}"\n
+Action.c(218):                                       data-ng-class='{ colorSelected : colorSelected.name == c
+Action.c(218):     olor.name , {{color.name}} : colorSelected.name} '\n
+Action.c(218):                                       data-ng-click="setColor(color)">\n
+Action.c(218):                                 </span>\n
+Action.c(218):                             </div>\n
+Action.c(218):                             <div ng-show="firstImageToShow">\n
+Action.c(218):                                 <span title="{{color.name}}"\n
+Action.c(218):                                       id="bunny"\n
+Action.c(218):                                       data-ng-repeat="color in colors"\n
+Action.c(218):                                       class="bunny productColor"\n
+Action.c(218):                                       data-ng-hide="color.code == 'ABCDEF'" data-ng-style="col
+Action.c(218):     or.code == 'FFFFFF' ?\n
+Action.c(218):                                               {'backgroundColor': '#' + color.code, 'border': 
+Action.c(218):     'solid 1px #9d9d9d' } :\n
+Action.c(218):                                               {'backgroundColor': '#' + color.code, 'border': 
+Action.c(218):     'solid 1px transparent'}"\n
+Action.c(218):                                       data-ng-class='{ colorSelected : colorSelected.name == c
+Action.c(218):     olor.name , {{color.name}} : colorSelected.name} '\n
+Action.c(218):                                       data-ng-click="setColor(color, $event)">\n
+Action.c(218):                                 </span>\n
+Action.c(218):                             </div>\n
+Action.c(218):                         </div>\n
+Action.c(218):                         <div class="smoolMargin">\n
+Action.c(218):                             <label class="Quantity roboto-light" translate="Quantity:"></label
+Action.c(218):     >\n
+Action.c(218):                             <e-sec-plus-minus num-attr="quantity" a-disable="product.productSt
+Action.c(218):     atus == 'OutOfStock'"></e-sec-plus-minus>\n
+Action.c(218):                         </div>\n
+Action.c(218):                         <div class="option notPromotionCheckbox" data-ng-show="warrantyPropert
+Action.c(218):     ies.enableWarranty && product.categoryId == 1">\n
+Action.c(218):                             <input style="z-index: 999;top:8px" name="purchase_warranty" data-
+Action.c(218):     ng-model="warrantyCheckbox" type="checkbox"\n
+Action.c(218):                                    data-ng-click="addWarrenty()">\n
+Action.c(218):                             <label style="top:-5px" class="Quantity roboto-light ng-scope" tra
+Action.c(218):     nslate="add_warranty"></label>\n
+Action.c(218):                             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+Action.c(218):      xmlns:xlink="http://www.w3.org/1999/xlink"  width="24px" height="24px" x="0px" y="0px"\n
+Action.c(218):                                  viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:spa
+Action.c(218):     ce="preserve">\n
+Action.c(218):     <path fill="#666666" d="M8,14.4c-3.5,0-6.4-2.9-6.4-6.4S4.5,1.6,8,1.6s6.4,2.9,6.4,6.4S11.5,
+Action.c(218):     14.4,8,14.4z M8,0C3.6,0,0,3.6,0,8\n
+Action.c(218):     \ts3.6,8,8,8s8-3.6,8-8S12.4,0,8,0z M7,7h2v5H7V7z M7,6V4h2v2H7z"/>\n
+Action.c(218):     </svg>                        <h2 style="    float: right;top: -3px;padding: 0; font-size:
+Action.c(218):      20px;" class="roboto-thin screen768 ng-binding">{{::warrantyPrice | currency:'$'}}</h2>\n
+Action.c(218):                         </div>\n
+Action.c(218):                         <div class="fixedBtn">\n
+Action.c(218):                             <button name="save_to_cart" class="roboto-medium" role="button"\n
+Action.c(218):                                     data-ng-class='{ disable : product.productStatus == "OutOf
+Action.c(218):     Stock" } '\n
+Action.c(218):                                     translate="ADD_TO_CART"\n
+Action.c(218):                                     data-ng-click="addToCart(product.productStatus == 'OutOfSt
+Action.c(218):     ock')">\n
+Action.c(218):                                 <div class="fixedBtn" data-ng-if="pageState != 'edit'">\n
+Action.c(218):                                     <span translate="ADD_TO_CART"></span>\n
+Action.c(218):                                 </div>\n
+Action.c(218):                                 <div class="fixedBtn" data-ng-if="pageState == 'edit'">\n
+Action.c(218):                                     <span translate="UPDATE_CART"></span>\n
+Action.c(218):                                 </div>\n
+Action.c(218):                             </button>\n
+Action.c(218):                         </div>\n
+Action.c(218):                         <label data-ng-class="message._class"> {{message.text}}</label>\n
+Action.c(218):                     </div>\n
+Action.c(218):                 </div>\n
+Action.c(218):             </div>\n
+Action.c(218):     \n
+Action.c(218):         </article>\n
+Action.c(218):         <!--data-ng-class="{ topSpace : product.images.length > 1 }"-->\n
+Action.c(218):         <div id="separator"></div>\n
+Action.c(218):     \n
+Action.c(218):         <article ng-if="showVideo" class="max-width" data-ng-switch="haveInternet" >\n
+Action.c(218):             <div ng-bind-html="srcV1">\n
+Action.c(218):             </div>\n
+Action.c(218):         </article>\n
+Action.c(218):     \n
+Action.c(218):         <article class="max-width " >\n
+Action.c(218):             <h2 class="roboto-regular product_specifications" translate="PRODUCT_SPECIFICATION
+Action.c(218):     S"></h2>\n
+Action.c(218):     \n
+Action.c(218):             <div class="roboto-light list" ng-repeat="attr in product_attributes">\n
+Action.c(218):                 <label class="attr">{{ attr.attributeName | uppercase}}</label>\n
+Action.c(218):                 <label class="value">{{ attr.attributeValue }}</label>\n
+Action.c(218):             </div>\n
+Action.c(218):         </article>\n
+Action.c(218):     \n
+Action.c(218):     </section>\n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     <social-media-drtv></social-media-drtv>\n
+Action.c(218):     \n
+Action.c(218):     <div class="trickProductBtn"></div>\n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218):     \n
+Action.c(218): Found resource "https://www.advantageonlineshopping.com/css/images/review_right.png" in HTML "https://www.advantageonlineshopping.com/app/views/product-page.html"  	[MsgId: MMSG-26659]
+Action.c(218): The request to server https://www.advantageonlineshopping.com/css/images/review_right.png" is done with headers:
+Action.c(218):     :method = GET
+Action.c(218):     :scheme = https
+Action.c(218):     :path = /css/images/review_right.png
+Action.c(218):     :authority = www.advantageonlineshopping.com
+Action.c(218):     Referer = https://www.advantageonlineshopping.com/app/views/product-page.html
+Action.c(218):     Sec-Fetch-Site = same-origin
+Action.c(218):     Sec-Fetch-Mode = cors
+Action.c(218):     Sec-Fetch-Dest = empty
+Action.c(218):     DNT = 1
+Action.c(218):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(218):     sec-ch-ua-mobile = ?0
+Action.c(218):     sec-ch-ua-platform = "Windows"
+Action.c(218):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(218):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(218):     Accept-Encoding = gzip, deflate, br
+Action.c(218):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(218):     Accept = */*
+Action.c(218):     cookie = _gat=1
+Action.c(218): Found resource "https://www.advantageonlineshopping.com/css/images/reviewUser.png" in HTML "https://www.advantageonlineshopping.com/app/views/product-page.html"  	[MsgId: MMSG-26659]
+Action.c(218): The request to server https://www.advantageonlineshopping.com/css/images/reviewUser.png" is done with headers:
+Action.c(218):     :method = GET
+Action.c(218):     :scheme = https
+Action.c(218):     :path = /css/images/reviewUser.png
+Action.c(218):     :authority = www.advantageonlineshopping.com
+Action.c(218):     Referer = https://www.advantageonlineshopping.com/app/views/product-page.html
+Action.c(218):     Sec-Fetch-Site = same-origin
+Action.c(218):     Sec-Fetch-Mode = cors
+Action.c(218):     Sec-Fetch-Dest = empty
+Action.c(218):     DNT = 1
+Action.c(218):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(218):     sec-ch-ua-mobile = ?0
+Action.c(218):     sec-ch-ua-platform = "Windows"
+Action.c(218):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(218):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(218):     Accept-Encoding = gzip, deflate, br
+Action.c(218):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(218):     Accept = */*
+Action.c(218):     cookie = _gat=1
+Action.c(218): Found resource "https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png" in HTML "https://www.advantageonlineshopping.com/app/views/product-page.html"  	[MsgId: MMSG-26659]
+Action.c(218): The request to server https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png" is done with headers:
+Action.c(218):     :method = GET
+Action.c(218):     :scheme = https
+Action.c(218):     :path = /css/images/review_Left_disabled.png
+Action.c(218):     :authority = www.advantageonlineshopping.com
+Action.c(218):     Referer = https://www.advantageonlineshopping.com/app/views/product-page.html
+Action.c(218):     Sec-Fetch-Site = same-origin
+Action.c(218):     Sec-Fetch-Mode = cors
+Action.c(218):     Sec-Fetch-Dest = empty
+Action.c(218):     DNT = 1
+Action.c(218):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(218):     sec-ch-ua-mobile = ?0
+Action.c(218):     sec-ch-ua-platform = "Windows"
+Action.c(218):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(218):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(218):     Accept-Encoding = gzip, deflate, br
+Action.c(218):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(218):     Accept = */*
+Action.c(218):     cookie = _gat=1
+Action.c(218): t=7256243ms: Request done "https://www.advantageonlineshopping.com/app/views/product-page.html"  	[MsgId: MMSG-26000]
+Action.c(218): t=7256396ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/review_right.png" (RelFrameId=, Internal ID=1171)
+Action.c(218):     HTTP/2.0 200\r\n
+Action.c(218):     Status: 200\r\n
+Action.c(218):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(218):     date: Wed, 27 Apr 2022 00:04:34 GMT\r\n
+Action.c(218):     content-type: image/png\r\n
+Action.c(218):     content-length: 1075\r\n
+Action.c(218):     accept-ranges: bytes\r\n
+Action.c(218):     etag: W/"1075-1641810512000"\r\n
+Action.c(218):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(218):     cache-control: max-age=864000\r\n
+Action.c(218):     expires: Sat, 07 May 2022 00:04:34 GMT\r\n
+Action.c(218):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(218):     \r\n
+Action.c(218): t=7256397ms: 1075-byte response body for "https://www.advantageonlineshopping.com/css/images/review_right.png" (RelFrameId=, Internal ID=1171)
+Action.c(218): t=7256397ms: Request done "https://www.advantageonlineshopping.com/css/images/review_right.png"  	[MsgId: MMSG-26000]
+Action.c(218): t=7256546ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png" (RelFrameId=, Internal ID=1173)
+Action.c(218):     HTTP/2.0 200\r\n
+Action.c(218):     Status: 200\r\n
+Action.c(218):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(218):     date: Wed, 27 Apr 2022 00:04:34 GMT\r\n
+Action.c(218):     content-type: image/png\r\n
+Action.c(218):     content-length: 1087\r\n
+Action.c(218):     accept-ranges: bytes\r\n
+Action.c(218):     etag: W/"1087-1641810512000"\r\n
+Action.c(218):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(218):     cache-control: max-age=864000\r\n
+Action.c(218):     expires: Sat, 07 May 2022 00:04:34 GMT\r\n
+Action.c(218):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(218):     \r\n
+Action.c(218): t=7256547ms: 1087-byte response body for "https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png" (RelFrameId=, Internal ID=1173)
+Action.c(218): t=7256547ms: Request done "https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png"  	[MsgId: MMSG-26000]
+Action.c(218): t=7256548ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/reviewUser.png" (RelFrameId=, Internal ID=1172)
+Action.c(218):     HTTP/2.0 200\r\n
+Action.c(218):     Status: 200\r\n
+Action.c(218):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(218):     date: Wed, 27 Apr 2022 00:04:34 GMT\r\n
+Action.c(218):     content-type: image/png\r\n
+Action.c(218):     content-length: 1542\r\n
+Action.c(218):     accept-ranges: bytes\r\n
+Action.c(218):     etag: W/"1542-1641810512000"\r\n
+Action.c(218):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(218):     cache-control: max-age=864000\r\n
+Action.c(218):     expires: Sat, 07 May 2022 00:04:34 GMT\r\n
+Action.c(218):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(218):     \r\n
+Action.c(218): t=7256548ms: 1542-byte response body for "https://www.advantageonlineshopping.com/css/images/reviewUser.png" (RelFrameId=, Internal ID=1172)
+Action.c(218): t=7256548ms: Request done "https://www.advantageonlineshopping.com/css/images/reviewUser.png"  	[MsgId: MMSG-26000]
+Action.c(218): web_url("product-page.html") was successful, 6064 body bytes, 1564 header bytes  	[MsgId: MMSG-26386]
+Action.c(227): Notify: Transaction "Product 1" ended with a "Pass" status (Duration: 1,5097 Wasted Time: 0,0000).	[MsgId: MMSG-16871]
+Action.c(233): Notify: Transaction "01_Scrolling_The_Site" ended with a "Pass" status (Duration: 15,3532 Think Time: 10,0016 Wasted Time: 0,0012).	[MsgId: MMSG-16870]
+Ending action Action.	[MsgId: MMSG-15918]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=7256549ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 14 (thread 10652), ended OK."	[MsgId: MMSG-10695]

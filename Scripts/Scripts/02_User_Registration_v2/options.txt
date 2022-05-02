@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\LR\Scripts\Scripts\02_User_Registration_v2
+-IH:\Programms\include
+-ec:\lr\scripts\scripts\02_user_registration_v2\\logfile.log
+c:\lr\scripts\scripts\02_user_registration_v2\\combined_02_User_Registration_v2.c
+c:\lr\scripts\scripts\02_user_registration_v2\\pre_cci.c

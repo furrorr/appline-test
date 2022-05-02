@@ -1,0 +1,17 @@
+[t32]
+FileName1=t32_17.json
+URL1=https://www.advantageonlineshopping.com/catalog/api/v1/products/17
+Total=4
+ContentType=application/json
+SnapshotXmlFile=snapshot_32.xml
+RequestHeaderFile=t32_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t32_ResponseHeader.txt
+FileName2=t32_Roboto-Medium-webfont.html
+URL2=https://www.advantageonlineshopping.com/css/fonts/roboto_medium_macroman/Roboto-Medium-webfont.woff
+FileName3=t32_Roboto-Light-webfont.html
+URL3=https://www.advantageonlineshopping.com/css/fonts/roboto_light_macroman/Roboto-Light-webfont.woff
+FileName4=t32_favicon.ico
+URL4=https://www.advantageonlineshopping.com/css/images/favicon.ico
+[ProtocolInfo]
+ProtocolId=QTWeb

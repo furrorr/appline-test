@@ -1,0 +1,168 @@
+Vuser 8 (thread 19004), ended OK."	[MsgId: MMSG-10695]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+t=3431550ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Action was aborted.	[MsgId: MMSG-10694]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+HTML-Mode memory management statistics: Reusable=0, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser 9 (thread 17208), ended OK."	[MsgId: MMSG-10695]
+Vuser Terminated.	[MsgId: MMSG-15963]
+HTML-Mode memory management statistics: Reusable=0, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 12 (thread 1800), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=0, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 13 (thread 9660), ended OK."	[MsgId: MMSG-10695]
+Vuser 1 (thread 18832), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 4 (thread 5576), ended OK."	[MsgId: MMSG-10695]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Action was aborted.	[MsgId: MMSG-10694]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+HTML-Mode memory management statistics: Reusable=0, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 10 (thread 9468), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 3 (thread 8856), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=0, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=0, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 11 (thread 13568), ended OK."	[MsgId: MMSG-10695]
+Vuser 14 (thread 14520), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 2 (thread 16240), ended OK."	[MsgId: MMSG-10695]
+Action.c(165): t=3431591ms: 321-byte response headers for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=304)
+Action.c(165):     HTTP/2.0 404\r\n
+Action.c(165):     Status: 404\r\n
+Action.c(165):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(165):     date: Thu, 28 Apr 2022 18:20:30 GMT\r\n
+Action.c(165):     content-type: text/html;charset=utf-8\r\n
+Action.c(165):     cache-control: max-age=0\r\n
+Action.c(165):     expires: Thu, 28 Apr 2022 18:20:30 GMT\r\n
+Action.c(165):     content-language: ru\r\n
+Action.c(165):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(165):     content-encoding: gzip\r\n
+Action.c(165):     \r\n
+Action.c(165): t=3431592ms: 493-byte ENCODED response body received for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=304)
+Action.c(165): t=3431592ms: 783-byte DECODED response body for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" (RelFrameId=, Internal ID=304)
+Action.c(165):     <!doctype html><html lang="ru"><head><title>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 
+Action.c(165):     \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5\xD0\xBD\xD0\xBE</title><style type="text/css">bod
+Action.c(165):     y {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D
+Action.c(165):     76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a 
+Action.c(165):     {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+Action.c(165):     y><h1>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5
+Action.c(165):     \xD0\xBD\xD0\xBE</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> 
+Action.c(165):     &#47;app&#47;views&#47;css&#47;images&#47;Special-offer.jpg</p><p><b>Description</b> The o
+Action.c(165):     rigin server did not find a current representation for the target resource or is not willi
+Action.c(165):     ng to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat/9.0.30</h3></body>
+Action.c(165):     </html>
+Action.c(165): Warning -26627: HTTP Status-Code=404 (Not Found) for "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg"  	[MsgId: MWAR-26627]
+Action.c(165): t=3431592ms: Request done "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg"  	[MsgId: MMSG-26000]
+Action.c(165): t=3431740ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/chat_logo.png" (RelFrameId=, Internal ID=305)
+Action.c(165):     HTTP/2.0 200\r\n
+Action.c(165):     Status: 200\r\n
+Action.c(165):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(165):     date: Thu, 28 Apr 2022 18:20:30 GMT\r\n
+Action.c(165):     content-type: image/png\r\n
+Action.c(165):     content-length: 3003\r\n
+Action.c(165):     accept-ranges: bytes\r\n
+Action.c(165):     etag: W/"3003-1641810512000"\r\n
+Action.c(165):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(165):     cache-control: max-age=864000\r\n
+Action.c(165):     expires: Sun, 08 May 2022 18:20:30 GMT\r\n
+Action.c(165):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(165):     \r\n
+Action.c(165): t=3431741ms: 3003-byte response body for "https://www.advantageonlineshopping.com/css/images/chat_logo.png" (RelFrameId=, Internal ID=305)
+Action.c(165): t=3431741ms: Request done "https://www.advantageonlineshopping.com/css/images/chat_logo.png"  	[MsgId: MMSG-26000]
+Action.c(165): t=3431741ms: 321-byte response headers for "https://www.advantageonlineshopping.com/app/views/" (RelFrameId=, Internal ID=306)
+Action.c(165):     HTTP/2.0 404\r\n
+Action.c(165):     Status: 404\r\n
+Action.c(165):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(165):     date: Thu, 28 Apr 2022 18:20:30 GMT\r\n
+Action.c(165):     content-type: text/html;charset=utf-8\r\n
+Action.c(165):     cache-control: max-age=0\r\n
+Action.c(165):     expires: Thu, 28 Apr 2022 18:20:30 GMT\r\n
+Action.c(165):     content-language: ru\r\n
+Action.c(165):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(165):     content-encoding: gzip\r\n
+Action.c(165):     \r\n
+Action.c(165): t=3431741ms: 471-byte ENCODED response body received for "https://www.advantageonlineshopping.com/app/views/" (RelFrameId=, Internal ID=306)
+Action.c(165): t=3431741ms: 747-byte DECODED response body for "https://www.advantageonlineshopping.com/app/views/" (RelFrameId=, Internal ID=306)
+Action.c(165):     <!doctype html><html lang="ru"><head><title>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 
+Action.c(165):     \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5\xD0\xBD\xD0\xBE</title><style type="text/css">bod
+Action.c(165):     y {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D
+Action.c(165):     76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a 
+Action.c(165):     {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><bod
+Action.c(165):     y><h1>HTTP Status 404 \xE2\x80\x93 \xD0\x9D\xD0\xB5 \xD0\xBD\xD0\xB0\xD0\xB9\xD0\xB4\xD0\xB5
+Action.c(165):     \xD0\xBD\xD0\xBE</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> 
+Action.c(165):     &#47;app&#47;views&#47;</p><p><b>Description</b> The origin server did not find a current 
+Action.c(165):     representation for the target resource or is not willing to disclose that one exists.</p><
+Action.c(165):     hr class="line" /><h3>Apache Tomcat/9.0.30</h3></body></html>
+Action.c(165): Warning -26627: HTTP Status-Code=404 (Not Found) for "https://www.advantageonlineshopping.com/app/views/"  	[MsgId: MWAR-26627]
+Action.c(165): t=3431742ms: Request done "https://www.advantageonlineshopping.com/app/views/"  	[MsgId: MMSG-26000]
+Action.c(165): web_url("home-page.html") highest severity level was "warning", 6199 body bytes, 1435 header bytes  	[MsgId: MMSG-26388]
+Action.c(175): Notify: Transaction "Home" ended with a "Pass" status (Duration: 11,6752 Wasted Time: 0,0107).	[MsgId: MMSG-16871]
+Action.c(182): lr_think_time: 5,00 seconds.	[MsgId: MMSG-15948]
+Action.c(215): Notify: Transaction "Register" ended with a "Stop" status (Duration: 18,0142).	[MsgId: MMSG-16873]
+Action.c(215): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 34,2057 Think Time: 5,0037 Wasted Time: 0,0092).	[MsgId: MMSG-16870]
+Action.c(215): Notify: Transaction "Register" ended with a "Stop" status (Duration: 2,7041).	[MsgId: MMSG-16873]
+Action.c(215): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 19,3934 Think Time: 5,0057 Wasted Time: 0,0091).	[MsgId: MMSG-16870]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Action.c(182): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 13,1803 Wasted Time: 0,0107).	[MsgId: MMSG-16871]
+Ending Vuser...	[MsgId: MMSG-15966]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Action.c(215): t=3433247ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(215): t=3433247ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(182): t=3433248ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Action.c(215): Notify: Transaction "Register" ended with a "Stop" status (Duration: 20,0726).	[MsgId: MMSG-16873]
+Action.c(215): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 36,1898 Think Time: 5,0026 Wasted Time: 0,0101).	[MsgId: MMSG-16870]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Vuser 6 (thread 17952), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Action.c(215): t=3433250ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 7 (thread 12164), ended OK."	[MsgId: MMSG-10695]
+Vuser 5 (thread 1592), ended OK."	[MsgId: MMSG-10695]
+Vuser 0 (thread 19860), ended OK."	[MsgId: MMSG-10695]

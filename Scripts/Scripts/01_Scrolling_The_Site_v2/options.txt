@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\LR\Скрипты\VuGen\Scripts\01_Scrolling_The_Site_v2
+-IH:\Programms\include
+-ec:\lr\скрипты\vugen\scripts\01_scrolling_the_site_v2\\logfile.log
+c:\lr\скрипты\vugen\scripts\01_scrolling_the_site_v2\\combined_01_Scrolling_The_Site_v2.c
+c:\lr\скрипты\vugen\scripts\01_scrolling_the_site_v2\\pre_cci.c

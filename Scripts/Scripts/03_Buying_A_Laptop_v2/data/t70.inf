@@ -1,0 +1,15 @@
+[t70]
+FileName1=t70_659294453.json
+URL1=https://www.advantageonlineshopping.com/order/api/v1/carts/659294453
+Total=3
+ContentType=application/json
+SnapshotXmlFile=snapshot_70.xml
+RequestHeaderFile=t70_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t70_ResponseHeader.txt
+FileName2=t70_fetchImage.jpg
+URL2=https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=1249
+FileName3=t70_fetchImage.jpg
+URL3=https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=4200
+[ProtocolInfo]
+ProtocolId=QTWeb

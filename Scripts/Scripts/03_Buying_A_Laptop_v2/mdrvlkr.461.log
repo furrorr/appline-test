@@ -1,0 +1,343 @@
+Action.c(110):     :"SV","locationInAdvantage":"ShipEx;MasterCredit;SafePay","locationInAdminTool":"Functiona
+Action.c(110):     l","parameterValue":"Tip"},{"parameterName":"Tips_How_To_Use_Product_Video","datatype":"en
+Action.c(110):     um:[Tip]","description":"ADM performance tools support HTML5 video streaming via: native b
+Action.c(110):     rowsers, plugins such as Adobe Flash, or standalone software.  To demonstrate this feature
+Action.c(110):     , browse to one of the following products and view the demo video:  - HP ROAR WIRELESS SPE
+Action.c(110):     AKER (Product ID: 22)  - BEATS STUDIO 2 OVER-EAR MATTE BLACK HEADPHONES (product ID: 15)  
+Action.c(110):     - HP ELITEPAD 1000 G2 TABLET (product ID: 16)","attributeTools":"LoadRunner","locationInAd
+Action.c(110):     vantage":"Selected Products","locationInAdminTool":"Performance","parameterValue":"Tip"},{
+Action.c(110):     "parameterName":"Tips_regular_expression","datatype":"enum:[Tip]","description":"The butto
+Action.c(110):     n text always starts with Pay to allow for demonstrating regular expressions in object ide
+Action.c(110):     ntification.","attributeTools":"LeanFT;UFT","locationInAdvantage":"Pay button in cart sum"
+Action.c(110):     ,"locationInAdminTool":"Functional","parameterValue":"Tip"},{"parameterName":"Tips_correla
+Action.c(110):     tion_example","datatype":"enum:[Tip]","description":"To demonstrate correlation, make sure
+Action.c(110):      that you include a login step in your flow.  The correlation is implemented with the sess
+Action.c(110):     ion ID.","attributeTools":"LoadRunner","locationInAdvantage":"Web Application Login","loca
+Action.c(110):     tionInAdminTool":"Performance","parameterValue":"Tip"},{"parameterName":"Tips_async_exampl
+Action.c(110):     e","datatype":"enum:[Tip]","description":"ADM performance tools support asynchronous commu
+Action.c(110):     nication.  To demonstrate this feature, browse to any of the products in the HEADPHONES ca
+Action.c(110):     tegory, and record the comments (web only).","attributeTools":"LoadRunner","locationInAdva
+Action.c(110):     ntage":"Performance","locationInAdminTool":"Performance","parameterValue":"Tip"},{"paramet
+Action.c(110):     erName":"Tips_Swagger_Interface_For_REST_APIs","datatype":"enum:[Tip]","description":"To u
+Action.c(110):     se Swagger interface for REST APIs change the URL to http://<your-server>:<port>/<service>
+Action.c(110):     /api/docs.  <service> can be on of the following (case sensitive): catalog, order, MasterC
+Action.c(110):     redit or SafePay.  For example: http://www.advantageonlineshopping.com:80/catalog/api/docs
+Action.c(110):     .","attributeTools":"","locationInAdvantage":"catalog,MasterCredit,order,SafePay services"
+Action.c(110):     ,"locationInAdminTool":"General","parameterValue":"Tip"},{"parameterName":"Tips_REST_API_P
+Action.c(110):     arams_In_Request_URL","datatype":"enum:[Tip]","description":"Send the REST API request and
+Action.c(110):      parameters in request URL. Example: http://www.advantageonlineshopping.com/catalog/api/v1
+Action.c(110):     /products/1.","attributeTools":"UFT","locationInAdvantage":"catalog,MasterCredit,order,Saf
+Action.c(110):     ePay services","locationInAdminTool":"Functional","parameterValue":"Tip"},{"parameterName"
+Action.c(110):     :"Tips_REST_API_Params_In_Request_Body","datatype":"enum:[Tip]","description":"Send the RE
+Action.c(110):     ST API parameters in the request body. Example: http://www.advantageonlineshopping.com/Mas
+Action.c(110):     terCredit/api/v1/payments/payment, body: { \\"MCCVVNumber\\": 666, \\"MCCardNumber\\": 654
+Action.c(110):     3210987654321, \\"MCCustomerName\\": \\"King David\\", \\"MCCustomerPhone\\": \\"+12025551
+Action.c(110):     969\\", \\"MCExpirationDate\\": \\"032017\\", \\"MCRecevingAmount.Value\\": 2011.03, \\"MC
+Action.c(110):     RecevingCard.AccountNumber\\": 112987298763, \\"MCRecevingCard.Currency\\": \\"USD\\", \\"
+Action.c(110):     MCTransactionDate\\": \\"02092016\\", \\"MCTransactionType\\": \\"PAYMENT\\" }.","attribut
+Action.c(110):     eTools":"UFT","locationInAdvantage":"catalog,MasterCredit,order,SafePay services","locatio
+Action.c(110):     nInAdminTool":"Functional","parameterValue":"Tip"},{"parameterName":"Tips_DFE","datatype":
+Action.c(110):     "enum:[Tip]","description":"Send login request and response in Base-64 encoded, instead of
+Action.c(110):      in plain text, to show DFE in snapshot (display only).","attributeTools":"LoadRunner","lo
+Action.c(110):     cationInAdvantage":"Web Application Login","locationInAdminTool":"Performance","parameterV
+Action.c(110):     alue":"Tip"},{"parameterName":"Tips_validation_example","datatype":"enum:[Tip]","descripti
+Action.c(110):     on":"To demonstrate validation: Perform a flow where you buy the contents of the cart, the
+Action.c(110):     n go to the My Orders page and look for the order by its order number (shows positive\xC2\xA0
+Action.c(110):     validation). Delete the order, then look for the order by its number again (shows negative
+Action.c(110):     \xC2\xA0validation).","attributeTools":"LoadRunner","locationInAdvantage":"My Orders","loc
+Action.c(110):     ationInAdminTool":"Performance","parameterValue":"Tip"},{"parameterName":"Mobile_crash","d
+Action.c(110):     atatype":"enum:[Tip]","description":"To generate a crash, login with AppPulse user and cha
+Action.c(110):     nge\xC2\xA0the device orientation from\xC2\xA0portrait to landscape","attributeTools":"App
+Action.c(110):     Pulse","locationInAdvantage":"Mobile: entire app","locationInAdminTool":"Mobile;Functional
+Action.c(110):     ;ITOM","parameterValue":"Tip"},{"parameterName":"Slow_launch_of_the_native_app","datatype"
+Action.c(110):     :"enum:[Tip]","description":"To show a slow launch, log in as the AppPulse user and kill t
+Action.c(110):     he app. From this point on, any launch will be slow until you log in with a different user
+Action.c(110):     ","attributeTools":"AppPulse","locationInAdvantage":"Android\xC2\xA0native app: Launch","l
+Action.c(110):     ocationInAdminTool":"Mobile;Performance","parameterValue":"Tip"},{"parameterName":"Error_5
+Action.c(110):     00","datatype":"enum:[Tip]","description":"To generate error 500, login with AppPulse user
+Action.c(110):     , add items to\xC2\xA0the the cart, checkout and click on pay now","attributeTools":"AppPu
+Action.c(110):     lse","locationInAdvantage":"Order Payment","locationInAdminTool":"Mobile;Functional;ITOM",
+Action.c(110):     "parameterValue":"Tip"},{"parameterName":"Error_403","datatype":"enum:[Tip]","description"
+Action.c(110):     :"To generate error 403, click on the 'Sign in with Facebook' button.","attributeTools":"A
+Action.c(110):     ppPulse","locationInAdvantage":"Login page","locationInAdminTool":"Mobile;Functional;ITOM"
+Action.c(110):     ,"parameterValue":"Tip"},{"parameterName":"Use_Camera_Capability","datatype":"enum:[Tip]",
+Action.c(110):     "description":"Add an option to enable the user to take a picture with the camera . This p
+Action.c(110):     icture will be added to the current product page. In offline mode, the picture is retained
+Action.c(110):      for the current session only. When using MC, if \xE2\x80\x9CCamera Sensor\xE2\x80\x9D is 
+Action.c(110):     enabled, this picture will be replaced with the picture the user previously uploaded to MC
+Action.c(110):     .","attributeTools":"MobileCenter","locationInAdvantage":"Mobile apps: Product page","loca
+Action.c(110):     tionInAdminTool":"Mobile","parameterValue":"Tip"},{"parameterName":"Tips_SQL_injection_vul
+Action.c(110):     nerability","datatype":"enum:[Tip]","description":"A functional test finds the following d
+Action.c(110):     efect: The user creates a user with any\xC2\xA0Username, but the\xC2\xA0name that is actua
+Action.c(110):     lly created is duplicated, as displayed at\xC2\xA0the top right side of the site.\xC2\xA0\xC2
+Action.c(110):     \xA0 The user opens a defect, fixes the code, and commits the change. This triggers a Fort
+Action.c(110):     ify scan (provided that you added the Fortify scan trigger in the code change) that will f
+Action.c(110):     ind an\xC2\xA0SQL injection\xC2\xA0vulnerability.  To achieve this, you must edit the\xC2\xA0
+Action.c(110):     accountservice\\\\src\\\\main\\\\java\\\\com\\\\advantage\\\\accountsoap\\\\dao\\\\impl\\\\
+Action.c(110):     DefaultAccountRepository\xC2\xA0file. In this file, first uncomment the\xC2\xA0code that i
+Action.c(110):     s located\xC2\xA0between the\xC2\xA0'SQL injection vulnerability' tags. \xC2\xA0Then, comm
+Action.c(110):     ent out the code that is located between the 'Code without\xC2\xA0SQL injection vulnerabil
+Action.c(110):     ity' tags. Note that there are 2 locations in the code in which you need to make these cha
+Action.c(110):     nges.","attributeTools":"Fortify, LeanFT, UFT","locationInAdvantage":"Create Account page"
+Action.c(110):     ,"locationInAdminTool":"Security","parameterValue":"Tip"},{"parameterName":"Enable_Warrant
+Action.c(110):     y","datatype":"enum:[Yes,No]","description":"Determines whether a warranty checkbox is add
+Action.c(110):     ed to each laptop product screen. Use this parameter to demonstrate an integration between
+Action.c(110):      AOS and COBOL, during checkout AOS backend invoke a COBOL service to activate a warranty 
+Action.c(110):     for laptop. Default = No. Yes = Add a checkbox to the laptop product page.","attributeTool
+Action.c(110):     s":"AMC","locationInAdvantage":"Laptops","locationInAdminTool":"General","parameterValue":
+Action.c(110):     "No"},{"parameterName":"Warranty_Service_URL","datatype":"string","description":"The URL o
+Action.c(110):     f the COBOL web service to be used for the warranty, the default service is located on AZU
+Action.c(110):     RE. the default URL is: https://aoswarrantyfunction.azurewebsites.net/api/Function1?code=K
+Action.c(110):     EK/GaiTZ0lfJdRkJGgNdsn8qfenPseDGaS3j3n8noI6AGtSIriLAg== note: mouse over on the text field
+Action.c(110):      to view the current URL.","attributeTools":"AMC","locationInAdvantage":"Laptops","locatio
+Action.c(110):     nInAdminTool":"General","parameterValue":"https://aoswarrantyfunction.azurewebsites.net/ap
+Action.c(110):     i/Function1?code=KEK/GaiTZ0lfJdRkJGgNdsn8qfenPseDGaS3j3n8noI6AGtSIriLAg=="},{"parameterNam
+Action.c(110):     e":"Enable_Voltage_Encryption","datatype":"enum:[Yes,No]","description":"Use this paramete
+Action.c(110):     r to demonstrate an integration between Voltage Data Encryption And AOS. The MasterCredit 
+Action.c(110):     number is encrypted when the flag is set to 'Yes'","attributeTools":"AMC","locationInAdvan
+Action.c(110):     tage":"Payment page","locationInAdminTool":"General","parameterValue":"No"},{"parameterNam
+Action.c(110):     e":"Voltage_Service_URL","datatype":"string","description":"The URL of the Voltage Data En
+Action.c(110):     cryption service to be used for the encryption, the default service is located on AZURE. t
+Action.c(110):     he default URL is: https://voltage-pp-0000.dataprotection.voltage.com note: mouse over on 
+Action.c(110):     the text field to view the current URL.","attributeTools":"ITOM","locationInAdvantage":"Pa
+Action.c(110):     yment page","locationInAdminTool":"General","parameterValue":"https://voltage-pp-0000.data
+Action.c(110):     protection.voltage.com"},{"parameterName":"duplicate_countries","datatype":"enum:[Yes,No]"
+Action.c(110):     ,"description":"Duplicates the countries in adv_account DB, causing error during registrat
+Action.c(110):     ion. Note: Restart required.","attributeTools":"ITOM","locationInAdvantage":"Registration 
+Action.c(110):     page","locationInAdminTool":"General","parameterValue":"No"},{"parameterName":"AOB_Endpoin
+Action.c(110):     t","datatype":"string","description":"Purchases made using AOB user, will create a transac
+Action.c(110):     tion on AOB system, on the current endpoint","attributeTools":"","locationInAdvantage":"Pu
+Action.c(110):     rchase Page","locationInAdminTool":"General","parameterValue":"http://advantageonlinebanki
+Action.c(110):     ng.com/api/accounts/purchase"}]}
+Action.c(110): t=618795ms: 10-byte ENCODED response body received for "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=189)
+Action.c(110): t=618796ms: Request done "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL"  	[MsgId: MMSG-26000]
+Action.c(110): web_url("ALL") was successful, 6541 body bytes, 375 header bytes  	[MsgId: MMSG-26386]
+Action.c(119): web_add_cookie started  	[MsgId: MMSG-26355]
+Action.c(119): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(121): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(121): An unrecognized header ("Origin") is being added  	[MsgId: MMSG-26595]
+Action.c(121): "Origin: https://www.advantageonlineshopping.com" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(121): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+Action.c(124): web_add_header("SOAPAction") started  	[MsgId: MMSG-26355]
+Action.c(124): "SOAPAction: com.advantage.online.store.accountserviceGetAccountConfigurationRequest" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(124): web_add_header("SOAPAction") was successful  	[MsgId: MMSG-26392]
+Action.c(127): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+Action.c(127): An unrecognized header ("X-Requested-With") is being added  	[MsgId: MMSG-26595]
+Action.c(127): "X-Requested-With: XMLHttpRequest" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(127): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+Action.c(130): web_custom_request("GetAccountConfigurationRequest") started  	[MsgId: MMSG-26355]
+Action.c(130): The request to server https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" is done with headers:
+Action.c(130):     :method = POST
+Action.c(130):     :scheme = https
+Action.c(130):     :path = /accountservice/ws/GetAccountConfigurationRequest
+Action.c(130):     :authority = www.advantageonlineshopping.com
+Action.c(130):     Content-Type = text/xml; charset=UTF-8
+Action.c(130):     Referer = https://www.advantageonlineshopping.com/
+Action.c(130):     Origin = https://www.advantageonlineshopping.com
+Action.c(130):     SOAPAction = com.advantage.online.store.accountserviceGetAccountConfigurationRequest
+Action.c(130):     X-Requested-With = XMLHttpRequest
+Action.c(130):     Sec-Fetch-Site = same-origin
+Action.c(130):     Sec-Fetch-Mode = cors
+Action.c(130):     Sec-Fetch-Dest = empty
+Action.c(130):     DNT = 1
+Action.c(130):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(130):     sec-ch-ua-mobile = ?0
+Action.c(130):     sec-ch-ua-platform = "Windows"
+Action.c(130):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(130):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(130):     Accept-Encoding = gzip, deflate, br
+Action.c(130):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(130):     Accept = */*
+Action.c(130):     content-length = 361
+Action.c(130):     cookie = _gat=1
+Action.c(130): The request to server "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" is done with body:
+Action.c(130):     <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(130):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(130):     www.w3.org/2001/XMLSchema"><soap:Body><GetAccountConfigurationRequest xmlns="com.advantage
+Action.c(130):     .online.store.accountservice"></GetAccountConfigurationRequest></soap:Body></soap:Envelope
+Action.c(130):     >
+Action.c(458): t=619062ms: 204-byte response headers for "https://www.advantageonlineshopping.com/order/api/v1/carts/107796510" (RelFrameId=1, Internal ID=158)
+Action.c(458):     HTTP/2.0 404\r\n
+Action.c(458):     Status: 404\r\n
+Action.c(458):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(458):     date: Fri, 29 Apr 2022 06:01:49 GMT\r\n
+Action.c(458):     content-type: text/html\r\n
+Action.c(458):     strict-transport-security: max-age=20; includeSubDomains\r\n
+Action.c(458):     content-encoding: gzip\r\n
+Action.c(458):     \r\n
+Action.c(458): t=619063ms: 186-byte ENCODED response body received for "https://www.advantageonlineshopping.com/order/api/v1/carts/107796510" (RelFrameId=1, Internal ID=158)
+Action.c(458): t=619063ms: 564-byte DECODED response body for "https://www.advantageonlineshopping.com/order/api/v1/carts/107796510" (RelFrameId=1, Internal ID=158)
+Action.c(458):     <html>\r\n
+Action.c(458):     <head><title>404 Not Found</title></head>\r\n
+Action.c(458):     <body>\r\n
+Action.c(458):     <center><h1>404 Not Found</h1></center>\r\n
+Action.c(458):     <hr><center>nginx/1.18.0 (Ubuntu)</center>\r\n
+Action.c(458):     </body>\r\n
+Action.c(458):     </html>\r\n
+Action.c(458):     <!-- a padding to disable MSIE and Chrome friendly error page -->\r\n
+Action.c(458):     <!-- a padding to disable MSIE and Chrome friendly error page -->\r\n
+Action.c(458):     <!-- a padding to disable MSIE and Chrome friendly error page -->\r\n
+Action.c(458):     <!-- a padding to disable MSIE and Chrome friendly error page -->\r\n
+Action.c(458):     <!-- a padding to disable MSIE and Chrome friendly error page -->\r\n
+Action.c(458):     <!-- a padding to disable MSIE and Chrome friendly error page -->\r\n
+Action.c(458): Error -26627: HTTP Status-Code=404 (Not Found) for "https://www.advantageonlineshopping.com/order/api/v1/carts/107796510"  	[MsgId: MERR-26627]
+Action.c(458): t=619063ms: Request done "https://www.advantageonlineshopping.com/order/api/v1/carts/107796510"  	[MsgId: MMSG-26000]
+Action.c(458): web_url("{UserId}_3") highest severity level was "ERROR", 186 body bytes, 204 header bytes  	[MsgId: MMSG-26388]
+Action.c(458): Notify: Transaction "Payment Details" ended with a "Fail" status (Duration: 72,7472 Think Time: 10,0108 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(458): Notify: Transaction "Payment Details" has 1 error message(s).	[MsgId: MMSG-16818]
+Action.c(458): Notify: The 1st error message associated with transaction "Payment Details" is "Error -26627: HTTP Status-Code=404 (Not Found) for "https://www.advantageonlineshopping.com/order/api/v1/carts/107796510""	[MsgId: MMSG-16819]
+Action.c(458): Notify: Transaction "03_Buying_A_Laptop" ended with a "Fail" status (Duration: 210,2689 Think Time: 35,0238 Wasted Time: 0,0086).	[MsgId: MMSG-16870]
+Action.c(458): Notify: Transaction "03_Buying_A_Laptop" has 1 error message(s).	[MsgId: MMSG-16818]
+Action.c(458): Notify: The 1st error message associated with transaction "03_Buying_A_Laptop" is "Error -26627: HTTP Status-Code=404 (Not Found) for "https://www.advantageonlineshopping.com/order/api/v1/carts/107796510""	[MsgId: MMSG-16819]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 2.	[MsgId: MMSG-15965]
+Waiting 8,7290 seconds for iteration pacing.	[MsgId: MMSG-15996]
+Action.c(130): t=619683ms: 735-byte response headers for "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" (RelFrameId=1, Internal ID=190)
+Action.c(130):     HTTP/2.0 200\r\n
+Action.c(130):     Status: 200\r\n
+Action.c(130):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(130):     date: Fri, 29 Apr 2022 06:01:49 GMT\r\n
+Action.c(130):     content-type: text/xml;charset=utf-8\r\n
+Action.c(130):     content-length: 823\r\n
+Action.c(130):     x-content-type-options: nosniff\r\n
+Action.c(130):     x-xss-protection: 1; mode=block\r\n
+Action.c(130):     cache-control: no-store\r\n
+Action.c(130):     pragma: no-cache\r\n
+Action.c(130):     expires: 0\r\n
+Action.c(130):     x-frame-options: DENY\r\n
+Action.c(130):     access-control-request-method: POST, GET, OPTIONS, DELETE\r\n
+Action.c(130):     access-control-allow-methods: POST, GET, OPTIONS, DELETE\r\n
+Action.c(130):     access-control-max-age: 3600\r\n
+Action.c(130):     access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Key, soapact
+Action.c(130):     ion\r\n
+Action.c(130):     access-control-allow-origin: *\r\n
+Action.c(130):     accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2\r\n
+Action.c(130):     soapaction: ""\r\n
+Action.c(130):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(130):     \r\n
+Action.c(130): t=619684ms: 823-byte response body for "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" (RelFrameId=1, Internal ID=190)
+Action.c(130):     <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:He
+Action.c(130):     ader/><SOAP-ENV:Body><ns2:GetAccountConfigurationResponse xmlns:ns2="com.advantage.online.
+Action.c(130):     store.accountservice"><ns2:numberOfFailedLoginAttemptsBeforeBlocking>3</ns2:numberOfFailed
+Action.c(130):     LoginAttemptsBeforeBlocking><ns2:loginBlockingIntervalInSeconds>300</ns2:loginBlockingInte
+Action.c(130):     rvalInSeconds><ns2:productInStockDefaultValue>10</ns2:productInStockDefaultValue><ns2:user
+Action.c(130):     SecondWsdl>false</ns2:userSecondWsdl><ns2:userLoginTimeout>60</ns2:userLoginTimeout><ns2:a
+Action.c(130):     llowUserConfiguration>true</ns2:allowUserConfiguration><ns2:productionHostIp>http://54.175
+Action.c(130):     .138.128:8081</ns2:productionHostIp><ns2:productionHostName>http://advantageonlineshopping
+Action.c(130):     .com</ns2:productionHostName></ns2:GetAccountConfigurationResponse></SOAP-ENV:Body></SOAP-
+Action.c(130):     ENV:Envelope>
+Action.c(130): t=619685ms: Request done "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest"  	[MsgId: MMSG-26000]
+Action.c(130): web_custom_request("GetAccountConfigurationRequest") was successful, 823 body bytes, 735 header bytes  	[MsgId: MMSG-26386]
+Action.c(142): web_url("categories") started  	[MsgId: MMSG-26355]
+Action.c(142): The request to server https://www.advantageonlineshopping.com/catalog/api/v1/categories" is done with headers:
+Action.c(142):     :method = GET
+Action.c(142):     :scheme = https
+Action.c(142):     :path = /catalog/api/v1/categories
+Action.c(142):     :authority = www.advantageonlineshopping.com
+Action.c(142):     Referer = https://www.advantageonlineshopping.com/
+Action.c(142):     Sec-Fetch-Site = same-origin
+Action.c(142):     Sec-Fetch-Mode = cors
+Action.c(142):     Sec-Fetch-Dest = empty
+Action.c(142):     DNT = 1
+Action.c(142):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(142):     sec-ch-ua-mobile = ?0
+Action.c(142):     sec-ch-ua-platform = "Windows"
+Action.c(142):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(142):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(142):     Accept-Encoding = gzip, deflate, br
+Action.c(142):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(142):     Accept = */*
+Action.c(142):     cookie = _gat=1
+Action.c(458): Notify: Transaction "Payment Details" ended with a "Stop" status (Duration: 63,7260 Think Time: 10,0098 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(458): Notify: Transaction "Payment Details" ended with a "Stop" status (Duration: 62,9820 Think Time: 10,0036 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(458): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 163,6223 Think Time: 35,0556 Wasted Time: 0,0090).	[MsgId: MMSG-16870]
+Action.c(458): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 153,7888 Think Time: 35,0214 Wasted Time: 0,0082).	[MsgId: MMSG-16870]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(458): Error -27760: Request "https://www.advantageonlineshopping.com/order/api/v1/carts/703791721" failed  	[MsgId: MERR-27760]
+Action.c(142): Notify: Transaction "Home" ended with a "Stop" status (Duration: 13,4203 Wasted Time: 0,0087).	[MsgId: MMSG-16871]
+Action.c(142): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 13,4203 Wasted Time: 0,0087).	[MsgId: MMSG-16871]
+Action.c(309): Notify: Transaction "Laptop Selection 1" ended with a "Stop" status (Duration: 19,3490 Wasted Time: 0,0000).	[MsgId: MMSG-16871]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Action.c(309): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 83,6282 Think Time: 15,0279 Wasted Time: 0,0081).	[MsgId: MMSG-16870]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Action.c(235): Notify: Transaction "Login" ended with a "Stop" status (Duration: 10,6862 Wasted Time: 0,0001).	[MsgId: MMSG-16871]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(235): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 34,4722 Think Time: 5,0144 Wasted Time: 0,0081).	[MsgId: MMSG-16870]
+Action.c(142): Error -27760: Request "https://www.advantageonlineshopping.com/catalog/api/v1/categories" failed  	[MsgId: MERR-27760]
+Action.c(309): Error -27760: Request "https://www.advantageonlineshopping.com/catalog/api/v1/categories/all_data" failed  	[MsgId: MERR-27760]
+Action.c(235): Notify: Transaction "Login" ended with a "Stop" status (Duration: 37,9007 Wasted Time: 0,0001).	[MsgId: MMSG-16871]
+Action.c(235): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 62,5527 Think Time: 5,0059 Wasted Time: 0,0081).	[MsgId: MMSG-16870]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Action.c(235): Error -27760: Request "https://www.advantageonlineshopping.com/order/api/v1/carts/703791721" failed  	[MsgId: MERR-27760]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Action.c(235): Error -27760: Request "https://www.advantageonlineshopping.com/order/api/v1/carts/703791721" failed  	[MsgId: MERR-27760]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(342): t=620180ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(458): Error -27760: Request "https://www.advantageonlineshopping.com/order/api/v1/carts/703791721" failed  	[MsgId: MERR-27760]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(458): t=620181ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(458): Notify: Transaction "Payment Details" ended with a "Stop" status (Duration: 62,5090 Think Time: 10,0095 Wasted Time: 0,0000).	[MsgId: MMSG-16870]
+Action.c(458): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 132,7638 Think Time: 35,0518 Wasted Time: 0,0080).	[MsgId: MMSG-16870]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(458): Error -27760: Request "https://www.advantageonlineshopping.com/order/api/v1/carts/703791721" failed  	[MsgId: MERR-27760]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Action.c(458): t=620209ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(235): t=620209ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(309): t=620209ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(458): t=620209ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(142): t=620210ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(235): t=620210ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Vuser 3 (thread 17972), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Action.c(458): t=620211ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 5 (thread 1456), ended OK."	[MsgId: MMSG-10695]
+Vuser 0 (thread 6544), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 6 (thread 9500), ended OK."	[MsgId: MMSG-10695]
+Vuser 7 (thread 4184), ended OK."	[MsgId: MMSG-10695]
+Vuser 8 (thread 13420), ended OK."	[MsgId: MMSG-10695]
+Vuser 1 (thread 16236), ended OK."	[MsgId: MMSG-10695]
+Vuser 2 (thread 9468), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 4 (thread 6804), ended OK."	[MsgId: MMSG-10695]

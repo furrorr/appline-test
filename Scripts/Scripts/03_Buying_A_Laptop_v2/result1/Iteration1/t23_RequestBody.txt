@@ -1,0 +1,4 @@
+"{"seaddress":{"addressLine1":"5389 Shady Route","addressLine2":"","city":"Trinity","country":""
+"us","postalCode":440413979,"state":10},"secustomerName":"Carlos Watson","secustomerPhone":"000"
+"00000000","senumberOfProducts":1,"setransactionType":"SHIPPING_COST","sessionId":"7421A2BF93FD"
+"CA523696E7AB9CEF6273"}"

@@ -1,0 +1,4 @@
+"{\"seaddress\":{\"addressLine1\":\"5389 Shady Route\",\"addressLine2\":\"\",\"city\":\"Trinity"
+"\",\"country\":\"us\",\"postalCode\":440413979,\"state\":\"00\"},\"secustomerName\":\"Carlos W"
+"atson\",\"secustomerPhone\":\"00000000000\",\"senumberOfProducts\":1,\"setransactionType\":\"S"
+"HIPPING_COST\",\"sessionId\":\"56DB0D8266F22E81CFD46992A97D3AF8\"}"

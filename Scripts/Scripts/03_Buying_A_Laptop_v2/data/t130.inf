@@ -1,0 +1,15 @@
+[t130]
+FileName1=t130.htm
+URL1=https://www.advantageonlineshopping.com/app/views/shoppingCart.html
+Total=3
+RequestHeaderFile=t130_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t130_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_130.xml
+FileName2=t130_Master_credit.png
+URL2=https://www.advantageonlineshopping.com/css/images/Master_credit.png
+FileName3=t130_SafePay.png
+URL3=https://www.advantageonlineshopping.com/css/images/SafePay.png
+[ProtocolInfo]
+ProtocolId=QTWeb

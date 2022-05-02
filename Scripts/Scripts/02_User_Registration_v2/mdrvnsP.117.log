@@ -1,0 +1,1755 @@
+Action.c(50):     \n
+Action.c(50):               angular.forEach($location.search(), function (value, key) {\n
+Action.c(50):                 var campaignVar = utmToCampaignVar[key];\n
+Action.c(50):     \n
+Action.c(50):                 if (angular.isDefined(campaignVar)) {\n
+Action.c(50):                   object[campaignVar] = value;\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):     \n
+Action.c(50):               return object;\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * get ActionFieldObject\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#action-data\n
+Action.c(50):              * @param
+Action.c(50): t=2337309ms: 1846-byte DECODED response body for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=905)
+Action.c(50):      id\n
+Action.c(50):              * @param affliation\n
+Action.c(50):              * @param revenue\n
+Action.c(50):              * @param tax\n
+Action.c(50):              * @param shipping\n
+Action.c(50):              * @param coupon\n
+Action.c(50):              * @param list\n
+Action.c(50):              * @param step\n
+Action.c(50):              * @param option\n
+Action.c(50):              */\n
+Action.c(50):             var getActionFieldObject = function (id, affiliation, revenue, tax, shipping, coup
+Action.c(50):     on, list, step, option) {\n
+Action.c(50):               var obj = {};\n
+Action.c(50):               if (id) { obj.id = id; }\n
+Action.c(50):               if (affiliation) { obj.affiliation = affiliation; }\n
+Action.c(50):               if (revenue) { obj.revenue = revenue; }\n
+Action.c(50):               if (tax) { obj.tax = tax; }\n
+Action.c(50):               if (shipping) { obj.shipping = shipping; }\n
+Action.c(50):               if (coupon) { obj.coupon = coupon; }\n
+Action.c(50):               if (list) { obj.list = list; }\n
+Action.c(50):               if (step) { obj.step = step; }\n
+Action.c(50):               if (option) { obj.option = option; }\n
+Action.c(50):               return obj;\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Private Methods\n
+Action.c(50):              */\n
+Action.c(50):     \n
+Action.c(50):             var _getProtocol = function (httpPostfix, httpsPostfix) {\n
+Action.c(50):               var protocol = '',\n
+Action.c(50):                   isSslEnabled = document.location.protocol === 'https:',\n
+Action.c(50):                   isChromeExtension = document.location.protocol === 'chrome-extension:',\n
+Action.c(50):                   isHybridApplication = analyticsJS === true && hybridMobileSupport === true;\n
+Action.c(50):               httpPostfix = angular.isString(httpPostfix) ? httpPostfix : '';\n
+Action.c(50):               httpsPostfix = angular.isString(httpsPostfix) ? httpsPostfix : '';\n
+Action.c(50):               if (httpPostfix !== '') {\n
+Action.c(50):                 protocol = 'http:' + httpPostfix;\n
+Action.c(50):               }\n
+Action.c(50):               if (isChromeExtension || isHybridApplication || (isSslEnabled && httpsPostfix !=
+Action.c(50):     = '')) {\n
+Action.c(50):                 protocol = 'https:' + httpsPostfix;\n
+Action.c(50):               }\n
+Action.c(50):               return protocol;\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             var _gaJs = function (fn) {\n
+Action.c(50):               if (!analyticsJS && $window._gaq && typeof fn === 'function') {\n
+Action.c(50):                 fn();\n
+Action.c(50):               }\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             var _gaq = function () {\n
+Action.c(50):               var args = 
+Action.c(50): t=2337310ms: 6621-byte ENCODED response body received for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=905)
+Action.c(50): t=2337310ms: 12288-byte DECODED response body for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=905)
+Action.c(50):     Array.prototype.slice.call(arguments);\n
+Action.c(50):               if (offlineMode === true) {\n
+Action.c(50):                 that.offlineQueue.push([_gaq, args]);\n
+Action.c(50):                 return;\n
+Action.c(50):               }\n
+Action.c(50):               if (!$window._gaq) {\n
+Action.c(50):                 $window._gaq = [];\n
+Action.c(50):               }\n
+Action.c(50):               if (logAllCalls === true) {\n
+Action.c(50):                 that._log.apply(that, args);\n
+Action.c(50):               }\n
+Action.c(50):               $window._gaq.push(args);\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             var _analyticsJs = function (fn) {\n
+Action.c(50):               if (analyticsJS && $window.ga && typeof fn === 'function') {\n
+Action.c(50):                 fn();\n
+Action.c(50):               }\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             var _ga = function () {\n
+Action.c(50):               var args = Array.prototype.slice.call(arguments);\n
+Action.c(50):               if (offlineMode === true) {\n
+Action.c(50):                 that.offlineQueue.push([_ga, args]);\n
+Action.c(50):                 return;\n
+Action.c(50):               }\n
+Action.c(50):               if (typeof $window.ga !== 'function') {\n
+Action.c(50):                 that._log('warn', 'ga function not set on window');\n
+Action.c(50):                 return;\n
+Action.c(50):               }\n
+Action.c(50):               if (logAllCalls === true) {\n
+Action.c(50):                 that._log.apply(that, args);\n
+Action.c(50):               }\n
+Action.c(50):               $window.ga.apply(null, args);\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             var _gaMultipleTrackers = function (includeFn) {\n
+Action.c(50):               // Drop the includeFn from the arguments and preserve the original command name\n
+Action.c(50):               var args = Array.prototype.slice.call(arguments, 1),\n
+Action.c(50):                   commandName = args[0],\n
+Action.c(50):                   trackers = [];\n
+Action.c(50):               if (typeof includeFn === 'function') {\n
+Action.c(50):                 accounts.forEach(function (account) {\n
+Action.c(50):                   if (includeFn(account)) {\n
+Action.c(50):                     trackers.push(account);\n
+Action.c(50):                   }\n
+Action.c(50):                 });\n
+Action.c(50):               } else {\n
+Action.c(50):                 // No include function indicates that all accounts are to be used\n
+Action.c(50):                 trackers = accounts;\n
+Action.c(50):               }\n
+Action.c(50):     \n
+Action.c(50):               // To preserve backwards compatibility fallback to _ga method if no account\n
+Action.c(50):               // matches the specified includeFn. This preserves existing behaviors by\n
+Action.c(50):               // performing the single tracker operation.\n
+Action.c(50):               if (trackers.length === 0) {\n
+Action.c(50):                 _ga.apply(that, args);\n
+Action.c(50):                 return;\n
+Action.c(50):               }\n
+Action.c(50):     \n
+Action.c(50):               trackers.forEach(function (tracker) {\n
+Action.c(50):                 // Check tracker 'select' function, if it exists, for whether the tracker shou
+Action.c(50):     ld be used with the current command.\n
+Action.c(50):                 // If the 'select' function returns false then the tracker will not be used wi
+Action.c(50):     th the current command.\n
+Action.c(50):                 if (isPropertyDefined('select', tracker) && typeof tracker.select === 'functio
+Action.c(50):     n' && !tracker.select(args)) {\n
+Action.c(50):                   return;\n
+Action.c(50):                 }\n
+Action.c(50):                 args[0] = generateCommandName(commandName, tracker);\n
+Action.c(50):                 _ga.apply(that, args);\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             this._log = function () {\n
+Action.c(50):               var args = Array.prototype.slice.call(arguments);\n
+Action.c(50):               if (args.length > 0) {\n
+Action.c(50):                 if (args.length > 1) {\n
+Action.c(50):                   switch (args[0]) {\n
+Action.c(50):                     case 'debug':\n
+Action.c(50):                     case 'error':\n
+Action.c(50):                     case 'info':\n
+Action.c(50):                     case 'log':\n
+Action.c(50):                     case 'warn':\n
+Action.c(50):                       $log[args[0]](args.slice(1));\n
+Action.c(50):                       break;\n
+Action.c(50):                   }\n
+Action.c(50):                 }\n
+Action.c(50):                 that.log.push(args);\n
+Action.c(50):               }\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /* DEPRECATED */\n
+Action.c(50):             this._createScriptTag = function () {\n
+Action.c(50):               that._registerScriptTags();\n
+Action.c(50):               that._registerTrackers();\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /* DEPRECATED */\n
+Action.c(50):             this._createAnalyticsScriptTag = function () {\n
+Action.c(50):               that._registerScriptTags();\n
+Action.c(50):               that._registerTrackers();\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             this._registerScriptTags = function () {\n
+Action.c(50):               var document = $document[0],\n
+Action.c(50):                   protocol = _getProtocol(),\n
+Action.c(50):                   scriptSource;\n
+Action.c(50):     \n
+Action.c(50):               if (created === true) {\n
+Action.c(50):                 that._log('warn', 'Script tags already created');\n
+Action.c(50):                 return;\n
+Action.c(50):               }\n
+Action.c(50):     \n
+Action.c(50):               if (disableAnalytics === true) {\n
+Action.c(50):                 accounts.forEach(function (trackerObj) {\n
+Action.c(50):                   that._log('info', 'Analytics disabled: ' + trackerObj.tracker);\n
+Action.c(50):                   $window['ga-disable-' + trackerObj.tracker] = true;\n
+Action.c(50):                 });\n
+Action.c(50):               }\n
+Action.c(50):     \n
+Action.c(50):               //\n
+Action.c(50):               // Universal Analytics\n
+Action.c(50):               //\n
+Action.c(50):               if (analyticsJS === true) {\n
+Action.c(50):                 scriptSource = protocol + '//www.google-analytics.com/' + (debugMode ? 'analyt
+Action.c(50):     ics_debug.js' : 'analytics.js');\n
+Action.c(50):                 if (testMode !== true) {\n
+Action.c(50):                   // If not in test mode inject the Google Analytics tag\n
+Action.c(50):                   (function (i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function (
+Action.c(50):     ){\n
+Action.c(50):                     (i[r].q=i[r].q||[]).push(arguments);},i[r].l=1*new Date();a=s.createElemen
+Action.c(50):     t(o),\n
+Action.c(50):                     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore
+Action.c(50):     (a,m);\n
+Action.c(50):                   })(window,document,'script',scriptSource,'ga');\n
+Action.c(50):                 } else {\n
+Action.c(50):                   if (typeof $window.ga !== 'function') {\n
+Action.c(50):                     // In test mode create a ga function if none exists that is a noop sink.\n
+Action.c(50):                     $window.ga = function () {};\n
+Action.c(50):                   }\n
+Action.c(50):                   // Log script injection.\n
+Action.c(50):                   that._log('inject', scriptSource);\n
+Action.c(50):                 }\n
+Action.c(50):     \n
+Action.c(50):                 if (traceDebuggingMode) {\n
+Action.c(50):                   $window.ga_debug = { trace: true };\n
+Action.c(50):                 }\n
+Action.c(50):     \n
+Action.c(50):                 if (experimentId) {\n
+Action.c(50):                   var expScript = document.createElement('script'),\n
+Action.c(50):                       s = document.getElementsByTagName('script')[0];\n
+Action.c(50):                   expScript.src = protocol + '//www.google-analytics.com/cx/api.js?experiment=
+Action.c(50):     ' + experimentId;\n
+Action.c(50):                   s.parentNode.insertBefore(expScript, s);\n
+Action.c(50):                 }\n
+Action.c(50):               //\n
+Action.c(50):               // Classic Analytics\n
+Action.c(50):               //\n
+Action.c(50):               } else {\n
+Action.c(50):                 scriptSource = _getProtocol('//www', '//ssl') + '.google-analytics.com/ga.js';
+Action.c(50):     \n
+Action.c(50):                 if (displayFeatures === true) {\n
+Action.c(50):                   scriptSource = protocol + '//stats.g.doubleclick.net/dc.js';\n
+Action.c(50):                 }\n
+Action.c(50):     \n
+Action.c(50):                 if (testMode !== true) {\n
+Action.c(50):                   // If not in test mode inject the Google Analytics tag\n
+Action.c(50):                   (function () {\n
+Action.c(50):                     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga
+Action.c(50):     .async = true;\n
+Action.c(50):                     ga.src = scriptSource;\n
+Action.c(50):                     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBef
+Action.c(50):     ore(ga, s);\n
+Action.c(50):                   })();\n
+Action.c(50):                 } else {\n
+Action.c(50):                   // Log the source location for validation\n
+Action.c(50):                   that._log('inject', scriptSource);\n
+Action.c(50):                 }\n
+Action.c(50):               }\n
+Action.c(50):     \n
+Action.c(50):               created = true;\n
+Action.c(50):               return true;\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             this._registerTrackers = function () {\n
+Action.c(50):               if (!accounts || accounts.length < 1) {\n
+Action.c(50):                 that._log('warn', 'No accounts to register');\n
+Action.c(50):                 return;\n
+Action.c(50):               }\n
+Action.c(50):     \n
+Action.c(50):               //\n
+Action.c(50):               // Universal Analytics\n
+Action.c(50):               //\n
+Action.c(50):               if (analyticsJS === true) {\n
+Action.c(50):                 accounts.forEach(function (trackerObj) {\n
+Action.c(50):                   trackerObj.crossDomainLinker = isPropertyDefined('crossDomainLinker', tracke
+Action.c(50):     rObj) ? trackerObj.crossDomainLinker : crossDomainLinker;\n
+Action.c(50):                   trackerObj.crossLinkDomains = isPropertyDefined('crossLinkDomains', trackerO
+Action.c(50):     bj) ? trackerObj.crossLinkDomains : crossLinkDomains;\n
+Action.c(50):                   trackerObj.displayFeatures = isPropertyDefined('displayFeatures', trackerObj
+Action.c(50):     ) ? trackerObj.displayFeatures : displayFeatures;\n
+Action.c(50):                   trackerObj.enhancedLinkAttribution = isPropertyDefined('enhancedLinkAttribut
+Action.c(50):     ion', trackerObj) ? trackerObj.enhancedLinkAttribution : enhancedLinkAttribution;\n
+Action.c(50):                   trackerObj.set = isPropertyDefined('set', trackerObj) ? trackerObj.set : {};
+Action.c(50):     \n
+Action.c(50):                   trackerObj.trackEcommerce = isPropertyDefined('trackEcommerce', trackerObj) 
+Action.c(50):     ? trackerObj.trackEcommerce : ecommerce;\n
+Action.c(50):                   trackerObj.trackEvent = isPropertyDefined('trackEvent', trackerObj) ? tracke
+Action.c(50):     rObj.trackEvent : false;\n
+Action.c(50):     \n
+Action.c(50):                   // Logic to choose the account fields to be used.\n
+Action.c(50):                   // cookieConfig is being deprecated for a tracker specific property: fields.
+Action.c(50):     \n
+Action.c(50):                   var fields = {};\n
+Action.c(50):                   if (isPropertyDefined('fields', trackerObj)) {\n
+Action.c(50):                     fields = trackerObj.fields;\n
+Action.c(50):                   } else if (isPropertyDefined('cookieConfig', trackerObj)) {\n
+Action.c(50):                     if (angular.isString(trackerObj.cookieConfig)) {\n
+Action.c(50):                       fields.cookieDomain = trackerObj.cookieConfig;\n
+Action.c(50):                     } else {\n
+Action.c(50):                       fields = trackerObj.cookieConfig;\n
+Action.c(50):                     }\n
+Action.c(50):                   } else if (angular.isString(cookieConfig)) {\n
+Action.c(50):                     fields.cookieDomain = cookieConfig;\n
+Action.c(50):                   } else if (cookieConfig) {\n
+Action.c(50):                     fields = cookieConfig;\n
+Action.c(50):                   }\n
+Action.c(50):                   if (trackerObj.crossDomainLinker === true) {\n
+Action.c(50):                     fields.allowLinker = true;\n
+Action.c(50):                   }\n
+Action.c(50):                   if (isPropertyDefined('name', trackerObj)) {\n
+Action.c(50):                     fields.name = trackerObj.name;\n
+Action.c(50):                   }\n
+Action.c(50):                   trackerObj.fields = fields;\n
+Action.c(50):     \n
+Action.c(50):                   _ga('create', trackerObj.tracker, trackerObj.fields);\n
+Action.c(50):     \n
+Action.c(50):                   // Hybrid mobile application support\n
+Action.c(50):                   // https://developers.google.com/analytics/devguides/collection/analyticsjs/
+Action.c(50):     tasks\n
+Action.c(50):                   if (hybridMobileSupport === true) {\n
+Action.c(50):                     _ga(generateCommandName('set', trackerObj), 'checkProtocolTask', null);\n
+Action.c(50):                   }\n
+Action.c(50):     \n
+Action.c(50):                   // Send all custom set commands from the trackerObj.set property\n
+Action.c(50):                   for (var key in trackerObj.set) {\n
+Action.c(50):                     if (trackerObj.set.hasOwnProperty(key)) {\n
+Action.c(50):                       _ga(generateCommandName('set', trackerObj), key, trackerObj.set[key]);\n
+Action.c(50):                     }\n
+Action.c(50):                   }\n
+Action.c(50):     \n
+Action.c(50):                   if (trackerObj.crossDomainLinker === true) {\n
+Action.c(50):                     _ga(generateCommandName('require', trackerObj), 'linker');\n
+Action.c(50):                     if (angular.isDefined(trackerObj.crossLinkDomains)) {\n
+Action.c(50):                       _ga(generateCommandName('linker:autoLink', trackerObj), trackerObj.cross
+Action.c(50):     LinkDomains);\n
+Action.c(50):                     }\n
+Action.c(50):                   }\n
+Action.c(50):     \n
+Action.c(50):                   if (trackerObj.displayFeatures) {\n
+Action.c(50):                     _ga(generateCommandName('require', trackerObj), 'displayfeatures');\n
+Action.c(50):                   }\n
+Action.c(50):     \n
+Action.c(50):                   if (trackerObj.trackEcommerce) {\n
+Action.c(50):                     if (!enhancedEcommerce) {\n
+Action.c(50):                       _ga(generateCommandName('require', trackerObj), 'ecommerce');\n
+Action.c(50):                     } else {\n
+Action.c(50):                       _ga(generateCommandName('require', trackerObj), 'ec');\n
+Action.c(50):                       _ga(generateCommandName('set', trackerObj), '&cu', currency);\n
+Action.c(50):                     }\n
+Action.c(50):                   }\n
+Action.c(50):     \n
+Action.c(50):                   if (trackerObj.enhancedLinkAttribution) {\n
+Action.c(50):                     _ga(generateCommandName('require', trackerObj), 'linkid');\n
+Action.c(50):                   }\n
+Action.c(50):     \n
+Action.c(50):                   if (trackRoutes && !ignoreFirstPageLoad) {\n
+Action.c(50):                     _ga(generateCommandName('send', trackerObj), 'pageview', trackPrefix + get
+Action.c(50):     Url());\n
+Action.c(50):                   }\n
+Action.c(50):                 });\n
+Action.c(50):               //\n
+Action.c(50):               // Classic Analytics\n
+Action.c(50):               //\n
+Action.c(50):               } else {\n
+Action.c(50):                 if (accounts.length > 1) {\n
+Action.c(50):                   that._log('warn', 'Multiple trackers are not supported with ga.js. Using fir
+Action.c(50):     st tracker only');\n
+Action.c(50):                   accounts = accounts.slice(0, 1);\n
+Action.c(50):                 }\n
+Action.c(50):     \n
+Action.c(50):                 _gaq('_setAccount', accounts[0].tracker);\n
+Action.c(50):                 if(domainName) {\n
+Action.c(50):                   _gaq('_setDomainName', domainName);\n
+Action.c(50):                 }\n
+Action.c(50):                 if (enhancedLinkAttribution) {\n
+Action.c(50):                   _gaq('_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inp
+Action.c(50):     age_linkid.js');\n
+Action.c(50):                 }\n
+Action.c(50):                 if (trackRoutes && !ignoreFirstPageLoad) {\n
+Action.c(50):                   if (removeRegExp) {\n
+Action.c(50):                     _gaq('_trackPageview', getUrl());\n
+Action.c(50):                   } else {\n
+Action.c(50):                     _gaq('_trackPageview');\n
+Action.c(50):                   }\n
+Action.c(50):                 }\n
+Action.c(50):               }\n
+Action.c(50):     \n
+Action.c(50):               return true;\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             this._ecommerceEnabled = function (warn, command) {\n
+Action.c(50):               var result = ecommerce && !enhancedEcommerce;\n
+Action.c(50):               if (warn === true && result === false) {\n
+Action.c(50):                 if (ecommerce && enhancedEcommerce) {\n
+Action.c(50):                   that._log('warn', command + ' is not available when Enhanced Ecommerce is en
+Action.c(50):     abled with analytics.js');\n
+Action.c(50):                 } else {\n
+Action.c(50):                   that._log('warn', 'Ecommerce must be enabled to use ' + command + ' with ana
+Action.c(50):     lytics.js');\n
+Action.c(50):                 }\n
+Action.c(50):               }\n
+Action.c(50):               return result;\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             this._enhancedEcommerceEnabled = function (warn, command) {\n
+Action.c(50):               var result = ecommerce && enhancedEcommerce;\n
+Action.c(50):               if (warn === true && result === false) {\n
+Action.c(50):                 that._log('warn', 'Enhanced Ecommerce must be enabled to use ' + command + ' w
+Action.c(50):     ith analytics.js');\n
+Action.c(50):               }\n
+Action.c(50):               return result;\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /
+Action.c(50): t=2337316ms: 12288-byte DECODED response body for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=905)
+Action.c(50):     **\n
+Action.c(50):              * Track page\n
+Action.c(50):              https://developers.google.com/analytics/devguides/collection/gajs/\n
+Action.c(50):              https://developers.google.com/analytics/devguides/collection/analyticsjs/pages\n
+Action.c(50):              * @param url\n
+Action.c(50):              * @param title\n
+Action.c(50):              * @param custom\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackPage = function (url, title, custom) {\n
+Action.c(50):               url = url ? url : getUrl();\n
+Action.c(50):               title = title ? title : $document[0].title;\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 // http://stackoverflow.com/questions/7322288/how-can-i-set-a-page-title-with-
+Action.c(50):     google-analytics\n
+Action.c(50):                 _gaq('_set', 'title', title);\n
+Action.c(50):                 _gaq('_trackPageview', (trackPrefix + url));\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 var opt_fieldObject = {\n
+Action.c(50):                   'page': trackPrefix + url,\n
+Action.c(50):                   'title': title\n
+Action.c(50):                 };\n
+Action.c(50):                 angular.extend(opt_fieldObject, getUtmParams());\n
+Action.c(50):                 if (angular.isObject(custom)) {\n
+Action.c(50):                   angular.extend(opt_fieldObject, custom);\n
+Action.c(50):                 }\n
+Action.c(50):                 _gaMultipleTrackers(undefined, 'send', 'pageview', opt_fieldObject);\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track event\n
+Action.c(50):              https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGui
+Action.c(50):     de\n
+Action.c(50):              https://developers.google.com/analytics/devguides/collection/analyticsjs/events\n
+Action.c(50):              * @param category\n
+Action.c(50):              * @param action\n
+Action.c(50):              * @param label\n
+Action.c(50):              * @param value\n
+Action.c(50):              * @param noninteraction\n
+Action.c(50):              * @param custom\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackEvent = function (category, action, label, value, noninteraction, custo
+Action.c(50):     m) {\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_trackEvent', category, action, label, value, !!noninteraction);\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 var opt_fieldObject = {};\n
+Action.c(50):                 var includeFn = function (trackerObj) {\n
+Action.c(50):                   return isPropertySetTo('trackEvent', trackerObj, true);\n
+Action.c(50):                 };\n
+Action.c(50):     \n
+Action.c(50):                 if (angular.isDefined(noninteraction)) {\n
+Action.c(50):                   opt_fieldObject.nonInteraction = !!noninteraction;\n
+Action.c(50):                 }\n
+Action.c(50):                 if (angular.isObject(custom)) {\n
+Action.c(50):                   angular.extend(opt_fieldObject, custom);\n
+Action.c(50):                 }\n
+Action.c(50):                 if (!angular.isDefined(opt_fieldObject.page)) {\n
+Action.c(50):                   opt_fieldObject.page = getUrl();\n
+Action.c(50):                 }\n
+Action.c(50):                 _gaMultipleTrackers(includeFn, 'send', 'event', category, action, label, value
+Action.c(50):     , opt_fieldObject);\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Add transaction\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSA
+Action.c(50):     piEcommerce#_gat.GA_Tracker_._addTrans\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/ecomme
+Action.c(50):     rce#addTrans\n
+Action.c(50):              * @param transactionId\n
+Action.c(50):              * @param affiliation\n
+Action.c(50):              * @param total\n
+Action.c(50):              * @param tax\n
+Action.c(50):              * @param shipping\n
+Action.c(50):              * @param city\n
+Action.c(50):              * @param state\n
+Action.c(50):              * @param country\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._addTrans = function (transactionId, affiliation, total, tax, shipping, city,
+Action.c(50):      state, country, currency) {\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_addTrans', transactionId, affiliation, total, tax, shipping, city, stat
+Action.c(50):     e, country);\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._ecommerceEnabled(true, 'addTrans')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):     \n
+Action.c(50):                   _gaMultipleTrackers(\n
+Action.c(50):                     includeFn,\n
+Action.c(50):                     'ecommerce:addTransaction',\n
+Action.c(50):                     {\n
+Action.c(50):                       id: transactionId,\n
+Action.c(50):                       affiliation: affiliation,\n
+Action.c(50):                       revenue: total,\n
+Action.c(50):                       tax: tax,\n
+Action.c(50):                       shipping: shipping,\n
+Action.c(50):                       currency: currency || 'USD'\n
+Action.c(50):                     });\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Add item to transaction\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSA
+Action.c(50):     piEcommerce#_gat.GA_Tracker_._addItem\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/ecomme
+Action.c(50):     rce#addItem\n
+Action.c(50):              * @param transactionId\n
+Action.c(50):              * @param sku\n
+Action.c(50):              * @param name\n
+Action.c(50):              * @param category\n
+Action.c(50):              * @param price\n
+Action.c(50):              * @param quantity\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._addItem = function (transactionId, sku, name, category, price, quantity) {\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_addItem', transactionId, sku, name, category, price, quantity);\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._ecommerceEnabled(true, 'addItem')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):     \n
+Action.c(50):                   _gaMultipleTrackers(\n
+Action.c(50):                     includeFn,\n
+Action.c(50):                     'ecommerce:addItem',\n
+Action.c(50):                     {\n
+Action.c(50):                       id: transactionId,\n
+Action.c(50):                       name: name,\n
+Action.c(50):                       sku: sku,\n
+Action.c(50):                       category: category,\n
+Action.c(50):                       price: price,\n
+Action.c(50):                       quantity: quantity\n
+Action.c(50):                     });\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track transaction\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSA
+Action.c(50):     piEcommerce#_gat.GA_Tracker_._trackTrans\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/ecomme
+Action.c(50):     rce#sendingData\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackTrans = function () {\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_trackTrans');\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._ecommerceEnabled(true, 'trackTrans')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):     \n
+Action.c(50):                   _gaMultipleTrackers(includeFn, 'ecommerce:send');\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Clear transaction\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/ecomme
+Action.c(50):     rce#clearingData\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._clearTrans = function () {\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._ecommerceEnabled(true, 'clearTrans')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):     \n
+Action.c(50):                   _gaMultipleTrackers(includeFn, 'ecommerce:clear');\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Enhanced Ecommerce\n
+Action.c(50):              */\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Add Product\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#product-data\n
+Action.c(50):              * @param productId\n
+Action.c(50):              * @param name\n
+Action.c(50):              * @param category\n
+Action.c(50):              * @param brand\n
+Action.c(50):              * @param variant\n
+Action.c(50):              * @param price\n
+Action.c(50):              * @param quantity\n
+Action.c(50):              * @param coupon\n
+Action.c(50):              * @param position\n
+Action.c(50):              * @param custom\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._addProduct = function (productId, name, category, brand, variant, price, qua
+Action.c(50):     ntity, coupon, position, custom) {\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_addProduct', productId, name, category, brand, variant, price, quantity
+Action.c(50):     , coupon, position);\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._enhancedEcommerceEnabled(true, 'addProduct')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):                   var details = {\n
+Action.c(50):                     id: productId,\n
+Action.c(50):                     name: name,\n
+Action.c(50):                     category: category,\n
+Action.c(50):                     brand: brand,\n
+Action.c(50):                     variant: variant,\n
+Action.c(50):                     price: price,\n
+Action.c(50):                     quantity: quantity,\n
+Action.c(50):                     coupon: coupon,\n
+Action.c(50):                     position: position\n
+Action.c(50):                   };\n
+Action.c(50):                   if (angular.isObject(custom)) {\n
+Action.c(50):                     angular.extend(details, custom);\n
+Action.c(50):                   }\n
+Action.c(50):                   _gaMultipleTrackers(includeFn, 'ec:addProduct', details);\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Add Impression\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#impression-data\n
+Action.c(50):              * @param id\n
+Action.c(50):              * @param name\n
+Action.c(50):              * @param list\n
+Action.c(50):              * @param brand\n
+Action.c(50):              * @param category\n
+Action.c(50):              * @param variant\n
+Action.c(50):              * @param position\n
+Action.c(50):              * @param price\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._addImpression = function (id, name, list, brand, category, variant, position
+Action.c(50):     , price){\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_addImpression', id, name, list, brand, category, variant, position, pri
+Action.c(50):     ce);\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._enhancedEcommerceEnabled(true, 'addImpression')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):     \n
+Action.c(50):                   _gaMultipleTrackers(\n
+Action.c(50):                     includeFn,\n
+Action.c(50):                     'ec:addImpression',\n
+Action.c(50):                     {\n
+Action.c(50):                       id: id,\n
+Action.c(50):                       name: name,\n
+Action.c(50):                       category: category,\n
+Action.c(50):                       brand: brand,\n
+Action.c(50):                       variant: variant,\n
+Action.c(50):                       list: list,\n
+Action.c(50):                       position: position,\n
+Action.c(50):                       price: price\n
+Action.c(50):                     });\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Add Promo\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce\n
+Action.c(50):              * @param productId\n
+Action.c(50):              * @param name\n
+Action.c(50):              * @param creative\n
+Action.c(50):              * @param position\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._addPromo = function (productId, name, creative, position) {\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_addPromo', productId, name, creative, position);\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._enhancedEcommerceEnabled(true, 'addPromo')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):     \n
+Action.c(50):                   _gaMultipleTrackers(\n
+Action.c(50):                     includeFn,\n
+Action.c(50):                     'ec:addPromo',\n
+Action.c(50):                     {\n
+Action.c(50):                       id: productId,\n
+Action.c(50):                       name: name,\n
+Action.c(50):                       creative: creative,\n
+Action.c(50):                       position: position\n
+Action.c(50):                     });\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Set Action\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#measuring-actions\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#action-types\n
+Action.c(50):              * @param action\n
+Action.c(50):              * @param obj\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._setAction = function (action, obj){\n
+Action.c(50):               _gaJs(function () {\n
+Action.c(50):                 _gaq('_setAction', action, obj);\n
+Action.c(50):               });\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 if (that._enhancedEcommerceEnabled(true, 'setAction')) {\n
+Action.c(50):                   var includeFn = function (trackerObj) {\n
+Action.c(50):                     return isPropertySetTo('trackEcommerce', trackerObj, true);\n
+Action.c(50):                   };\n
+Action.c(50):     \n
+Action.c(50):                   _gaMultipleTrackers(includeFn, 'ec:setAction', action, obj);\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track Transaction\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#measuring-transactions\n
+Action.c(50):              * @param transactionId\n
+Action.c(50):              * @param affiliation\n
+Action.c(50):              * @param revenue\n
+Action.c(50):              * @param tax\n
+Action.c(50):              * @param shipping\n
+Action.c(50):              * @param coupon\n
+Action.c(50):              * @param list\n
+Action.c(50):              * @param step\n
+Action.c(50):              * @param option\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackTransaction = function (transactionId, affiliation, revenue, tax, shipp
+Action.c(50):     ing, coupon, list, step, option) {\n
+Action.c(50):               this._setAction('purchase', getActionFieldObject(transactionId, affiliation, rev
+Action.c(50):     enue, tax, shipping, coupon, list, step, option));\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track Refund\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#measuring-refunds\n
+Action.c(50):              * @param transactionId\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):            
+Action.c(50): t=2337323ms: 12288-byte DECODED response body for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=905)
+Action.c(50):      this._trackRefund = function (transactionId) {\n
+Action.c(50):               this._setAction('refund', getActionFieldObject(transactionId));\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track Checkout\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#measuring-checkout\n
+Action.c(50):              * @param step\n
+Action.c(50):              * @param option\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackCheckOut = function (step, option) {\n
+Action.c(50):               this._setAction('checkout', getActionFieldObject(null, null, null, null, null, n
+Action.c(50):     ull, null, step, option));\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track detail\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackDetail = function () {\n
+Action.c(50):               this._setAction('detail');\n
+Action.c(50):               this._pageView();\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track add/remove to cart\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#add-remove-cart\n
+Action.c(50):              * @param action\n
+Action.c(50):              * @param list\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackCart = function (action, listName) {\n
+Action.c(50):               if (['add', 'remove'].indexOf(action) !== -1) {\n
+Action.c(50):                 this._setAction(action, { list: listName });\n
+Action.c(50):                 this._trackEvent('UX', 'click', action + (action === 'add' ? ' to cart' : ' fr
+Action.c(50):     om cart'));\n
+Action.c(50):               }\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track promo click\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#measuring-promo-clicks\n
+Action.c(50):              * @param promotionName\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._promoClick = function (promotionName) {\n
+Action.c(50):               this._setAction('promo_click');\n
+Action.c(50):               this._trackEvent('Internal Promotions', 'click', promotionName);\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track product click\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanc
+Action.c(50):     ed-ecommerce#measuring-promo-clicks\n
+Action.c(50):              * @param promotionName\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._productClick = function (listName) {\n
+Action.c(50):               this._setAction('click', getActionFieldObject(null, null, null, null, null, null
+Action.c(50):     , listName, null, null));\n
+Action.c(50):               this._trackEvent('UX', 'click', listName);\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Send page view\n
+Action.c(50):              * @param trackerName\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._pageView = function (trackerName) {\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 _ga(generateCommandName('send', trackerName), 'pageview');\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Send custom events\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/user-t
+Action.c(50):     imings#implementation\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/social
+Action.c(50):     -interactions#implementation\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._send = function () {\n
+Action.c(50):               var args = Array.prototype.slice.call(arguments);\n
+Action.c(50):               args.unshift('send');\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 _ga.apply(that, args);\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Set custom dimensions, metrics or experiment\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/custom
+Action.c(50):     -dims-mets\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/field-
+Action.c(50):     reference#customs\n
+Action.c(50):              * @param name (Required)\n
+Action.c(50):              * @param value (Required)\n
+Action.c(50):              * @param trackerName (Optional)\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._set = function (name, value, trackerName) {\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 _ga(generateCommandName('set', trackerName), name, value);\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Track user timings\n
+Action.c(50):              * @param timingCategory (Required): A string for categorizing all user timing var
+Action.c(50):     iables into logical groups(e.g jQuery).\n
+Action.c(50):              * @param timingVar (Required): A string to identify the variable being recorded(e
+Action.c(50):     .g. JavaScript Load).\n
+Action.c(50):              * @param timingValue (Required): The number of milliseconds in elapsed time to re
+Action.c(50):     port to Google Analytics(e.g. 20).\n
+Action.c(50):              * @param timingLabel (Optional): A string that can be used to add flexibility in 
+Action.c(50):     visualizing user timings in the reports(e.g. Google CDN).\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackTimings = function (timingCategory, timingVar, timingValue, timingLabel
+Action.c(50):     ) {\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 _gaMultipleTrackers(undefined, 'send', 'timing', timingCategory, timingVar, ti
+Action.c(50):     mingValue, timingLabel);\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             /**\n
+Action.c(50):              * Exception tracking\n
+Action.c(50):              * https://developers.google.com/analytics/devguides/collection/analyticsjs/except
+Action.c(50):     ions\n
+Action.c(50):              * @param description (Optional): A description of the exception.\n
+Action.c(50):              * @param isFatal (Optional): true if the exception was fatal, false otherwise.\n
+Action.c(50):              * @private\n
+Action.c(50):              */\n
+Action.c(50):             this._trackException = function (description, isFatal) {\n
+Action.c(50):               _analyticsJs(function () {\n
+Action.c(50):                 _gaMultipleTrackers(undefined, 'send', 'exception', { exDescription: descripti
+Action.c(50):     on, exFatal: !!isFatal});\n
+Action.c(50):               });\n
+Action.c(50):             };\n
+Action.c(50):     \n
+Action.c(50):             // creates the Google Analytics tracker\n
+Action.c(50):             if (!delayScriptTag) {\n
+Action.c(50):               this._registerScriptTags();\n
+Action.c(50):               this._registerTrackers();\n
+Action.c(50):             }\n
+Action.c(50):     \n
+Action.c(50):             // activates page tracking\n
+Action.c(50):             if (trackRoutes) {\n
+Action.c(50):               $rootScope.$on(pageEvent, function () {\n
+Action.c(50):                 // Apply $route based filtering if configured\n
+Action.c(50):                 if (readFromRoute) {\n
+Action.c(50):                   // Avoid tracking undefined routes, routes without template (e.g. redirect r
+Action.c(50):     outes)\n
+Action.c(50):                   // and those explicitly marked as 'do not track'\n
+Action.c(50):                   if (!$route.current || !$route.current.templateUrl || $route.current.doNotTr
+Action.c(50):     ack) {\n
+Action.c(50):                     return;\n
+Action.c(50):                   }\n
+Action.c(50):                 }\n
+Action.c(50):                 \n
+Action.c(50):                 that._trackPage();\n
+Action.c(50):               });\n
+Action.c(50):             }\n
+Action.c(50):     \n
+Action.c(50):             return {\n
+Action.c(50):               log: that.log,\n
+Action.c(50):               offlineQueue: that.offlineQueue,\n
+Action.c(50):               configuration: {\n
+Action.c(50):                 accounts: accounts,\n
+Action.c(50):                 universalAnalytics: analyticsJS,\n
+Action.c(50):                 crossDomainLinker: crossDomainLinker,\n
+Action.c(50):                 crossLinkDomains: crossLinkDomains,\n
+Action.c(50):                 currency: currency,\n
+Action.c(50):                 debugMode: debugMode,\n
+Action.c(50):                 delayScriptTag: delayScriptTag,\n
+Action.c(50):                 disableAnalytics: disableAnalytics,\n
+Action.c(50):                 displayFeatures: displayFeatures,\n
+Action.c(50):                 domainName: domainName,\n
+Action.c(50):                 ecommerce: that._ecommerceEnabled(),\n
+Action.c(50):                 enhancedEcommerce: that._enhancedEcommerceEnabled(),\n
+Action.c(50):                 enhancedLinkAttribution: enhancedLinkAttribution,\n
+Action.c(50):                 experimentId: experimentId,\n
+Action.c(50):                 hybridMobileSupport: hybridMobileSupport,\n
+Action.c(50):                 ignoreFirstPageLoad: ignoreFirstPageLoad,\n
+Action.c(50):                 logAllCalls: logAllCalls,\n
+Action.c(50):                 pageEvent: pageEvent,\n
+Action.c(50):                 readFromRoute: readFromRoute,\n
+Action.c(50):                 removeRegExp: removeRegExp,\n
+Action.c(50):                 testMode: testMode,\n
+Action.c(50):                 traceDebuggingMode: traceDebuggingMode,\n
+Action.c(50):                 trackPrefix: trackPrefix,\n
+Action.c(50):                 trackRoutes: trackRoutes,\n
+Action.c(50):                 trackUrlParams: trackUrlParams\n
+Action.c(50):               },\n
+Action.c(50):               getUrl: getUrl,\n
+Action.c(50):               /* DEPRECATED */\n
+Action.c(50):               setCookieConfig: function (config) {\n
+Action.c(50):                 that._log('warn', 'DEPRECATION WARNING: setCookieConfig method is deprecated. 
+Action.c(50):     Please use tracker fields instead.');\n
+Action.c(50):                 return that._setCookieConfig.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               /* DEPRECATED */\n
+Action.c(50):               getCookieConfig: function () {\n
+Action.c(50):                 that._log('warn', 'DEPRECATION WARNING: getCookieConfig method is deprecated. 
+Action.c(50):     Please use tracker fields instead.');\n
+Action.c(50):                 return cookieConfig;\n
+Action.c(50):               },\n
+Action.c(50):               /* DEPRECATED */\n
+Action.c(50):               createAnalyticsScriptTag: function (config) {\n
+Action.c(50):                 that._log('warn', 'DEPRECATION WARNING: createAnalyticsScriptTag method is dep
+Action.c(50):     recated. Please use registerScriptTags and registerTrackers methods instead.');\n
+Action.c(50):                 if (config) {\n
+Action.c(50):                   cookieConfig = config;\n
+Action.c(50):                 }\n
+Action.c(50):                 return that._createAnalyticsScriptTag();\n
+Action.c(50):               },\n
+Action.c(50):               /* DEPRECATED */\n
+Action.c(50):               createScriptTag: function () {\n
+Action.c(50):                 that._log('warn', 'DEPRECATION WARNING: createScriptTag method is deprecated. 
+Action.c(50):     Please use registerScriptTags and registerTrackers methods instead.');\n
+Action.c(50):                 return that._createScriptTag();\n
+Action.c(50):               },\n
+Action.c(50):               registerScriptTags: function () {\n
+Action.c(50):                 return that._registerScriptTags();\n
+Action.c(50):               },\n
+Action.c(50):               registerTrackers: function () {\n
+Action.c(50):                 return that._registerTrackers();\n
+Action.c(50):               },\n
+Action.c(50):               offline: function (mode) {\n
+Action.c(50):                 if (mode === true && offlineMode === false) {\n
+Action.c(50):                   // Go to offline mode\n
+Action.c(50):                   offlineMode = true;\n
+Action.c(50):                 }\n
+Action.c(50):                 if (mode === false && offlineMode === true) {\n
+Action.c(50):                   // Go to online mode and process the offline queue\n
+Action.c(50):                   offlineMode = false;\n
+Action.c(50):                   while (that.offlineQueue.length > 0) {\n
+Action.c(50):                     var obj = that.offlineQueue.shift();\n
+Action.c(50):                     obj[0].apply(that, obj[1]);\n
+Action.c(50):                   }\n
+Action.c(50):                 }\n
+Action.c(50):                 return offlineMode;\n
+Action.c(50):               },\n
+Action.c(50):               trackPage: function (url, title, custom) {\n
+Action.c(50):                 that._trackPage.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackEvent: function (category, action, label, value, noninteraction, custom) {\n
+Action.c(50):                 that._trackEvent.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               addTrans: function (transactionId, affiliation, total, tax, shipping, city, stat
+Action.c(50):     e, country, currency) {\n
+Action.c(50):                 that._addTrans.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               addItem: function (transactionId, sku, name, category, price, quantity) {\n
+Action.c(50):                 that._addItem.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackTrans: function () {\n
+Action.c(50):                 that._trackTrans.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               clearTrans: function () {\n
+Action.c(50):                 that._clearTrans.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               addProduct: function (productId, name, category, brand, variant, price, quantity
+Action.c(50):     , coupon, position, custom) {\n
+Action.c(50):                 that._addProduct.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               addPromo: function (productId, name, creative, position) {\n
+Action.c(50):                 that._addPromo.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               addImpression: function (productId, name, list, brand, category, variant, positi
+Action.c(50):     on, price) {\n
+Action.c(50):                 that._addImpression.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               productClick: function (listName) {\n
+Action.c(50):                 that._productClick.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               promoClick : function (promotionName) {\n
+Action.c(50):                 that._promoClick.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackDetail: function () {\n
+Action.c(50):                 that._trackDetail.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackCart: function (action, list) {\n
+Action.c(50):                 that._trackCart.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackCheckout: function (step, option) {\n
+Action.c(50):                 that._trackCheckOut.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackTimings: function (timingCategory, timingVar, timingValue, timingLabel) {\n
+Action.c(50):                 that._trackTimings.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackTransaction: function (transactionId, affiliation, revenue, tax, shipping, 
+Action.c(50):     coupon, list, step, option) {\n
+Action.c(50):                 that._trackTransaction.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               trackException: function (description, isFatal) {\n
+Action.c(50):                 that._trackException.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               setAction: function (action, obj) {\n
+Action.c(50):                 that._setAction.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               pageView: function () {\n
+Action.c(50):                 that._pageView.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               send: function (obj) {\n
+Action.c(50):                 that._send.apply(that, arguments);\n
+Action.c(50):               },\n
+Action.c(50):               set: function (name, value, trackerName) {\n
+Action.c(50):                 that._set.apply(that, arguments);\n
+Action.c(50):               }\n
+Action.c(50):             };\n
+Action.c(50):           }];\n
+Action.c(50):         })\n
+Action.c(50):     \n
+Action.c(50):         .directive('gaTrackEvent', ['Analytics', '$parse', function (Analytics, $parse) {\n
+Action.c(50):           return {\n
+Action.c(50):             restrict: 'A',\n
+Action.c(50):             link: function (scope, element, attrs) {\n
+Action.c(50):               var options = $parse(attrs.gaTrackEvent);\n
+Action.c(50):               element.bind('click', function () {\n
+Action.c(50):                 if(attrs.gaTrackEventIf){\n
+Action.c(50):                   if(!scope.$eval(attrs.gaTrackEventIf)){\n
+Action.c(50):                     return; // Cancel this event if we don't pass the ga-track-event-if condit
+Action.c(50):     ion\n
+Action.c(50):                   }\n
+Action.c(50):                 }\n
+Action.c(50):                 if (options.le
+Action.c(50): t=2337329ms: 3576-byte DECODED response body for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=905)
+Action.c(50):     ngth > 1) {\n
+Action.c(50):                   Analytics.trackEvent.apply(Analytics, options(scope));\n
+Action.c(50):                 }\n
+Action.c(50):               });\n
+Action.c(50):             }\n
+Action.c(50):           };\n
+Action.c(50):         }]);\n
+Action.c(50):       return angular.module('angular-google-analytics');\n
+Action.c(50):     }));\n
+Action.c(50):     \n
+Action.c(50):     /**\n
+Action.c(50):      * Created by kubany on 10/12/2015.\n
+Action.c(50):      */\n
+Action.c(50):     require.config({\n
+Action.c(50):         "waitSeconds": 600,\n
+Action.c(50):         paths: {\n
+Action.c(50):     \n
+Action.c(50):             'jquery': 'vendor/jquery/dist/jquery.min',\n
+Action.c(50):             'jquery-bez': 'vendor/jquery-bez/jquery.bez.min',\n
+Action.c(50):             'jquery.animate-colors': 'vendor/jquery-color-animation/jquery.animate-colors-min'
+Action.c(50):     ,\n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):             'angular': 'vendor/angular/angular.min',\n
+Action.c(50):             'angular-cookie': 'vendor/angular-cookie/angular-cookie.min',\n
+Action.c(50):             'toaster': 'vendor/AngularJS-Toaster/toaster.min',\n
+Action.c(50):             'angular-translate': 'vendor/angular-translate/angular-translate.min',\n
+Action.c(50):             "uiRouter": 'vendor/angular-ui-router/release/angular-ui-router.min',\n
+Action.c(50):             'angularAnimate': 'vendor/angular-animate/angular-animate.min',\n
+Action.c(50):             'angularAutocomplete': 'vendor/ngAutocomplete/src/ngAutocomplete',\n
+Action.c(50):             'underscore' : 'vendor/underscore/underscore-min',\n
+Action.c(50):     \n
+Action.c(50):             'bootstrap': 'vendor/bootstrap/dist/js/bootstrap.min',\n
+Action.c(50):             'ui-bootstrap': 'vendor/angular-bootstrap/ui-bootstrap-tpls.min',\n
+Action.c(50):             'angular-google-analytics': 'vendor/angular-google-analytics/dist/angular-google-a
+Action.c(50):     nalytics',\n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):             'jPushMenu': 'utils/jPushMenu',\n
+Action.c(50):             'mainScript': 'utils/main',\n
+Action.c(50):             'accordion': 'utils/accordion',\n
+Action.c(50):             'server': 'utils/server',\n
+Action.c(50):             'nouislider': 'utils/noUiSlider.8.2.1/nouislider',\n
+Action.c(50):             'wrongDirection': 'utils/wrongDirection',\n
+Action.c(50):             'UserCookie': 'utils/Models/UserCookie',\n
+Action.c(50):             'slider': 'utils/slider',\n
+Action.c(50):             'jquery-soap': 'utils/jquery.soap',\n
+Action.c(50):     \n
+Action.c(50):             'englishLanguage': 'languages/english',\n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):         },\n
+Action.c(50):         shim: {\n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):             'angular': {\n
+Action.c(50):                 'exports': 'angular'\n
+Action.c(50):             },\n
+Action.c(50):             'app': {\n
+Action.c(50):                 deps: ['angular']\n
+Action.c(50):             },\n
+Action.c(50):             'angular-cookie': {\n
+Action.c(50):                 deps: ['angular']\n
+Action.c(50):             },\n
+Action.c(50):             'toaster': {\n
+Action.c(50):                 deps: ['angular', 'angularAnimate']\n
+Action.c(50):             },\n
+Action.c(50):             'angular-translate': {\n
+Action.c(50):                 deps: ['angular']\n
+Action.c(50):             },\n
+Action.c(50):             'nouislider': {},\n
+Action.c(50):             'englishLanguage': {},\n
+Action.c(50):             'angularAutocomplete': {\n
+Action.c(50):                 deps: ['angular']\n
+Action.c(50):             },\n
+Action.c(50):             'ui-bootstrap': ['angular'],\n
+Action.c(50):             'angularAnimate': ['angular'],\n
+Action.c(50):             'jquery-bez': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'jquery-soap': {\n
+Action.c(50):                 'deps': ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'jquery.animate-colors': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'bootstrap': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'jPushMenu': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'mainScript': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'accordion': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'slider': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'wrongDirection': {\n
+Action.c(50):                 deps: ['jquery']\n
+Action.c(50):             },\n
+Action.c(50):             'uiRouter': {\n
+Action.c(50):                 deps: ['angular']\n
+Action.c(50):             }\n
+Action.c(50):         }\n
+Action.c(50):     });\n
+Action.c(50):     \n
+Action.c(50):     window.name = "NG_DEFER_BOOTSTRAP!";\n
+Action.c(50):     \n
+Action.c(50):     require(['angular', 'app', 'angular-translate', 'bootstrap', 'englishLanguage',\n
+Action.c(50):             'jquery', 'jquery-bez', 'jquery.animate-colors', 'jPushMenu', 'mainScript', 'serve
+Action.c(50):     r',\n
+Action.c(50):             'nouislider', 'accordion', 'wrongDirection', 'UserCookie',\n
+Action.c(50):             'slider', 'uiRouter', 'angular-cookie', 'toaster', 'angularAutocomplete',\n
+Action.c(50):             'angularAnimate', 'ui-bootstrap', 'jquery-soap', 'underscore', 'angular-google-ana
+Action.c(50):     lytics',\n
+Action.c(50):         ], function (angular, app) {\n
+Action.c(50):                 angular.bootstrap(document, ['aos']);\n
+Action.c(50):                 angular.resumeBootstrap();\n
+Action.c(50):         }\n
+Action.c(50):     );\n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):     \n
+Action.c(50):     define("main", function(){});\n
+Action.c(50):     \n
+Action.c(50): t=2337332ms: Request done "https://www.advantageonlineshopping.com/main.min.js"  	[MsgId: MMSG-26000]
+Action.c(50): t=2337332ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337332ms: 4527-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337456ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337457ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337458ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337458ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337458ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337458ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337458ms: 4480-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337613ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337613ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337614ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337614ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337614ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337614ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337615ms: 3711-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337770ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337770ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337771ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337771ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337771ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337771ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337771ms: 4480-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337927ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337927ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337928ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337928ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337928ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337928ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2337928ms: 3711-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338084ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338084ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338085ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338085ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338085ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338085ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338085ms: 4480-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338244ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338244ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338244ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338244ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338244ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338245ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338245ms: 3711-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338402ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338402ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338403ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338403ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338403ms: 6244-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=925)
+Action.c(50): t=2338403ms: Request done "https://www.advantageonlineshopping.com/css/images/Banner1.jpg"  	[MsgId: MMSG-26000]
+Action.c(50): Registered web_reg_find successful for "Text=Advantage Shopping" (count=1)  	[MsgId: MMSG-26364]
+Action.c(50): web_url("www.advantageonlineshopping.com") was successful, 1785723 body bytes, 12724 header bytes  	[MsgId: MMSG-26386]
+Action.c(92): web_add_auto_header("Sec-Fetch-Mode") started  	[MsgId: MMSG-26355]
+Action.c(92): An unrecognized header ("Sec-Fetch-Mode") is being added  	[MsgId: MMSG-26595]
+Action.c(92): "Sec-Fetch-Mode: cors" header registered (superseding previous registration) for adding to requests from all following Action functions  	[MsgId: MMSG-26504]
+Action.c(92): web_add_auto_header("Sec-Fetch-Mode") was successful  	[MsgId: MMSG-26392]
+Action.c(95): web_add_auto_header("Sec-Fetch-Dest") started  	[MsgId: MMSG-26355]
+Action.c(95): An unrecognized header ("Sec-Fetch-Dest") is being added  	[MsgId: MMSG-26595]
+Action.c(95): "Sec-Fetch-Dest: empty" header registered (superseding previous registration) for adding to requests from all following Action functions  	[MsgId: MMSG-26504]
+Action.c(95): web_add_auto_header("Sec-Fetch-Dest") was successful  	[MsgId: MMSG-26392]
+Action.c(98): web_add_auto_header("Sec-Fetch-Site") started  	[MsgId: MMSG-26355]
+Action.c(98): An unrecognized header ("Sec-Fetch-Site") is being added  	[MsgId: MMSG-26595]
+Action.c(98): "Sec-Fetch-Site: same-origin" header registered (superseding previous registration) for adding to requests from all following Action functions  	[MsgId: MMSG-26504]
+Action.c(98): web_add_auto_header("Sec-Fetch-Site") was successful  	[MsgId: MMSG-26392]
+Action.c(101): web_url("ALL") started  	[MsgId: MMSG-26355]
+Action.c(101): The request to server https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" is done with headers:
+Action.c(101):     :method = GET
+Action.c(101):     :scheme = https
+Action.c(101):     :path = /catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL
+Action.c(101):     :authority = www.advantageonlineshopping.com
+Action.c(101):     Referer = https://www.advantageonlineshopping.com/
+Action.c(101):     Sec-Fetch-Site = same-origin
+Action.c(101):     Sec-Fetch-Mode = cors
+Action.c(101):     Sec-Fetch-Dest = empty
+Action.c(101):     DNT = 1
+Action.c(101):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(101):     sec-ch-ua-mobile = ?0
+Action.c(101):     sec-ch-ua-platform = "Windows"
+Action.c(101):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(101):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(101):     Accept-Encoding = gzip, deflate
+Action.c(101):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(101):     Accept = */*
+Action.c(101): t=2338758ms: 375-byte response headers for "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=934)
+Action.c(101):     HTTP/2.0 200\r\n
+Action.c(101):     Status: 200\r\n
+Action.c(101):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(101):     date: Wed, 27 Apr 2022 14:29:24 GMT\r\n
+Action.c(101):     content-type: application/json\r\n
+Action.c(101):     expires: 0\r\n
+Action.c(101):     cache-control: no-store\r\n
+Action.c(101):     x-content-type-options: nosniff\r\n
+Action.c(101):     x-xss-protection: 1; mode=block\r\n
+Action.c(101):     x-frame-options: DENY\r\n
+Action.c(101):     vary: accept-encoding\r\n
+Action.c(101):     content-encoding: gzip\r\n
+Action.c(101):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(101):     \r\n
+Action.c(101): t=2338759ms: 6531-byte ENCODED response body received for "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=934)
+Action.c(101): t=2338759ms: 12288-byte DECODED response body for "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=934)
+Action.c(101):     {"parameters":[{"parameterName":"Email_in_login","datatype":"enum:[Yes,No]","description":
+Action.c(101):     "Determines whether a mandatory Email field is added to the login screen. Use this paramet
+Action.c(101):     er to demonstrate that in BPT, a single component can be modified without updating other t
+Action.c(101):     ests. Default = No. Yes = Add the Email Address field.","attributeTools":"BPT","locationIn
+Action.c(101):     Advantage":"Login page","locationInAdminTool":"Functional","parameterValue":"No"},{"parame
+Action.c(101):     terName":"AppPulse_user","datatype":"string","description":"UserName:Password for AppPulse
+Action.c(101):      user to trigger the relevant AppPulse features.","attributeTools":"AppPulse","locationInA
+Action.c(101):     dvantage":"Entire site","locationInAdminTool":"Mobile;Functional","parameterValue":"AppPul
+Action.c(101):     se:AppPulse1"},{"parameterName":"ShipEx_repeat_calls","datatype":"string","description":"D
+Action.c(101):     efines the number of times to repeat a call to ShipEx. Use this parameter to find unnecess
+Action.c(101):     ary multiple calls to the same methods, and affects performance. Default = 0 (no repeat ca
+Action.c(101):     lling. ","attributeTools":"NV","locationInAdvantage":"Purchase","locationInAdminTool":"Gen
+Action.c(101):     eral;Performance","parameterValue":"0"},{"parameterName":"Add_product_to_incorrect_categor
+Action.c(101):     y","datatype":"enum:[Yes,No]","description":"Defines whether to move a Headphones item (pr
+Action.c(101):     oduct-id=13) from the Headphones category to the Speakers category. Use this parameter to 
+Action.c(101):     demonstrate an error in GUI or API testing. Default = No (category is not changed). Yes = 
+Action.c(101):     Modify the product category.","attributeTools":"LeanFT;UFT","locationInAdvantage":"Speaker
+Action.c(101):     s page","locationInAdminTool":"Functional","parameterValue":"No"},{"parameterName":"DB_cal
+Action.c(101):     l_delay","datatype":"string","description":"Defines the number of seconds to delay the ret
+Action.c(101):     rieval of countries during user registration. Default = 0 (no delay). Possible values = An
+Action.c(101):     y positive integer.","attributeTools":"LoadRunner;StormRunner","locationInAdvantage":"CREA
+Action.c(101):     TE ACCOUNT page","locationInAdminTool":"Performance;ITOM","parameterValue":"0"},{"paramete
+Action.c(101):     rName":"User_alternate_WSDL","datatype":"enum:[Yes,No]","description":"Determines whether 
+Action.c(101):     to modify the field names on the user registration page. (Preferred payment method > Favor
+Action.c(101):     ite payment; Phone > Mobile phone) Use this parameter to demonstrate API testing. Default 
+Action.c(101):     = No. Yes = Use the second WSDL request to register a new user","attributeTools":"UFT","lo
+Action.c(101):     cationInAdvantage":"CREATE ACCOUNT page","locationInAdminTool":"Functional","parameterValu
+Action.c(101):     e":"No"},{"parameterName":"Sum_added_to_cart","datatype":"string","description":"Defines a
+Action.c(101):      sum to be added to each cart calculation. The sum is updated in to both the Web and Mobil
+Action.c(101):     e UI (no API). A user must be logged in to enable this change. Default = 0 (no sum added)"
+Action.c(101):     ,"attributeTools":"LeanFT;UFT","locationInAdvantage":"Order payment page","locationInAdmin
+Action.c(101):     Tool":"Functional","parameterValue":"0"},{"parameterName":"Generate_memory_leak","datatype
+Action.c(101):     ":"string","description":"Defines the amount of memory leak in megabytes while retrieving 
+Action.c(101):     the order history. The memory leak is visible in both the UI and the API. Default = 0 (no 
+Action.c(101):     leak at all). Positive Integer = Number, multiplied by 1000. For example 1 = 1000 megabyte
+Action.c(101):      memory leak.","attributeTools":"LoadRunner;StormRunner","locationInAdvantage":"Order hist
+Action.c(101):     ory","locationInAdminTool":"Performance;ITOM","parameterValue":"0"},{"parameterName":"Post
+Action.c(101):     gres_Locks","datatype":"enum:[Tip]","description":"To generate a exhaustion of\xC2\xA0Post
+Action.c(101):     gresSQL\xC2\xA0locks, go to CONTACT US type \xE2\x80\x98database\xE2\x80\x99 at the Subjec
+Action.c(101):     t and click SEND.","attributeTools":"Ops B","locationInAdvantage":"Mobile, Entire App","lo
+Action.c(101):     cationInAdminTool":"Performance;ITOM","parameterValue":"Tip"},{"parameterName":"Max_concur
+Action.c(101):     rent_users","datatype":"string","description":"Defines the maximum number of concurrent us
+Action.c(101):     ers allowed. Any additional users are rejected with an error code 500. Default = 0 (no con
+Action.c(101):     current sessions allowed). Possible values = Any positive integer.","attributeTools":"Load
+Action.c(101):     Runner;StormRunner;NV","locationInAdvantage":"Login response","locationInAdminTool":"Perfo
+Action.c(101):     rmance;ITOM","parameterValue":"0"},{"parameterName":"Typos_on_order_payment","datatype":"e
+Action.c(101):     num:[Yes,No]","description":"Determines whether spelling errors appear in the UI. Default 
+Action.c(101):     = No. Yes = The following spelling errors are shown: - SHIPING DETAILS - Ciity - Recipeint
+Action.c(101):      Details (Web only) - ORDERR SUMMARY (Web only)","attributeTools":"Sprinter","locationInAd
+Action.c(101):     vantage":"Web: ORDER PAYMENT page ; Mobile: SHIPPING DETAILS page","locationInAdminTool":"
+Action.c(101):     Functional","parameterValue":"No"},{"parameterName":"Misplace_pictures_on_Android","dataty
+Action.c(101):     pe":"enum:[Yes,No]","description":"Determines whether pictures are placed differently on t
+Action.c(101):     he home page when viewed on an Android  device. Use this parameter to demonstrate how the 
+Action.c(101):     application may function differently on different mobile OSs. Default = No. Yes = Pictures
+Action.c(101):      are placed differently on Android devices.","attributeTools":"LeanFT;MobileCenter;UFT","l
+Action.c(101):     ocationInAdvantage":"Home page","locationInAdminTool":"Mobile;Functional","parameterValue"
+Action.c(101):     :"No"},{"parameterName":"Add_to_cart_time_delay","datatype":"string","description":"Define
+Action.c(101):     s the number of seconds to add as a delay in response time when a logged in user adds an i
+Action.c(101):     tem to cart. Default = 0 (no delay).","attributeTools":"LoadRunner;StormRunner","locationI
+Action.c(101):     nAdvantage":"DefaultShoppingCartRepository","locationInAdminTool":"ITOM;Performance","para
+Action.c(101):     meterValue":"0"},{"parameterName":"SLA_add_delay_time","datatype":"string","description":"
+Action.c(101):     Defines the number of seconds to add as a delay in response time when trying to login. Def
+Action.c(101):     ault = 0 (no delay). If you modify this value, also modify the SLA_add_delay_sessions para
+Action.c(101):     meter.","attributeTools":"LoadRunner;StormRunner","locationInAdvantage":"AccountServiceEnd
+Action.c(101):     point","locationInAdminTool":"Performance","parameterValue":"0"},{"parameterName":"SLA_add
+Action.c(101):     _delay_sessions","datatype":"string","description":"Defines a number of concurrent users s
+Action.c(101):     essions at which a delay is added to login response. Enabled only when SLA_add_delay_time 
+Action.c(101):     is set to a number greater than 0. Default = 20. Valid values = 0-n. The system starts add
+Action.c(101):     ing a delay if the number of sessions is greater than the defined value. It will stop the 
+Action.c(101):     delay if the number of sessions is decreased to less than the defined value. If you modify
+Action.c(101):      this value, also modify the SLA_add_delay_time parameter.","attributeTools":"LoadRunner;S
+Action.c(101):     tormRunner","locationInAdvantage":"ADD TO CART response","locationInAdminTool":"Performanc
+Action.c(101):     e","parameterValue":"0"},{"parameterName":"Show_slow_pages","datatype":"enum:[Yes,No]","de
+Action.c(101):     scription":"Determines whether NV report shows problems and errors: HTTP Codes 4xx and 5xx
+Action.c(101):     , loading unused libraries, timeout, downloading big images, etc. ","attributeTools":"NV;S
+Action.c(101):     tormRunner","locationInAdvantage":"Home Page; Laptops Page","locationInAdminTool":"Perform
+Action.c(101):     ance","parameterValue":"No"},{"parameterName":"Price_diffs_UI_vs_API","datatype":"enum:[Ye
+Action.c(101):     s,No]","description":"Creates a difference in the prices shown in the UI and the prices us
+Action.c(101):     ed in the API. Default = No. Yes = Price is doubled in the UI only, for both desktop and m
+Action.c(101):     obile, across the entire app.","attributeTools":"LeanFT;UFT","locationInAdvantage":"Entire
+Action.c(101):      site","locationInAdminTool":"Functional","parameterValue":"No"},{"parameterName":"Allow_E
+Action.c(101):     rror_in_Login","datatype":"enum:[Yes,No]","description":"Determines whether an invalid pas
+Action.c(101):     swords are allowed. These would trigger an error in a test, indicating a security gap in t
+Action.c(101):     he product. Default = No. Yes = Invalid passwords allowed, such as an empty password, or \xE2
+Action.c(101):     \x80\x981\xE2\x80\x99=\xE2\x80\x991\xE2\x80\x99","attributeTools":"Fortify","locationInAdv
+Action.c(101):     antage":"Login page","locationInAdminTool":"Security","parameterValue":"No"},{"parameterNa
+Action.c(101):     me":"Tips_Implement_DevOps_Process","datatype":"enum:[Tip]","description":"To demonstrate 
+Action.c(101):     the DevOpps process in a lifecycle management product, do the following: \xC2\xA0       1.
+Action.c(101):      In Octane, in your product release, add a user story to change an invalid user name or pa
+Action.c(101):     ssword text.         2. Demonstrate that you can view this new user story in your IDE.    
+Action.c(101):          3. Implement the user story by changing the MESSAGE_USER_LOGIN_FAILED error message i
+Action.c(101):     n the following file: \\\\adm-demo-app\\\\accountservice\\\\src\\\\main\\\\java\\\\com\\\\
+Action.c(101):     advantage\\\\accountsoap\\\\model\\\\Account.java.         For example, change it from \\"
+Action.c(101):     Invalid user name or password\\" to \\"Incorrect user name or password, please try again\\
+Action.c(101):     ".         4. Demonstrate the DevOps process and that you can now see the new error messag
+Action.c(101):     e on both desktop and mobile.","attributeTools":"","locationInAdvantage":"Change password"
+Action.c(101):     ,"locationInAdminTool":"General","parameterValue":"Tip"},{"parameterName":"ShipEx_Free_Num
+Action.c(101):     ber_Of_Products","datatype":"string","description":"The quantity of products in a single p
+Action.c(101):     urchase that are entitled to free shipping. Default = 1.","attributeTools":"","locationInA
+Action.c(101):     dvantage":"Order Payment","locationInAdminTool":"General","parameterValue":"1"},{"paramete
+Action.c(101):     rName":"Tips_Mock_SOAP_ShipEx_Service","datatype":"enum:[Tip]","description":"The shipping
+Action.c(101):      cost is determined by a table table in the 'shipex-mock-for-db.properties' configuration 
+Action.c(101):     file, according to country.  Shipping costs to countries not defined in the table are dete
+Action.c(101):     rmined based on the value for Other.  Free shipping can be provided when the number of ite
+Action.c(101):     ms ordered is equal to or less than the value  of the 'ShipEx_Free_Number_Of_Products' con
+Action.c(101):     figuration parameter (default = 1).","attributeTools":"","locationInAdvantage":"Order Paym
+Action.c(101):     ent","locationInAdminTool":"General","parameterValue":"Tip"},{"parameterName":"Tips_Applic
+Action.c(101):     ation_Development_Environment","datatype":"enum:[Tip]","description":"The Advantage demo s
+Action.c(101):     ite uses the following software versions and interfaces:  - Java server: Java 8  - Applica
+Action.c(101):     tion server: Tomcat 8  - Web UI: Angular 1.47  - Admin Application: Standalone .NET  - Dat
+Action.c(101):     abase: PostgreSQL 9.4  - Schema Management: Liquibase 3.4  - Catalog, Order Services: REST
+Action.c(101):      API  - User Management: WSDL.","attributeTools":"","locationInAdvantage":"","locationInAd
+Action.c(101):     minTool":"General","parameterValue":"Tip"},{"parameterName":"Tips_Scripting","datatype":"e
+Action.c(101):     num:[Tip]","description":"The demo app IP addresses are not fixed. In any scripts you crea
+Action.c(101):     te for a demo, make sure to use a parameter for the application IP address.","attributeToo
+Action.c(101):     ls":"LeanFT;UFT;LoadRunner;StormRunner","locationInAdvantage":"","locationInAdminTool":"Pe
+Action.c(101):     rformance;Functional","parameterValue":"Tip"},{"parameterName":"Tips_Fill_User_Location_Fr
+Action.c(101):     om_GPS","datatype":"enum:[Tip]","description":"To use your GPS location instead of the def
+Action.c(101):     ault values, toggle on the Use my location option on the following pages:  1. CREATE ACCOU
+Action.c(101):     NT, for the user account details.  2. ORDER PAYMENT, for the shipping details.","attribute
+Action.c(101):     Tools":"MobileCenter","locationInAdvantage":"Create Account, Order Payment - Shipping deta
+Action.c(101):     ils","locationInAdminTool":"Mobile","parameterValue":"Tip"},{"parameterName":"Tips_Mock_Ma
+Action.c(101):     sterCredit_Generate_Error","datatype":"enum:[Tip]","description":"To generate an error usi
+Action.c(101):     ng the MasterCredit card, enter a MasterCredit expiration date earlier than the current da
+Action.c(101):     y.","attributeTools":"","locationInAdvantage":"Order Payment","locationInAdminTool":"Gener
+Action.c(101):     al","parameterValue":"Tip"},{"parameterName":"Tips_Mock_SafePay_Generate_Error_409","datat
+Action.c(101):     ype":"enum:[Tip]","description":"To generate an error using SafePay, enter identical (case
+Action.c(101):      sensitive) username and password.","attributeTools":"AppPulse","locationInAdvantage":"Web
+Action.c(101):     : Order Payment; Mobile: Payment Method (SafePay)","locationInAdminTool":"Functional;Mobil
+Action.c(101):     e","parameterValue":"Tip"},{"parameterName":"Tips_WebSocket_example","datatype":"enum:[Tip
+Action.c(101):     ]","description":"To demonstrate WebSocket features, use the chat widget located on the Ho
+Action.c(101):     me page (http://www.advantageonlineshopping.com/), under Contact Us.","attributeTools":"Lo
+Action.c(101):     adRunner","locationInAdvantage":"Home page - CONTACT US","locationInAdminTool":"Performanc
+Action.c(101):     e","parameterValue":"Tip"},{"parameterName":"Tips_Support_Different_Types_Of_Controls","da
+Action.c(101):     tatype":"enum:[Tip]","description":"Use the following UI elements to demonstrate various f
+Action.c(101):     unctional testing features:  * String: On the CREATE ACCOUNT or ACCOUNT DETAILS page, upda
+Action.c(101):     te the Personal Details fields.  * Radio button: On the ORDER PAYMENT page, select a payme
+Action.c(101):     nt method.  * Date value: On the ORDER PAYMENT page
+Action.c(101): t=2338761ms: 11644-byte DECODED response body for "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=934)
+Action.c(101):     , select the MasterCredit option and then enter an expiration date.  * List box: On the CR
+Action.c(101):     EATE ACCOUNT page, select a country from the Country drop down list.  * Multiple selection
+Action.c(101):     : Browse products by category and filter the products shown by using the options on the le
+Action.c(101):     ft","attributeTools":"BPT;MobileCenter;LeanFT;UFT","locationInAdvantage":"Entire Site","lo
+Action.c(101):     cationInAdminTool":"Functional;Mobile","parameterValue":"Tip"},{"parameterName":"Tips_Syst
+Action.c(101):     em_Configuration","datatype":"enum:[Tip]","description":"The Admin UI menu and pages are r
+Action.c(101):     ead-only in the shared system on the cloud.  You can make changes in a local instance.  Tr
+Action.c(101):     oubleshooting: If you are unable to make changes in a local instance:  1. Navigate to the 
+Action.c(101):     DemoApp.properties file.  2. Ensure that the Allow user configuration value is set to Yes.
+Action.c(101):      This is the default setting.  3. Verify that you can configure the relevant field from th
+Action.c(101):     e Admin UI as needed.","attributeTools":"","locationInAdvantage":".NET Admin app","locatio
+Action.c(101):     nInAdminTool":"General","parameterValue":"Tip"},{"parameterName":"Tips_replace_3rd_party_s
+Action.c(101):     ervices_with_SV","datatype":"enum:[Tip]","description":"Replace the ShipEx, MasterCredit, 
+Action.c(101):     or SafePay 3rd party services with Service Virtualization by updating the relevant URLs in
+Action.c(101):      the services.properties configuration file.  This file is located in properties folder of
+Action.c(101):      5 services: accountservice, MasterCredit, order, ROOT, SafePay.  For example: /accountser
+Action.c(101):     vice/properties/services.properties.  1. Navigate to the <service-name>.url.host line, and
+Action.c(101):      modify the URL/IP address string to the Service Virtualization URL and IP address.  2. Na
+Action.c(101):     vigate to the <service-name>.url.port line and modify the port string to the Service Virtu
+Action.c(101):     alization port.  3. Save the file, and repeat these steps for each service in the services
+Action.c(101):     .properties file, and in the services.properties files for each service.","attributeTools"
+Action.c(101):     :"SV","locationInAdvantage":"ShipEx;MasterCredit;SafePay","locationInAdminTool":"Functiona
+Action.c(101):     l","parameterValue":"Tip"},{"parameterName":"Tips_How_To_Use_Product_Video","datatype":"en
+Action.c(101):     um:[Tip]","description":"ADM performance tools support HTML5 video streaming via: native b
+Action.c(101):     rowsers, plugins such as Adobe Flash, or standalone software.  To demonstrate this feature
+Action.c(101):     , browse to one of the following products and view the demo video:  - HP ROAR WIRELESS SPE
+Action.c(101):     AKER (Product ID: 22)  - BEATS STUDIO 2 OVER-EAR MATTE BLACK HEADPHONES (product ID: 15)  
+Action.c(101):     - HP ELITEPAD 1000 G2 TABLET (product ID: 16)","attributeTools":"LoadRunner","locationInAd
+Action.c(101):     vantage":"Selected Products","locationInAdminTool":"Performance","parameterValue":"Tip"},{
+Action.c(101):     "parameterName":"Tips_regular_expression","datatype":"enum:[Tip]","description":"The butto
+Action.c(101):     n text always starts with Pay to allow for demonstrating regular expressions in object ide
+Action.c(101):     ntification.","attributeTools":"LeanFT;UFT","locationInAdvantage":"Pay button in cart sum"
+Action.c(101):     ,"locationInAdminTool":"Functional","parameterValue":"Tip"},{"parameterName":"Tips_correla
+Action.c(101):     tion_example","datatype":"enum:[Tip]","description":"To demonstrate correlation, make sure
+Action.c(101):      that you include a login step in your flow.  The correlation is implemented with the sess
+Action.c(101):     ion ID.","attributeTools":"LoadRunner","locationInAdvantage":"Web Application Login","loca
+Action.c(101):     tionInAdminTool":"Performance","parameterValue":"Tip"},{"parameterName":"Tips_async_exampl
+Action.c(101):     e","datatype":"enum:[Tip]","description":"ADM performance tools support asynchronous commu
+Action.c(101):     nication.  To demonstrate this feature, browse to any of the products in the HEADPHONES ca
+Action.c(101):     tegory, and record the comments (web only).","attributeTools":"LoadRunner","locationInAdva
+Action.c(101):     ntage":"Performance","locationInAdminTool":"Performance","parameterValue":"Tip"},{"paramet
+Action.c(101):     erName":"Tips_Swagger_Interface_For_REST_APIs","datatype":"enum:[Tip]","description":"To u
+Action.c(101):     se Swagger interface for REST APIs change the URL to http://<your-server>:<port>/<service>
+Action.c(101):     /api/docs.  <service> can be on of the following (case sensitive): catalog, order, MasterC
+Action.c(101):     redit or SafePay.  For example: http://www.advantageonlineshopping.com:80/catalog/api/docs
+Action.c(101):     .","attributeTools":"","locationInAdvantage":"catalog,MasterCredit,order,SafePay services"
+Action.c(101):     ,"locationInAdminTool":"General","parameterValue":"Tip"},{"parameterName":"Tips_REST_API_P
+Action.c(101):     arams_In_Request_URL","datatype":"enum:[Tip]","description":"Send the REST API request and
+Action.c(101):      parameters in request URL. Example: http://www.advantageonlineshopping.com/catalog/api/v1
+Action.c(101):     /products/1.","attributeTools":"UFT","locationInAdvantage":"catalog,MasterCredit,order,Saf
+Action.c(101):     ePay services","locationInAdminTool":"Functional","parameterValue":"Tip"},{"parameterName"
+Action.c(101):     :"Tips_REST_API_Params_In_Request_Body","datatype":"enum:[Tip]","description":"Send the RE
+Action.c(101):     ST API parameters in the request body. Example: http://www.advantageonlineshopping.com/Mas
+Action.c(101):     terCredit/api/v1/payments/payment, body: { \\"MCCVVNumber\\": 666, \\"MCCardNumber\\": 654
+Action.c(101):     3210987654321, \\"MCCustomerName\\": \\"King David\\", \\"MCCustomerPhone\\": \\"+12025551
+Action.c(101):     969\\", \\"MCExpirationDate\\": \\"032017\\", \\"MCRecevingAmount.Value\\": 2011.03, \\"MC
+Action.c(101):     RecevingCard.AccountNumber\\": 112987298763, \\"MCRecevingCard.Currency\\": \\"USD\\", \\"
+Action.c(101):     MCTransactionDate\\": \\"02092016\\", \\"MCTransactionType\\": \\"PAYMENT\\" }.","attribut
+Action.c(101):     eTools":"UFT","locationInAdvantage":"catalog,MasterCredit,order,SafePay services","locatio
+Action.c(101):     nInAdminTool":"Functional","parameterValue":"Tip"},{"parameterName":"Tips_DFE","datatype":
+Action.c(101):     "enum:[Tip]","description":"Send login request and response in Base-64 encoded, instead of
+Action.c(101):      in plain text, to show DFE in snapshot (display only).","attributeTools":"LoadRunner","lo
+Action.c(101):     cationInAdvantage":"Web Application Login","locationInAdminTool":"Performance","parameterV
+Action.c(101):     alue":"Tip"},{"parameterName":"Tips_validation_example","datatype":"enum:[Tip]","descripti
+Action.c(101):     on":"To demonstrate validation: Perform a flow where you buy the contents of the cart, the
+Action.c(101):     n go to the My Orders page and look for the order by its order number (shows positive\xC2\xA0
+Action.c(101):     validation). Delete the order, then look for the order by its number again (shows negative
+Action.c(101):     \xC2\xA0validation).","attributeTools":"LoadRunner","locationInAdvantage":"My Orders","loc
+Action.c(101):     ationInAdminTool":"Performance","parameterValue":"Tip"},{"parameterName":"Mobile_crash","d
+Action.c(101):     atatype":"enum:[Tip]","description":"To generate a crash, login with AppPulse user and cha
+Action.c(101):     nge\xC2\xA0the device orientation from\xC2\xA0portrait to landscape","attributeTools":"App
+Action.c(101):     Pulse","locationInAdvantage":"Mobile: entire app","locationInAdminTool":"Mobile;Functional
+Action.c(101):     ;ITOM","parameterValue":"Tip"},{"parameterName":"Slow_launch_of_the_native_app","datatype"
+Action.c(101):     :"enum:[Tip]","description":"To show a slow launch, log in as the AppPulse user and kill t
+Action.c(101):     he app. From this point on, any launch will be slow until you log in with a different user
+Action.c(101):     ","attributeTools":"AppPulse","locationInAdvantage":"Android\xC2\xA0native app: Launch","l
+Action.c(101):     ocationInAdminTool":"Mobile;Performance","parameterValue":"Tip"},{"parameterName":"Error_5
+Action.c(101):     00","datatype":"enum:[Tip]","description":"To generate error 500, login with AppPulse user
+Action.c(101):     , add items to\xC2\xA0the the cart, checkout and click on pay now","attributeTools":"AppPu
+Action.c(101):     lse","locationInAdvantage":"Order Payment","locationInAdminTool":"Mobile;Functional;ITOM",
+Action.c(101):     "parameterValue":"Tip"},{"parameterName":"Error_403","datatype":"enum:[Tip]","description"
+Action.c(101):     :"To generate error 403, click on the 'Sign in with Facebook' button.","attributeTools":"A
+Action.c(101):     ppPulse","locationInAdvantage":"Login page","locationInAdminTool":"Mobile;Functional;ITOM"
+Action.c(101):     ,"parameterValue":"Tip"},{"parameterName":"Use_Camera_Capability","datatype":"enum:[Tip]",
+Action.c(101):     "description":"Add an option to enable the user to take a picture with the camera . This p
+Action.c(101):     icture will be added to the current product page. In offline mode, the picture is retained
+Action.c(101):      for the current session only. When using MC, if \xE2\x80\x9CCamera Sensor\xE2\x80\x9D is 
+Action.c(101):     enabled, this picture will be replaced with the picture the user previously uploaded to MC
+Action.c(101):     .","attributeTools":"MobileCenter","locationInAdvantage":"Mobile apps: Product page","loca
+Action.c(101):     tionInAdminTool":"Mobile","parameterValue":"Tip"},{"parameterName":"Tips_SQL_injection_vul
+Action.c(101):     nerability","datatype":"enum:[Tip]","description":"A functional test finds the following d
+Action.c(101):     efect: The user creates a user with any\xC2\xA0Username, but the\xC2\xA0name that is actua
+Action.c(101):     lly created is duplicated, as displayed at\xC2\xA0the top right side of the site.\xC2\xA0\xC2
+Action.c(101):     \xA0 The user opens a defect, fixes the code, and commits the change. This triggers a Fort
+Action.c(101):     ify scan (provided that you added the Fortify scan trigger in the code change) that will f
+Action.c(101):     ind an\xC2\xA0SQL injection\xC2\xA0vulnerability.  To achieve this, you must edit the\xC2\xA0
+Action.c(101):     accountservice\\\\src\\\\main\\\\java\\\\com\\\\advantage\\\\accountsoap\\\\dao\\\\impl\\\\
+Action.c(101):     DefaultAccountRepository\xC2\xA0file. In this file, first uncomment the\xC2\xA0code that i
+Action.c(101):     s located\xC2\xA0between the\xC2\xA0'SQL injection vulnerability' tags. \xC2\xA0Then, comm
+Action.c(101):     ent out the code that is located between the 'Code without\xC2\xA0SQL injection vulnerabil
+Action.c(101):     ity' tags. Note that there are 2 locations in the code in which you need to make these cha
+Action.c(101):     nges.","attributeTools":"Fortify, LeanFT, UFT","locationInAdvantage":"Create Account page"
+Action.c(101):     ,"locationInAdminTool":"Security","parameterValue":"Tip"},{"parameterName":"Enable_Warrant
+Action.c(101):     y","datatype":"enum:[Yes,No]","description":"Determines whether a warranty checkbox is add
+Action.c(101):     ed to each laptop product screen. Use this parameter to demonstrate an integration between
+Action.c(101):      AOS and COBOL, during checkout AOS backend invoke a COBOL service to activate a warranty 
+Action.c(101):     for laptop. Default = No. Yes = Add a checkbox to the laptop product page.","attributeTool
+Action.c(101):     s":"AMC","locationInAdvantage":"Laptops","locationInAdminTool":"General","parameterValue":
+Action.c(101):     "No"},{"parameterName":"Warranty_Service_URL","datatype":"string","description":"The URL o
+Action.c(101):     f the COBOL web service to be used for the warranty, the default service is located on AZU
+Action.c(101):     RE. the default URL is: https://aoswarrantyfunction.azurewebsites.net/api/Function1?code=K
+Action.c(101):     EK/GaiTZ0lfJdRkJGgNdsn8qfenPseDGaS3j3n8noI6AGtSIriLAg== note: mouse over on the text field
+Action.c(101):      to view the current URL.","attributeTools":"AMC","locationInAdvantage":"Laptops","locatio
+Action.c(101):     nInAdminTool":"General","parameterValue":"https://aoswarrantyfunction.azurewebsites.net/ap
+Action.c(101):     i/Function1?code=KEK/GaiTZ0lfJdRkJGgNdsn8qfenPseDGaS3j3n8noI6AGtSIriLAg=="},{"parameterNam
+Action.c(101):     e":"Enable_Voltage_Encryption","datatype":"enum:[Yes,No]","description":"Use this paramete
+Action.c(101):     r to demonstrate an integration between Voltage Data Encryption And AOS. The MasterCredit 
+Action.c(101):     number is encrypted when the flag is set to 'Yes'","attributeTools":"AMC","locationInAdvan
+Action.c(101):     tage":"Payment page","locationInAdminTool":"General","parameterValue":"No"},{"parameterNam
+Action.c(101):     e":"Voltage_Service_URL","datatype":"string","description":"The URL of the Voltage Data En
+Action.c(101):     cryption service to be used for the encryption, the default service is located on AZURE. t
+Action.c(101):     he default URL is: https://voltage-pp-0000.dataprotection.voltage.com note: mouse over on 
+Action.c(101):     the text field to view the current URL.","attributeTools":"ITOM","locationInAdvantage":"Pa
+Action.c(101):     yment page","locationInAdminTool":"General","parameterValue":"https://voltage-pp-0000.data
+Action.c(101):     protection.voltage.com"},{"parameterName":"duplicate_countries","datatype":"enum:[Yes,No]"
+Action.c(101):     ,"description":"Duplicates the countries in adv_account DB, causing error during registrat
+Action.c(101):     ion. Note: Restart required.","attributeTools":"ITOM","locationInAdvantage":"Registration 
+Action.c(101):     page","locationInAdminTool":"General","parameterValue":"No"},{"parameterName":"AOB_Endpoin
+Action.c(101):     t","datatype":"string","description":"Purchases made using AOB user, will create a transac
+Action.c(101):     tion on AOB system, on the current endpoint","attributeTools":"","locationInAdvantage":"Pu
+Action.c(101):     rchase Page","locationInAdminTool":"General","parameterValue":"http://advantageonlinebanki
+Action.c(101):     ng.com/api/accounts/purchase"}]}
+Action.c(101): t=2338764ms: 10-byte ENCODED response body received for "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL" (RelFrameId=1, Internal ID=934)
+Action.c(101): t=2338764ms: Request done "https://www.advantageonlineshopping.com/catalog/api/v1/DemoAppConfig/parameters/by_tool/ALL"  	[MsgId: MMSG-26000]
+Action.c(101): web_url("ALL") was successful, 6541 body bytes, 375 header bytes  	[MsgId: MMSG-26386]
+Action.c(111): web_add_cookie started  	[MsgId: MMSG-26355]
+Action.c(111): web_add_cookie was successful  	[MsgId: MMSG-26392]
+Action.c(113): web_add_header("Origin") started  	[MsgId: MMSG-26355]
+Action.c(113): An unrecognized header ("Origin") is being added  	[MsgId: MMSG-26595]
+Action.c(113): "Origin: https://www.advantageonlineshopping.com" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(113): web_add_header("Origin") was successful  	[MsgId: MMSG-26392]
+Action.c(116): web_add_header("SOAPAction") started  	[MsgId: MMSG-26355]
+Action.c(116): "SOAPAction: com.advantage.online.store.accountserviceGetAccountConfigurationRequest" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(116): web_add_header("SOAPAction") was successful  	[MsgId: MMSG-26392]
+Action.c(119): web_add_header("X-Requested-With") started  	[MsgId: MMSG-26355]
+Action.c(119): An unrecognized header ("X-Requested-With") is being added  	[MsgId: MMSG-26595]
+Action.c(119): "X-Requested-With: XMLHttpRequest" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+Action.c(119): web_add_header("X-Requested-With") was successful  	[MsgId: MMSG-26392]
+Action.c(122): web_custom_request("GetAccountConfigurationRequest") started  	[MsgId: MMSG-26355]
+Action.c(122): The request to server https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" is done with headers:
+Action.c(122):     :method = POST
+Action.c(122):     :scheme = https
+Action.c(122):     :path = /accountservice/ws/GetAccountConfigurationRequest
+Action.c(122):     :authority = www.advantageonlineshopping.com
+Action.c(122):     Content-Type = text/xml; charset=UTF-8
+Action.c(122):     Referer = https://www.advantageonlineshopping.com/
+Action.c(122):     Origin = https://www.advantageonlineshopping.com
+Action.c(122):     SOAPAction = com.advantage.online.store.accountserviceGetAccountConfigurationRequest
+Action.c(122):     X-Requested-With = XMLHttpRequest
+Action.c(122):     Sec-Fetch-Site = same-origin
+Action.c(122):     Sec-Fetch-Mode = cors
+Action.c(122):     Sec-Fetch-Dest = empty
+Action.c(122):     DNT = 1
+Action.c(122):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(122):     sec-ch-ua-mobile = ?0
+Action.c(122):     sec-ch-ua-platform = "Windows"
+Action.c(122):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(122):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(122):     Accept-Encoding = gzip, deflate
+Action.c(122):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(122):     Accept = */*
+Action.c(122):     content-length = 361
+Action.c(122):     cookie = _gat=1
+Action.c(122): The request to server "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" is done with body:
+Action.c(122):     <?xml version="1.0" encoding="UTF-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.or
+Action.c(122):     g/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://
+Action.c(122):     www.w3.org/2001/XMLSchema"><soap:Body><GetAccountConfigurationRequest xmlns="com.advantage
+Action.c(122):     .online.store.accountservice"></GetAccountConfigurationRequest></soap:Body></soap:Envelope
+Action.c(122):     >
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Action was aborted.	[MsgId: MMSG-10694]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending Vuser...	[MsgId: MMSG-15966]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(122): t=2344458ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(122): t=2344458ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(122): t=2344458ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(122): t=2344460ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 3 (thread 2256), ended OK."	[MsgId: MMSG-10695]
+Vuser 7 (thread 18480), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 8 (thread 868), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 5 (thread 16336), ended OK."	[MsgId: MMSG-10695]
+Action.c(122): Notify: Transaction "Home" ended with a "Stop" status (Duration: 68,5794 Wasted Time: 0,0082).	[MsgId: MMSG-16871]
+Action.c(122): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 68,5794 Wasted Time: 0,0082).	[MsgId: MMSG-16871]
+Action.c(122): Notify: Transaction "Home" ended with a "Stop" status (Duration: 59,7235 Wasted Time: 0,0074).	[MsgId: MMSG-16871]
+Action.c(122): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 59,7235 Wasted Time: 0,0074).	[MsgId: MMSG-16871]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(122): Error -27760: Request "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" failed  	[MsgId: MERR-27760]
+Ending Vuser...	[MsgId: MMSG-15966]
+Action.c(122): Notify: Transaction "Home" ended with a "Stop" status (Duration: 43,9745 Wasted Time: 0,0081).	[MsgId: MMSG-16871]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Action.c(122): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 43,9745 Wasted Time: 0,0081).	[MsgId: MMSG-16871]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Action.c(122): Error -27760: Request "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" failed  	[MsgId: MERR-27760]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(122): Error -27760: Request "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" failed  	[MsgId: MERR-27760]
+Action.c(122): Notify: Transaction "Home" ended with a "Stop" status (Duration: 27,6327 Wasted Time: 0,0068).	[MsgId: MMSG-16871]
+Action.c(122): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 27,6327 Wasted Time: 0,0068).	[MsgId: MMSG-16871]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Action.c(122): t=2345553ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(122): Notify: Transaction "Home" ended with a "Stop" status (Duration: 16,0401 Wasted Time: 0,0074).	[MsgId: MMSG-16871]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Action.c(122): Notify: Transaction "02_User_Registration" ended with a "Stop" status (Duration: 16,0401 Wasted Time: 0,0074).	[MsgId: MMSG-16871]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Action.c(122): Error -27760: Request "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" failed  	[MsgId: MERR-27760]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Action.c(122): t=2345553ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(122): t=2345554ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Action.c(122): Error -27760: Request "https://www.advantageonlineshopping.com/accountservice/ws/GetAccountConfigurationRequest" failed  	[MsgId: MERR-27760]
+Vuser 4 (thread 15424), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 1 (thread 6452), ended OK."	[MsgId: MMSG-10695]
+Vuser 0 (thread 12252), ended OK."	[MsgId: MMSG-10695]
+Action.c(122): t=2345561ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Action.c(122): t=2345564ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Vuser 6 (thread 20872), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks enabled  	[MsgId: MMSG-26000]
+Vuser 2 (thread 14900), ended OK."	[MsgId: MMSG-10695]

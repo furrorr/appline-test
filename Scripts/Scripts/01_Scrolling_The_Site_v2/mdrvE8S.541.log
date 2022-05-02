@@ -1,0 +1,164 @@
+Action.c(218):     Sec-Fetch-Site = same-origin
+Action.c(218):     Sec-Fetch-Mode = cors
+Action.c(218):     Sec-Fetch-Dest = empty
+Action.c(218):     DNT = 1
+Action.c(218):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(218):     sec-ch-ua-mobile = ?0
+Action.c(218):     sec-ch-ua-platform = "Windows"
+Action.c(218):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(218):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(218):     Accept-Encoding = gzip, deflate, br
+Action.c(218):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(218):     Accept = */*
+Action.c(218):     cookie = _gat=1
+Action.c(218): t=1265665ms: Request done "https://www.advantageonlineshopping.com/app/views/product-page.html"  	[MsgId: MMSG-26000]
+Action.c(218): t=1265821ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/review_right.png" (RelFrameId=, Internal ID=737)
+Action.c(218):     HTTP/2.0 200\r\n
+Action.c(218):     Status: 200\r\n
+Action.c(218):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(218):     date: Wed, 27 Apr 2022 15:19:52 GMT\r\n
+Action.c(218):     content-type: image/png\r\n
+Action.c(218):     content-length: 1075\r\n
+Action.c(218):     accept-ranges: bytes\r\n
+Action.c(218):     etag: W/"1075-1641810512000"\r\n
+Action.c(218):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(218):     cache-control: max-age=864000\r\n
+Action.c(218):     expires: Sat, 07 May 2022 15:19:52 GMT\r\n
+Action.c(218):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(218):     \r\n
+Action.c(218): t=1265821ms: 1075-byte response body for "https://www.advantageonlineshopping.com/css/images/review_right.png" (RelFrameId=, Internal ID=737)
+Action.c(218): t=1265822ms: Request done "https://www.advantageonlineshopping.com/css/images/review_right.png"  	[MsgId: MMSG-26000]
+Action.c(218): t=1265975ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png" (RelFrameId=, Internal ID=739)
+Action.c(218):     HTTP/2.0 200\r\n
+Action.c(218):     Status: 200\r\n
+Action.c(218):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(218):     date: Wed, 27 Apr 2022 15:19:52 GMT\r\n
+Action.c(218):     content-type: image/png\r\n
+Action.c(218):     content-length: 1087\r\n
+Action.c(218):     accept-ranges: bytes\r\n
+Action.c(218):     etag: W/"1087-1641810512000"\r\n
+Action.c(218):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(218):     cache-control: max-age=864000\r\n
+Action.c(218):     expires: Sat, 07 May 2022 15:19:52 GMT\r\n
+Action.c(218):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(218):     \r\n
+Action.c(218): t=1265975ms: 1087-byte response body for "https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png" (RelFrameId=, Internal ID=739)
+Action.c(218): t=1265975ms: Request done "https://www.advantageonlineshopping.com/css/images/review_Left_disabled.png"  	[MsgId: MMSG-26000]
+Action.c(218): t=1265975ms: 386-byte response headers for "https://www.advantageonlineshopping.com/css/images/reviewUser.png" (RelFrameId=, Internal ID=738)
+Action.c(218):     HTTP/2.0 200\r\n
+Action.c(218):     Status: 200\r\n
+Action.c(218):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(218):     date: Wed, 27 Apr 2022 15:19:52 GMT\r\n
+Action.c(218):     content-type: image/png\r\n
+Action.c(218):     content-length: 1542\r\n
+Action.c(218):     accept-ranges: bytes\r\n
+Action.c(218):     etag: W/"1542-1641810512000"\r\n
+Action.c(218):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(218):     cache-control: max-age=864000\r\n
+Action.c(218):     expires: Sat, 07 May 2022 15:19:52 GMT\r\n
+Action.c(218):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(218):     \r\n
+Action.c(218): t=1265976ms: 1542-byte response body for "https://www.advantageonlineshopping.com/css/images/reviewUser.png" (RelFrameId=, Internal ID=738)
+Action.c(218): t=1265976ms: Request done "https://www.advantageonlineshopping.com/css/images/reviewUser.png"  	[MsgId: MMSG-26000]
+Action.c(218): web_url("product-page.html") was successful, 6064 body bytes, 1564 header bytes  	[MsgId: MMSG-26386]
+Action.c(227): Notify: Transaction "Product 1" ended with a "Pass" status (Duration: 1,9091 Wasted Time: 0,0000).	[MsgId: MMSG-16871]
+Action.c(233): Notify: Transaction "01_Scrolling_The_Site" ended with a "Pass" status (Duration: 15,6430 Think Time: 10,0128 Wasted Time: 0,0017).	[MsgId: MMSG-16870]
+Ending action Action.	[MsgId: MMSG-15918]
+Ending iteration 35.	[MsgId: MMSG-15965]
+Waiting 17,3560 seconds for iteration pacing.	[MsgId: MMSG-15996]
+Action was aborted.	[MsgId: MMSG-10694]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(50): t=1275147ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+Action was aborted.	[MsgId: MMSG-10694]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending Vuser...	[MsgId: MMSG-15966]
+Action.c(50): t=1275148ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Action was aborted.	[MsgId: MMSG-10694]
+Action.c(50): t=1275147ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Ending Vuser...	[MsgId: MMSG-15966]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Action.c(50): t=1275149ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(50): t=1275149ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(50): t=1275150ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 5 (thread 19416), ended OK."	[MsgId: MMSG-10695]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(50): t=1275153ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 4 (thread 21448), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 0 (thread 10696), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 8 (thread 2728), ended OK."	[MsgId: MMSG-10695]
+Vuser 1 (thread 1232), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 9 (thread 11256), ended OK."	[MsgId: MMSG-10695]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+t=1275164ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action was aborted.	[MsgId: MMSG-10694]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Action.c(50): t=1275164ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(50): t=1275165ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action was aborted.	[MsgId: MMSG-10694]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 10 (thread 16200), ended OK."	[MsgId: MMSG-10695]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(50): t=1275170ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Ending Vuser...	[MsgId: MMSG-15966]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 6 (thread 14284), ended OK."	[MsgId: MMSG-10695]
+Action.c(50): t=1275172ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Vuser 2 (thread 7016), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 7 (thread 8536), ended OK."	[MsgId: MMSG-10695]
+Vuser 3 (thread 21044), ended OK."	[MsgId: MMSG-10695]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 11 (thread 1908), ended OK."	[MsgId: MMSG-10695]

@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\ageef\Documents\Loadrunner_1\VuGen\Scripts\03_Buying_A_Laptop_v2
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ec:\users\ageef\documents\loadrunner_1\vugen\scripts\03_buying_a_laptop_v2\\logfile.log
+c:\users\ageef\documents\loadrunner_1\vugen\scripts\03_buying_a_laptop_v2\\combined_03_Buying_A_Laptop_v2.c
+c:\users\ageef\documents\loadrunner_1\vugen\scripts\03_buying_a_laptop_v2\\pre_cci.c

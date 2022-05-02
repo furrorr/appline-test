@@ -1,0 +1,4 @@
+"{\"seaddress\":{\"addressLine1\":\"Lonina\",\"addressLine2\":\"\",\"city\":\"Minsk\",\"country"
+"\":\"us\",\"postalCode\":123456,\"state\":12},\"secustomerName\":\"Sergey Ageev\",\"secustomer"
+"Phone\":\"90224442550\",\"senumberOfProducts\":1,\"setransactionType\":\"SHIPPING_COST\",\"ses"
+"sionId\":\"BA4B6360A66A42E43B9A25CC241F1A19\"}"

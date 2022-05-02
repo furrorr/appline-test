@@ -1,0 +1,548 @@
+Action.c(102): t=94789ms: 10-byte ENCODED response body received for "https://www.advantageonlineshopping.com/catalog/api/v1/categories" (RelFrameId=1, Internal ID=7)
+Action.c(102): t=94789ms: Request done "https://www.advantageonlineshopping.com/catalog/api/v1/categories"  	[MsgId: MMSG-26000]
+Action.c(102): web_url("categories") was successful, 168 body bytes, 375 header bytes  	[MsgId: MMSG-26386]
+Action.c(111): web_url("search") started  	[MsgId: MMSG-26355]
+Action.c(111): The request to server https://www.advantageonlineshopping.com/catalog/api/v1/deals/search?dealOfTheDay=true" is done with headers:
+Action.c(111):     :method = GET
+Action.c(111):     :scheme = https
+Action.c(111):     :path = /catalog/api/v1/deals/search?dealOfTheDay=true
+Action.c(111):     :authority = www.advantageonlineshopping.com
+Action.c(111):     Referer = https://www.advantageonlineshopping.com/
+Action.c(111):     Sec-Fetch-Site = same-origin
+Action.c(111):     Sec-Fetch-Mode = cors
+Action.c(111):     Sec-Fetch-Dest = empty
+Action.c(111):     DNT = 1
+Action.c(111):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(111):     sec-ch-ua-mobile = ?0
+Action.c(111):     sec-ch-ua-platform = "Windows"
+Action.c(111):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(111):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(111):     Accept-Encoding = gzip, deflate, br
+Action.c(111):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(111):     Accept = */*
+Action.c(111):     cookie = _gat=1
+Action.c(111): t=94949ms: 375-byte response headers for "https://www.advantageonlineshopping.com/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=8)
+Action.c(111):     HTTP/2.0 200\r\n
+Action.c(111):     Status: 200\r\n
+Action.c(111):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(111):     date: Fri, 29 Apr 2022 13:28:49 GMT\r\n
+Action.c(111):     content-type: application/json\r\n
+Action.c(111):     expires: 0\r\n
+Action.c(111):     cache-control: no-store\r\n
+Action.c(111):     x-content-type-options: nosniff\r\n
+Action.c(111):     x-xss-protection: 1; mode=block\r\n
+Action.c(111):     x-frame-options: DENY\r\n
+Action.c(111):     vary: accept-encoding\r\n
+Action.c(111):     content-encoding: gzip\r\n
+Action.c(111):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(111):     \r\n
+Action.c(111): t=94949ms: 22-byte ENCODED response body received for "https://www.advantageonlineshopping.com/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=8)
+Action.c(111): t=94949ms: 6-byte DECODED response body for "https://www.advantageonlineshopping.com/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=8)
+Action.c(111):     [null]
+Action.c(111): t=94949ms: 10-byte ENCODED response body received for "https://www.advantageonlineshopping.com/catalog/api/v1/deals/search?dealOfTheDay=true" (RelFrameId=1, Internal ID=8)
+Action.c(111): t=94949ms: Request done "https://www.advantageonlineshopping.com/catalog/api/v1/deals/search?dealOfTheDay=true"  	[MsgId: MMSG-26000]
+Action.c(111): web_url("search") was successful, 32 body bytes, 375 header bytes  	[MsgId: MMSG-26386]
+Action.c(120): web_url("popularProducts.json") started  	[MsgId: MMSG-26355]
+Action.c(120): The request to server https://www.advantageonlineshopping.com/app/tempFiles/popularProducts.json" is done with headers:
+Action.c(120):     :method = GET
+Action.c(120):     :scheme = https
+Action.c(120):     :path = /app/tempFiles/popularProducts.json
+Action.c(120):     :authority = www.advantageonlineshopping.com
+Action.c(120):     Referer = https://www.advantageonlineshopping.com/
+Action.c(120):     Sec-Fetch-Site = same-origin
+Action.c(120):     Sec-Fetch-Mode = cors
+Action.c(120):     Sec-Fetch-Dest = empty
+Action.c(120):     DNT = 1
+Action.c(120):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(120):     sec-ch-ua-mobile = ?0
+Action.c(120):     sec-ch-ua-platform = "Windows"
+Action.c(120):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(120):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(120):     Accept-Encoding = gzip, deflate, br
+Action.c(120):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(120):     Accept = */*
+Action.c(120):     cookie = _gat=1
+Action.c(120): t=95102ms: 413-byte response headers for "https://www.advantageonlineshopping.com/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=9)
+Action.c(120):     HTTP/2.0 200\r\n
+Action.c(120):     Status: 200\r\n
+Action.c(120):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(120):     date: Fri, 29 Apr 2022 13:28:49 GMT\r\n
+Action.c(120):     content-type: application/json\r\n
+Action.c(120):     accept-ranges: bytes\r\n
+Action.c(120):     etag: W/"2323-1641810512000"\r\n
+Action.c(120):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(120):     cache-control: max-age=0\r\n
+Action.c(120):     expires: Fri, 29 Apr 2022 13:28:49 GMT\r\n
+Action.c(120):     vary: accept-encoding\r\n
+Action.c(120):     content-encoding: gzip\r\n
+Action.c(120):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(120):     \r\n
+Action.c(120): t=95103ms: 500-byte ENCODED response body received for "https://www.advantageonlineshopping.com/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=9)
+Action.c(120): t=95103ms: 2323-byte DECODED response body for "https://www.advantageonlineshopping.com/app/tempFiles/popularProducts.json" (RelFrameId=1, Internal ID=9)
+Action.c(120):     [{"id": 16,\n
+Action.c(120):       "productName": "HP ELITEPAD 1000 G2 TABLET",\n
+Action.c(120):       "price": 550,\n
+Action.c(120):       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",\n
+Action.c(120):       "imageUrl" : "css/images/Popular-item3.jpg",\n
+Action.c(120):       "attributes" : [\n
+Action.c(120):         {"attributeName" : "PRICE", "attributeValue" : 400},\n
+Action.c(120):         {"attributeName" : "COLOR", "attributeValue" : "FFFFFF"},\n
+Action.c(120):         {"attributeName" : "OPERATING SYSTEM", "attributeValue" : "Chrome"},\n
+Action.c(120):         {"attributeName" : "CUSTOMIZATION", "attributeValue" : "Gaming"},\n
+Action.c(120):         {"attributeName" : "PROCESSOR", "attributeValue" : "intel(R) Core(TM) i5-6300HQ"},\n
+Action.c(120):         {"attributeName" : "DISPLAY", "attributeValue" : "15.6-inch diagonal HD BrightView WLE
+Action.c(120):     D-backlit Display (1366x768)"},\n
+Action.c(120):         {"attributeName" : "MEMORY", "attributeValue" : "16GB DDR3 - 2 DIMM"}\n
+Action.c(120):       ]},{"id": 10,\n
+Action.c(120):       "productName": "HP EliteBook Folio",\n
+Action.c(120):       "price": 550,\n
+Action.c(120):       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",\n
+Action.c(120):       "imageUrl" : "css/images/Popular-item2.jpg",\n
+Action.c(120):       "attributes" : [\n
+Action.c(120):         {"attributeName" : "PRICE", "attributeValue" : 400},\n
+Action.c(120):         {"attributeName" : "COLOR", "attributeValue" : "FFFFFF"},\n
+Action.c(120):         {"attributeName" : "OPERATING SYSTEM", "attributeValue" : "Chrome"},\n
+Action.c(120):         {"attributeName" : "CUSTOMIZATION", "attributeValue" : "Gaming"},\n
+Action.c(120):         {"attributeName" : "PROCESSOR", "attributeValue" : "intel(R) Core(TM) i5-6300HQ"},\n
+Action.c(120):         {"attributeName" : "DISPLAY", "attributeValue" : "15.6-inch diagonal HD BrightView WLE
+Action.c(120):     D-backlit Display (1366x768)"},\n
+Action.c(120):         {"attributeName" : "MEMORY", "attributeValue" : "16GB DDR3 - 2 DIMM"}\n
+Action.c(120):       ]},\n
+Action.c(120):       {"id": 21,\n
+Action.c(120):         "productName": "HP ROAR PLUS WIRELESS SPEAKER",\n
+Action.c(120):         "price": 550,\n
+Action.c(120):         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",\n
+Action.c(120):         "imageUrl" : "css/images/Popular-item1.jpg",\n
+Action.c(120):         "attributes" : [\n
+Action.c(120):           {"attributeName" : "PRICE", "attributeValue" : 400},\n
+Action.c(120):           {"attributeName" : "COLOR", "attributeValue" : "FFFFFF"},\n
+Action.c(120):           {"attributeName" : "OPERATING SYSTEM", "attributeValue" : "Chrome"},\n
+Action.c(120):           {"attributeName" : "CUSTOMIZATION", "attributeValue" : "Gaming"},\n
+Action.c(120):           {"attributeName" : "PROCESSOR", "attributeValue" : "intel(R) Core(TM) i5-6300HQ"},\n
+Action.c(120):           {"attributeName" : "DISPLAY", "attributeValue" : "15.6-inch diagonal HD BrightView W
+Action.c(120):     LED-backlit Display (1366x768)"},\n
+Action.c(120):           {"attributeName" : "MEMORY", "attributeValue" : "16GB DDR3 - 2 DIMM"}\n
+Action.c(120):         ]}]
+Action.c(120): t=95104ms: Request done "https://www.advantageonlineshopping.com/app/tempFiles/popularProducts.json"  	[MsgId: MMSG-26000]
+Action.c(120): web_url("popularProducts.json") was successful, 500 body bytes, 413 header bytes  	[MsgId: MMSG-26386]
+Action.c(129): web_url("home-page.html") started  	[MsgId: MMSG-26355]
+Action.c(129): The request to server https://www.advantageonlineshopping.com/app/views/home-page.html" is done with headers:
+Action.c(129):     :method = GET
+Action.c(129):     :scheme = https
+Action.c(129):     :path = /app/views/home-page.html
+Action.c(129):     :authority = www.advantageonlineshopping.com
+Action.c(129):     Referer = https://www.advantageonlineshopping.com/
+Action.c(129):     Sec-Fetch-Site = same-origin
+Action.c(129):     Sec-Fetch-Mode = cors
+Action.c(129):     Sec-Fetch-Dest = empty
+Action.c(129):     DNT = 1
+Action.c(129):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(129):     sec-ch-ua-mobile = ?0
+Action.c(129):     sec-ch-ua-platform = "Windows"
+Action.c(129):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(129):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(129):     Accept-Encoding = gzip, deflate, br
+Action.c(129):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(129):     Accept = */*
+Action.c(129):     cookie = _gat=1
+Action.c(129): t=95255ms: 407-byte response headers for "https://www.advantageonlineshopping.com/app/views/home-page.html" (RelFrameId=1, Internal ID=10)
+Action.c(129):     HTTP/2.0 200\r\n
+Action.c(129):     Status: 200\r\n
+Action.c(129):     server: nginx/1.18.0 (Ubuntu)\r\n
+Action.c(129):     date: Fri, 29 Apr 2022 13:28:49 GMT\r\n
+Action.c(129):     content-type: text/html\r\n
+Action.c(129):     accept-ranges: bytes\r\n
+Action.c(129):     etag: W/"12463-1641810512000"\r\n
+Action.c(129):     last-modified: Mon, 10 Jan 2022 10:28:32 GMT\r\n
+Action.c(129):     cache-control: max-age=0\r\n
+Action.c(129):     expires: Fri, 29 Apr 2022 13:28:49 GMT\r\n
+Action.c(129):     vary: accept-encoding\r\n
+Action.c(129):     content-encoding: gzip\r\n
+Action.c(129):     strict-transport-security: max-age=31536000; includeSubDomains; preload\r\n
+Action.c(129):     \r\n
+Action.c(129): t=95256ms: 2232-byte ENCODED response body received for "https://www.advantageonlineshopping.com/app/views/home-page.html" (RelFrameId=1, Internal ID=10)
+Action.c(129): t=95256ms: 12288-byte DECODED response body for "https://www.advantageonlineshopping.com/app/views/home-page.html" (RelFrameId=1, Internal ID=10)
+Action.c(129):     <scroll-to-top></scroll-to-top>\n
+Action.c(129):     <section>\n
+Action.c(129):     \n
+Action.c(129):         <!--  five pictures  -->\n
+Action.c(129):         <article id="our_products">\n
+Action.c(129):     \n
+Action.c(129):             <search mobile-search></search>\n
+Action.c(129):     \n
+Action.c(129):             <div class="container ">\n
+Action.c(129):     \n
+Action.c(129):                 <div class="rowSection">\n
+Action.c(129):                     <div id="speakersImg" aria-label="SpeakersCategory" ng-click="redirect('/c
+Action.c(129):     ategory/' + categories[3].categoryName + '/' + categories[3].categoryId)"\n
+Action.c(129):                          role="link" href="javascript:void(0)"\n
+Action.c(129):                          class="SpeakersImg categoryCell"\n
+Action.c(129):                          a-sec-back-img="{{categories[3].managedImageId}}" a-slow-page="{{ mai
+Action.c(129):     nCtrl.config.slowPage }}" >\n
+Action.c(129):                         <div class="shop_now_slider">\n
+Action.c(129):                             <span id="speakersTxt" aria-label="SpeakersCategoryTxt" class="sho
+Action.c(129):     p_now roboto-bold" role="link" href="javascript:void(0)">{{::categories[3].categoryName | 
+Action.c(129):     uppercase}}</span>\n
+Action.c(129):                             <label id="speakersLink" class="shop_nowSub roboto-regular" transl
+Action.c(129):     ate="Shop_Now"></label>\n
+Action.c(129):                         </div>\n
+Action.c(129):                     </div>\n
+Action.c(129):                     <div id="tabletsImg" aria-label="TabletsCategory" ng-click="redirect('/cat
+Action.c(129):     egory/' + categories[2].categoryName + '/' + categories[2].categoryId)"\n
+Action.c(129):                          role="link" href="javascript:void(0)"\n
+Action.c(129):                          a-sec-back-img="{{categories[2].managedImageId}}" class="categoryCell
+Action.c(129):     ">\n
+Action.c(129):                         <div class="shop_now_slider" aria-label="TabletsCategoryTxt">\n
+Action.c(129):                             <span id="tabletsTxt" aria-label="TabletsCategoryTxt" class="shop_
+Action.c(129):     now roboto-bold" role="link" href="javascript:void(0)">{{::categories[2].categoryName | up
+Action.c(129):     percase}}</span>\n
+Action.c(129):                             <label id="tabletsLink" class="shop_nowSub roboto-regular" transla
+Action.c(129):     te="Shop_Now"></label>\n
+Action.c(129):                         </div>\n
+Action.c(129):                     </div>\n
+Action.c(129):                     <div class="emptyCell">\n
+Action.c(129):                     </div>\n
+Action.c(129):                 </div>\n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):                 <div class="rowSection">\n
+Action.c(129):                     <div id="laptopsImg" aria-label="LaptopsCategory" ng-click="redirect('/cat
+Action.c(129):     egory/' + categories[0].categoryName + '/' + categories[0].categoryId)" class="laptopImg c
+Action.c(129):     ategoryCell"\n
+Action.c(129):                          role="link" href="javascript:void(0)"\n
+Action.c(129):                          a-sec-back-img="{{categories[0].managedImageId}}">\n
+Action.c(129):                         <div class="shop_now_slider">\n
+Action.c(129):                             <span id="laptopsTxt" aria-label="LaptopsCategoryTxt" class="shop_
+Action.c(129):     now roboto-bold" role="link" href="javascript:void(0)">{{::categories[0].categoryName | up
+Action.c(129):     percase}}</span>\n
+Action.c(129):                             <label id="laptopsLink" class="shop_nowSub roboto-regular" transla
+Action.c(129):     te="Shop_Now"></label>\n
+Action.c(129):                         </div>\n
+Action.c(129):                     </div>\n
+Action.c(129):                     <div id="miceImg" aria-label="MiceCategory" ng-click="redirect('/category/
+Action.c(129):     ' + categories[4].categoryName + '/' + categories[4].categoryId)" class="miceImg categoryC
+Action.c(129):     ell"\n
+Action.c(129):                          role="link" href="javascript:void(0)"\n
+Action.c(129):                          a-sec-back-img="{{categories[4].managedImageId}}">\n
+Action.c(129):                         <div class="shop_now_slider">\n
+Action.c(129):                             <span id="miceTxt" aria-label="MiceCategoryTxt" class="shop_now ro
+Action.c(129):     boto-bold" role="link" href="javascript:void(0)">{{::categories[4].categoryName | uppercas
+Action.c(129):     e}}</span>\n
+Action.c(129):                             <label id="miceLink" class="shop_nowSub roboto-regular" translate=
+Action.c(129):     "Shop_Now"></label>\n
+Action.c(129):                         </div>\n
+Action.c(129):                     </div>\n
+Action.c(129):                     <div id="headphonesImg" aria-label="HeadphonesCategory" ng-click="redirect
+Action.c(129):     ('/category/' + categories[1].categoryName + '/' + categories[1].categoryId)" class="twoRo
+Action.c(129):     ws categoryCell"\n
+Action.c(129):                          role="link" href="javascript:void(0)"\n
+Action.c(129):                          a-sec-back-img="{{categories[1].managedImageId}}">\n
+Action.c(129):                         <div class="shop_now_slider">\n
+Action.c(129):                             <span id="headphonesTxt" aria-label="HeadphonesCategoryTxt" class=
+Action.c(129):     "shop_now roboto-bold" role="link" href="javascript:void(0)">{{::categories[1].categoryNam
+Action.c(129):     e | uppercase}}</span>\n
+Action.c(129):                             <label id="headphonesLink" class="shop_nowSub roboto-regular" tran
+Action.c(129):     slate="Shop_Now"></label>\n
+Action.c(129):                         </div>\n
+Action.c(129):                     </div>\n
+Action.c(129):                 </div>\n
+Action.c(129):             </div>\n
+Action.c(129):         </article>\n
+Action.c(129):         <!-- end five pictures -->\n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):         <!-- SPACIAL OFFER -->\n
+Action.c(129):         <article id="special_offer_items">\n
+Action.c(129):             <h3 class="roboto-regular center" translate="SPACIAL_OFFER"></h3>\n
+Action.c(129):             <div>\n
+Action.c(129):                 <div id="img-special-offer">\n
+Action.c(129):                     <figure>\n
+Action.c(129):                         <img src="css/images/Special-offer.jpg" alt="Special-offer">\n
+Action.c(129):                     </figure>\n
+Action.c(129):                 </div>\n
+Action.c(129):                 <div id="div-special-offer">\n
+Action.c(129):                     <div>\n
+Action.c(129):                         <span class="roboto-light"> {{specialOffer[0].promotionHeader}} </span
+Action.c(129):     >\n
+Action.c(129):     \n
+Action.c(129):                         <h1 class="roboto-thin"> {{specialOffer[0].product.productName}} </h1>
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):                         <p> {{specialOffer[0].promotionSubHeader}} </p>\n
+Action.c(129):                         <a href="#/product/{{specialOffer[0].product.id}}">\n
+Action.c(129):                             <button id="see_offer_btn" translate="SEE_OFFER" role="button"></b
+Action.c(129):     utton>\n
+Action.c(129):                         </a>\n
+Action.c(129):                     </div>\n
+Action.c(129):                 </div>\n
+Action.c(129):             </div>\n
+Action.c(129):         </article>\n
+Action.c(129):         <!-- end SPACIAL OFFER -->\n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):         <!-- check directive -->\n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):         <!-- slider -->\n
+Action.c(129):         <article id="slider_explore_now">\n
+Action.c(129):             <div class="slider">\n
+Action.c(129):                 <div class="slider-length transition">\n
+Action.c(129):                     <div ng-repeat="img in images" class="imgSection">\n
+Action.c(129):                         <div class="imgContainer">\n
+Action.c(129):                             <img data-ng-src="../../css/images/{{img.imageName}}"\n
+Action.c(129):                                  ng-click="redirect('/category/' + categories[img.categoryId].
+Action.c(129):     categoryId)"/>\n
+Action.c(129):                         </div>\n
+Action.c(129):                         <div class="container">\n
+Action.c(129):                             <h2 ng-bind-html='img.message | trustHtml' class="roboto-light"></
+Action.c(129):     h2>\n
+Action.c(129):                             <button name="explore_now_btn" ng-click="redirect('/category/' + c
+Action.c(129):     ategories[img.categoryId].categoryName + '/' + categories[img.categoryId].categoryId)"\n
+Action.c(129):                                     translate="EXPLORE_NOW" role="button"></button>\n
+Action.c(129):                         </div>\n
+Action.c(129):                     </div>\n
+Action.c(129):                     <div class="imgSection">\n
+Action.c(129):                         <div class="imgContainer">\n
+Action.c(129):                             <img data-ng-src="../../css/images/{{images[0].imageName}}"\n
+Action.c(129):                                  ng-click="redirect('/category/' + categories[img.categoryId].
+Action.c(129):     categoryName + '/' + categories[0].categoryId)"/>\n
+Action.c(129):                         </div>\n
+Action.c(129):                         <div class="container">\n
+Action.c(129):                             <h2 class="roboto-light">{{images[0].message}}</h2>\n
+Action.c(129):                             <button name="explore_now_btn" ng-click="redirect('/category/' + c
+Action.c(129):     ategories[img.categoryId].categoryName + '/' + categories[0].categoryId)"\n
+Action.c(129):                                     class="white" translate="EXPLORE_NOW" role="button"></butt
+Action.c(129):     on>\n
+Action.c(129):                         </div>\n
+Action.c(129):                     </div>\n
+Action.c(129):                 </div>\n
+Action.c(129):                 <div class="slider-steps">\n
+Action.c(129):                     <span href="javascript:void(0)" role="link"\n
+Action.c(129):                             ng-repeat="img in images" ng-class="{selected : ({{img.imageId ===
+Action.c(129):      0}})}"></span>\n
+Action.c(129):                 </div>\n
+Action.c(129):             </div>\n
+Action.c(129):         </article>\n
+Action.c(129):         <!-- end slider -->\n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):         <!-- POPULAR ITEMS\n
+Action.c(129):         <popular-items-drtv popular-products="popularProducts"></popular-items-drtv>\n
+Action.c(129):         -->\n
+Action.c(129):     \n
+Action.c(129):         <article id="popular_items">\n
+Action.c(129):             <h3 class="roboto-regular center" translate="POPULAR_ITEMS"></h3>\n
+Action.c(129):     \n
+Action.c(129):             <div class="grid-table center">\n
+Action.c(129):                 <div name="popular_item_{{product.id}}" ng-repeat="product in popularProducts"
+Action.c(129):      ng-if="popularProducts.length > 0">\n
+Action.c(129):                     <figure>\n
+Action.c(129):                         <img name="popular_item_{{product.id}}_img" data-ng-src="{{product.ima
+Action.c(129):     geUrl}}" alt="Special-offer"\n
+Action.c(129):                             href="javascript:void(0)" role="link">\n
+Action.c(129):                     </figure>\n
+Action.c(129):                     <p name="popular_item_{{product.id}}_name" class="center productName robot
+Action.c(129):     o-medium">{{product.productName | uppercase}}</p>\n
+Action.c(129):                     <a href="#/product/{{product.id}}" role="link">\n
+Action.c(129):                         <label id="details_{{product.id}}" class="shop_nowSub viewDetail" tran
+Action.c(129):     slate="View_details"></label>\n
+Action.c(129):                     </a>\n
+Action.c(129):                 </div>\n
+Action.c(129):             </div>\n
+Action.c(129):         </article>\n
+Action.c(129):         <!-- end POPULAR ITEMS -->\n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):         <article id="contact_us">\n
+Action.c(129):     \n
+Action.c(129):             <div data-ng-hide="supportSuccess">\n
+Action.c(129):     \n
+Action.c(129):                 <div id="supportCover">\n
+Action.c(129):     \n
+Action.c(129):                     <div>\n
+Action.c(129):     \n
+Action.c(129):                         <div name="chat_with_us" class="chat" data-ng-click="openChat()">\n
+Action.c(129):     \n
+Action.c(129):                             <div>\n
+Action.c(129):                                 <img id="chatLogo" src="../../css/images/chat_logo.png" alt="c
+Action.c(129):     hat logo" />\n
+Action.c(129):                                 <label class="roboto-bold" translate="CHAT_WITH_US"></label>\n
+Action.c(129):                             </div>\n
+Action.c(129):     \n
+Action.c(129):                         </div>\n
+Action.c(129):     \n
+Action.c(129):                     </div>\n
+Action.c(129):                     <div>\n
+Action.c(129):     \n
+Action.c(129):                         <h1 class="roboto-bold contact_us" translate="CONTACT_US"></h1>\n
+Action.c(129):     \n
+Action.c(129):                         <sec-form>\n
+Action.c(129):     \n
+Action.c(129):                             <div class="splitter">\n
+Action.c(129):                                 <div class="inputMargin">\n
+Action.c(129):                                     <sec-view a-hint="Category"\n
+Action.c(129):                                               a-hint-description="ContactUs"\n
+Action.c(129):                                               a-type="select"\n
+Action.c(129):                                               a-show="categoryName"\n
+Action.c(129):                                               sec-select-options="categories"\n
+Action.c(129):                                               sec-model="categories.category"\n
+Action.c(129):                                               sec-select-change="categoryChange(value)">\n
+Action.c(129):                                     </sec-view>\n
+Action.c(129):                                     <sec-view a-hint="Product"\n
+Action.c(129):                                               a-hint-description="ContactUs"\n
+Action.c(129):                                               a-type="select"\n
+Action.c(129):                                               a-show="productName"\n
+Action.c(129):                                               sec-model="supportModel.product"\n
+Action.c(129):                                               sec-select-options="products"\n
+Action.c(129):                                               sec-select-change="productChange(value)">\n
+Action.c(129):                                     </sec-view>\n
+Action.c(129):                                     <sec-view a-hint="{{'Email' | translate}}"\n
+Action.c(129):                                               a-hint-description="ContactUs"\n
+Action.c(129):                                               sec-model="supportModel.email"\n
+Action.c(129):                                               sec-require="mainCtrl.getRequire('Email')">\n
+Action.c(129):                                     </sec-view>\n
+Action.c(129):                                 </div>\n
+Action.c(129):                             </div>\n
+Action.c(129):                             <div class="splitter" >\n
+Action.c(129):                                 <div class="smollPadding  margin-right">\n
+Action.c(129):                                     <label class="Subject"><span class="star">*</span> {{'Subj
+Action.c(129):     ect' | translate }}</label>\n
+Action.c(129):     \n
+Action.c(129):                                     <sec-view class="textarea"\n
+Action.c(129):                                               a-hint="subjectTextarea"\n
+Action.c(129):                                               a-hint-description="ContactUs"\n
+Action.c(129):                                               a-type="textarea"\n
+Action.c(129):                                               a-star="false"\n
+Action.c(129):                                               sec-model="supportModel.subject"\n
+Action.c(129):                                               sec-require="mainCtrl.getRequire('Email')">\n
+Action.c(129):                                     </sec-view>\n
+Action.c(129):     \n
+Action.c(129):                                     <sec-sender a-value="{{'SEND' | translate}}" sec-send="sen
+Action.c(129):     dSupportEmail()"></sec-sender>\n
+Action.c(129):     \n
+Action.c(129):                                 </div>\n
+Action.c(129):                             </div>\n
+Action.c(129):     \n
+Action.c(129):                             <label class="{{registerAnswer.class}} invalid center"> {{register
+Action.c(129):     Answer.message}} </label>\n
+Action.c(129):     \n
+Action.c(129):                         </sec-form>\n
+Action.c(129):                     </div>\n
+Action.c(129):                 </div>\n
+Action.c(129):             </div>\n
+Action.c(129):     \n
+Action.c(129):             <div id="registerSuccessCover" data-ng-show="supportSuccess">\n
+Action.c(129):                 <div class="center">\n
+Action.c(129):                     <p class="roboto-regular successMessage">{{ registerAnswer.message }}</p>\n
+Action.c(129):                     <br/>\n
+Action.c(129):                     <a class="a-button" href="#/" ng-click="continueShopping()" > {{ 'CONTINUE
+Action.c(129):     _SHOPPING' | translate}} </a>\n
+Action.c(129):                 </div>\n
+Action.c(129):             </div>\n
+Action.c(129):         </article>\n
+Action.c(129):         <div data-ng-if="mainCtrl.config.slowPage">\n
+Action.c(129):     \n
+Action.c(129):             <script href="" type="text/javascript"></script>\n
+Action.c(129):             <script href="" type="text/javascript"></script>\n
+Action.c(129):             <script href="" type="text/javascript"></script>\n
+Action.c(129):     \n
+Action.c(129):             <img src="" alt="">\n
+Action.c(129):             <img src="" alt="">\n
+Action.c(129):             <img src="" alt="">\n
+Action.c(129):         
+Action.c(129): Found resource "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" in HTML "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(129): The request to server https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" is done with headers:
+Action.c(129):     :method = GET
+Action.c(129):     :scheme = https
+Action.c(129):     :path = /app/views/css/images/Special-offer.jpg
+Action.c(129):     :authority = www.advantageonlineshopping.com
+Action.c(129):     Referer = https://www.advantageonlineshopping.com/app/views/home-page.html
+Action.c(129):     Sec-Fetch-Site = same-origin
+Action.c(129):     Sec-Fetch-Mode = cors
+Action.c(129):     Sec-Fetch-Dest = empty
+Action.c(129):     DNT = 1
+Action.c(129):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(129):     sec-ch-ua-mobile = ?0
+Action.c(129):     sec-ch-ua-platform = "Windows"
+Action.c(129):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(129):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(129):     Accept-Encoding = gzip, deflate, br
+Action.c(129):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(129):     Accept = */*
+Action.c(129):     cookie = _gat=1
+Action.c(129): Found resource "https://www.advantageonlineshopping.com/css/images/chat_logo.png" in HTML "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(129): The request to server https://www.advantageonlineshopping.com/css/images/chat_logo.png" is done with headers:
+Action.c(129):     :method = GET
+Action.c(129):     :scheme = https
+Action.c(129):     :path = /css/images/chat_logo.png
+Action.c(129):     :authority = www.advantageonlineshopping.com
+Action.c(129):     Referer = https://www.advantageonlineshopping.com/app/views/home-page.html
+Action.c(129):     Sec-Fetch-Site = same-origin
+Action.c(129):     Sec-Fetch-Mode = cors
+Action.c(129):     Sec-Fetch-Dest = empty
+Action.c(129):     DNT = 1
+Action.c(129):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(129):     sec-ch-ua-mobile = ?0
+Action.c(129):     sec-ch-ua-platform = "Windows"
+Action.c(129):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(129):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(129):     Accept-Encoding = gzip, deflate, br
+Action.c(129):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(129):     Accept = */*
+Action.c(129):     cookie = _gat=1
+Action.c(129): Found resource "https://www.advantageonlineshopping.com/app/views/" in HTML "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26659]
+Action.c(129): The request to server https://www.advantageonlineshopping.com/app/views/" is done with headers:
+Action.c(129):     :method = GET
+Action.c(129):     :scheme = https
+Action.c(129):     :path = /app/views/
+Action.c(129):     :authority = www.advantageonlineshopping.com
+Action.c(129):     Referer = https://www.advantageonlineshopping.com/app/views/home-page.html
+Action.c(129):     Sec-Fetch-Site = same-origin
+Action.c(129):     Sec-Fetch-Mode = cors
+Action.c(129):     Sec-Fetch-Dest = empty
+Action.c(129):     DNT = 1
+Action.c(129):     sec-ch-ua = " Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"
+Action.c(129):     sec-ch-ua-mobile = ?0
+Action.c(129):     sec-ch-ua-platform = "Windows"
+Action.c(129):     User-Agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gec
+Action.c(129):     ko) Chrome/100.0.4896.88 Safari/537.36
+Action.c(129):     Accept-Encoding = gzip, deflate, br
+Action.c(129):     Accept-Language = ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Action.c(129):     Accept = */*
+Action.c(129):     cookie = _gat=1
+Action.c(129): t=95262ms: 175-byte DECODED response body for "https://www.advantageonlineshopping.com/app/views/home-page.html" (RelFrameId=1, Internal ID=10)
+Action.c(129):         <img src="" alt="">\n
+Action.c(129):             <img src="" alt="">\n
+Action.c(129):             <img src="" alt="">\n
+Action.c(129):             <img src="" alt="">\n
+Action.c(129):     \n
+Action.c(129):         </div>\n
+Action.c(129):     \n
+Action.c(129):     </section>\n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):     \n
+Action.c(129):     <social-media-drtv></social-media-drtv>\n
+Action.c(129): t=95262ms: Request done "https://www.advantageonlineshopping.com/app/views/home-page.html"  	[MsgId: MMSG-26000]
+Action.c(129): Notify: Transaction "Home" ended with a "Stop" status (Duration: 2,5009 Wasted Time: 0,0012).	[MsgId: MMSG-16871]
+Action.c(144): Notify: Transaction "01_Scrolling_The_Site" ended with a "Stop" status (Duration: 6,8894 Wasted Time: 0,0012).	[MsgId: MMSG-16871]
+Action.c(129): Notify: Transaction "01_Scrolling_The_Site" ended with a "Stop" status (Duration: 2,5009 Wasted Time: 0,0012).	[MsgId: MMSG-16871]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(129): Warning -27760: Request "https://www.advantageonlineshopping.com/app/views/css/images/Special-offer.jpg" failed  	[MsgId: MWAR-27760]
+Action.c(129): Warning -27760: Request "https://www.advantageonlineshopping.com/css/images/chat_logo.png" failed  	[MsgId: MWAR-27760]
+Action.c(129): Warning -27760: Request "https://www.advantageonlineshopping.com/app/views/" failed  	[MsgId: MWAR-27760]
+Action.c(129): t=95332ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+Action.c(144): t=95332ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 5 (thread 4604), ended OK."	[MsgId: MMSG-10695]
+Vuser 1 (thread 16952), ended OK."	[MsgId: MMSG-10695]

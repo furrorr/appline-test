@@ -1,0 +1,37 @@
+[StartRecordingGMT]
+StartRecordingGMT_1=2022/04/19 17:49:44
+StartRecordingIsDst_1=0
+StartRecordingGMT_2=2022/04/19 18:07:17
+StartRecordingIsDst_2=0
+StartRecordingGMT_3=2022/04/19 18:18:56
+StartRecordingIsDst_3=0
+StartRecordingGMT_4=2022/04/19 18:19:27
+StartRecordingIsDst_4=0
+StartRecordingGMT_5=2022/04/19 18:22:01
+StartRecordingIsDst_5=0
+StartRecordingGMT_6=2022/04/24 14:51:33
+StartRecordingIsDst_6=0
+[User-Agent]
+User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.88 Safari/537.36
+[Security]
+UsingPersistForAuthentication=1
+UserName_1_1=Sergey2
+Password_1_1=1Qaz2Wsx
+Realm_1_1=www.advantageonlineshopping.com:443
+EventId_1_1=773
+UserName_2_1=Sergey2
+Password_2_1=1Qaz2Wsx
+Realm_2_1=www.advantageonlineshopping.com:443
+EventId_2_1=1426
+UserName_4_1=Sergey2
+Password_4_1=1Qaz2Wsx
+Realm_4_1=www.advantageonlineshopping.com:443
+EventId_4_1=2432
+UserName_5_1=Sergey2
+Password_5_1=1Qaz2Wsx
+Realm_5_1=www.advantageonlineshopping.com:443
+EventId_5_1=3187
+UserName_6_1=000000000
+Password_6_1=1Qaz2Wsx
+Realm_6_1=www.advantageonlineshopping.com:443
+EventId_6_1=3965

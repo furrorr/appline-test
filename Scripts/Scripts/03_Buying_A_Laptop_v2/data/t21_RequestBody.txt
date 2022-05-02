@@ -1,0 +1,1 @@
+"[{\"hexColor\":\"414141\",\"productId\":9,\"quantity\":1}]"

@@ -1,0 +1,714 @@
+Action.c(47):     \n
+Action.c(47):                         $(".PopUp").fadeIn(100, function () {\n
+Action.c(47):                             $(".PopUp > div:nth-child(1)").animate({"top": top}, 600);\n
+Action.c(47):                             $("body").css({"left": "0px"})\n
+Action.c(47):                         });\n
+Action.c(47):                         document.getElementsByName("username")[0].focus();\n
+Action.c(47):                     };\n
+Action.c(47):     \n
+Action.c(47):                     $(".PopUp, .closeBtn.loginPopUpCloseBtn").click(function () {\n
+Action.c(47):     \n
+Action.c(47):                         setEnterInFocusHandler();\n
+Action.c(47):     \n
+Action.c(47):                         $(".PopUp > div:nth-child(1)").animate({\n
+Action.c(47):                             "top": "-150%"\n
+Action.c(47):                         }, 600, function () {\n
+Action.c(47):                             $(".PopUp").fadeOut(100, function () {\n
+Action.c(47):                                 $("body").css("overflow-y", "scroll");\n
+Action.c(47):                             });\n
+Action.c(47):                         });\n
+Action.c(47):                     });\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                     function setEnterInFocusHandler() {\n
+Action.c(47):                         if (document.location.hash.indexOf("#/search") != -1) {\n
+Action.c(47):                             enterInFocus = enterInFocus.search;\n
+Action.c(47):                         } else {\n
+Action.c(47):                             enterInFocus = "";\n
+Action.c(47):                         }\n
+Action.c(47):                     }\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                     $(".PopUp > div").click(function (e) {\n
+Action.c(47):                         e.stopPropagation();\n
+Action.c(47):                     });\n
+Action.c(47):     \n
+Action.c(47):                     /* END User section */\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                     /* Application helper section */\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                     $scope.redirect = function (path) {\n
+Action.c(47):                         Helper.mobileSectionClose();\n
+Action.c(47):                         $location.path(path);\n
+Action.c(47):                     };\n
+Action.c(47):     \n
+Action.c(47):                     $scope.mobileRedirect = function (path) {\n
+Action.c(47):                         Helper.mobileSectionClose();\n
+Action.c(47):                         $state.go(path)\n
+Action.c(47):                     };\n
+Action.c(47):     \n
+Action.c(47):                     $scope.mobileRedirectHelp = function (path) {\n
+Action.c(47):     \n
+Action.c(47):                         Helper.mobileSectionClose();\n
+Action.c(47):                         $state.go(path)\n
+Action.c(47):                     };\n
+Action.c(47):     \n
+Action.c(47):                     //setTimeout(function(){\n
+Action.c(47):                     //    $scope.gotoElement("contact_us")\n
+Action.c(47):                     //}, 1500)\n
+Action.c(47):     \n
+Action.c(47):                     $scope.gotoElement = function (id) {\n
+Action.c(47):                         var element = $("#" + id);\n
+Action.c(47):                         if (element.length > 0) {\n
+Action.c(47):                             $("body, html").animate({\n
+Action.c(47):                                 scrollTop: (element.offset().top - 65) + "px"\n
+Action.c(47):                             }, 1000)\n
+Action.c(47):                         }\n
+Action.c(47):                     };\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                     var _____autoLogOut;\n
+Action.c(47):                     $scope.refreshTimeOut = function () {\n
+Action.c(47):     \n
+Action.c(47):                         if (ctrl.config == null) {\n
+Action.c(47):                             return;\n
+Action.c(47):                         }\n
+Action.c(47):                         if (JSON.stringify(ctrl.config) == JSON.stringify({})) {\n
+Action.c(47):                             return;\n
+Action.c(47):                         }\n
+Action.c(47):     \n
+Action.c(47):                         if (orderService.userIsLogin()) {\n
+Action.c(47):     \n
+Action.c(47):                             $timeout.cancel(_____autoLogOut);\n
+Action.c(47):                             _____autoLogOut = $timeout(function () {\n
+Action.c(47):                                 $scope.signOut()\n
+Action.c(47):                             }, ctrl.config.userLoginTimeOut == 0 ? (60 * 60000)\n
+Action.c(47):                                 : (ctrl.config.userLoginTimeOut * 60000));\n
+Action.c(47):     \n
+Action.c(47):                         }\n
+Action.c(47):                     };\n
+Action.c(47):     \n
+Action.c(47):                     /* END Application helper section */\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                     $rootScope.$on('clearCartEvent', function (event, args) {\n
+Action.c(47):                         productsCartService.clearCart().then(function (cart) {\n
+Action.c(47):                             $scope.cart = cart;\n
+Action.c(47):                         });\n
+Action.c(47):                     });\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                     $rootScope.$on('$locationChangeStart', function (event, current, previous)
+Action.c(47):      {\n
+Action.c(47):                         //$("html, body").css({opacity: 0});\n
+Action.c(47):                         //$(".waitBackground").css({opacity: 1, display: "block",});\n
+Action.c(47):                         //$("div.loader").css({opacity: 1, display: "block",});\n
+Action.c(47):                     });\n
+Action.c(47):     \n
+Action.c(47):                     $rootScope.$on('$locationChangeSuccess', function (event, current, previou
+Action.c(47):     s) {\n
+Action.c(47):     \n
+Action.c(47):                         $scope.welcome = $location.path().indexOf('/welcome') <= -1 && $locati
+Action.c(47):     on.path().indexOf('/404') <= -1;\n
+Action.c(47):                         $scope.showCategoryHeader = $location.path().indexOf('/search') <= -1;
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                         //$("#searchSection #output").css("opacity", $location.path().indexOf(
+Action.c(47):     '/search') == -1 ? 1 : 0);\n
+Action.c(47):     \n
+Action.c(47):                         Helper.UpdatePageFixed();\n
+Action.c(47):     \n
+Action.c(47):                         if ($location.path().indexOf('/search') == -1 && $scope.closeSearchFor
+Action.c(47):     ce + "" != "undefined") {\n
+Action.c(47):                             $scope.closeSearchForce();\n
+Action.c(47):                         }\n
+Action.c(47):                         Helper.mobileSectionClose();\n
+Action.c(47):     \n
+Action.c(47):                         $timeout(function () {\n
+Action.c(47):                             if ($location.path() == '/') {\n
+Action.c(47):                                 if ($(".autoCompleteCover").width() < 100) {\n
+Action.c(47):                                     $("nav .navLinks").css("display", "block");\n
+Action.c(47):                                 }\n
+Action.c(47):                             } else {\n
+Action.c(47):                                 $("nav .navLinks").css("display", "none");\n
+Action.c(47):                             }\n
+Action.c(47):                         }, 1050);\n
+Action.c(47):                         $scope.refreshTimeOut();\n
+Action.c(47):                         $scope.miniTitleOut();\n
+Action.c(47):                     });\n
+Action.c(47):     \n
+Action.c(47):                     $("#mobile-section").css("left", "-" + $("#mobile-section").css("width"));
+Action.c(47):     \n
+Action.c(47):                     Helper.mobile_section_moved = $("#mobile-section").width();\n
+Action.c(47):     \n
+Action.c(47):                     $scope.openMobileSection = function () {\n
+Action.c(47):                         Helper.mobileSectionHandler();\n
+Action.c(47):                     };\n
+Action.c(47):     \n
+Action.c(47):                     $scope.$on('$viewContentLoaded', function (event) {\n
+Action.c(47):                         Helper.forAllPage();\n
+Action.c(47):                     });\n
+Action.c(47):     \n
+Action.c(47):                 });\n
+Action.c(47):     \n
+Action.c(47):                 $scope.loginUser = {email: '', loginPassword: '', loginUser: ''};\n
+Action.c(47):                 this.rememberMe = false;\n
+Action.c(47):     \n
+Action.c(47):                 $scope.checkCart = function () {\n
+Action.c(47):     \n
+Action.c(47):                     if ($scope.cart + "" == "undefined" || $scope.cart.productsInCart.length =
+Action.c(47):     = 0) {\n
+Action.c(47):                         switch ($location.$$path) {\n
+Action.c(47):                             case '/login':\n
+Action.c(47):                             case '/MyOrders':\n
+Action.c(47):                             case '/orderPayment':\n
+Action.c(47):                                 $state.go("default");\n
+Action.c(47):                                 break;\n
+Action.c(47):                         }\n
+Action.c(47):                     }\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.checkLogin = function () {\n
+Action.c(47):                     var user = $rootScope.userCookie;\n
+Action.c(47):                     if (!(user && user.response && user.response.userId != -1 && user.response
+Action.c(47):     .t_authorization)) {\n
+Action.c(47):                         $state.go("default");\n
+Action.c(47):                     }\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 var _setUser = 0;\n
+Action.c(47):                 $scope.setUser = function () {\n
+Action.c(47):                     if (_setUser > 0) {\n
+Action.c(47):                         $scope.signIn({email: "", loginPassword: "Aa123", loginUser: "sergio"}
+Action.c(47):     , true);\n
+Action.c(47):                     }\n
+Action.c(47):                     _setUser++;\n
+Action.c(47):                     setTimeout(function () {\n
+Action.c(47):                         _setUser = 0;\n
+Action.c(47):                     }, 1000);\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 $scope.accountSection = function () {\n
+Action.c(47):                     $state.go('myAccount');\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.openAdminClient = function(){\n
+Action.c(47):                     Analytics.trackEvent('Management Console', 'Navigate');\n
+Action.c(47):                     window.open('/admin');\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.signOut = function (even) {\n
+Action.c(47):     \n
+Action.c(47):                     if (even) {\n
+Action.c(47):                         even.stopPropagation();\n
+Action.c(47):                     }\n
+Action.c(47):                     userService.singOut().then(function () {\n
+Action.c(47):                         $cookie.remove(userCookie.getKey($rootScope.userCookie).replace(/[^a-z
+Action.c(47):     A-Z ]/g, ""));\n
+Action.c(47):                         $cookie.remove('lastLogin');\n
+Action.c(47):                         $rootScope.userCookie = undefined;\n
+Action.c(47):                         $scope.loginUser = {email: '', loginPassword: '', loginUser: ''};\n
+Action.c(47):     \n
+Action.c(47):                         productsCartService.loadCartProducts().then(function (cart) {\n
+Action.c(47):                             $scope.cart = cart;\n
+Action.c(47):                             $scope.checkCart();\n
+Action.c(47):                         });\n
+Action.c(47):                         $(".mini-title").css("display", "none");\n
+Action.c(47):                         $(".mini-title-help").css("display", "none");\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.miniTitleIn = function (miniTitleId) {\n
+Action.c(47):                     if ($rootScope.userCookie) {\n
+Action.c(47):      
+Action.c(47): t=416566ms: 12288-byte DECODED response body for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=64)
+Action.c(47):                        $("#" + miniTitleId).stop().delay(500).fadeIn(300);\n
+Action.c(47):                     }\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.miniTitleOut = function (miniTitleId) {\n
+Action.c(47):                     if ($rootScope.userCookie) {\n
+Action.c(47):                         $("#" + miniTitleId).stop().delay(500).fadeOut(300);\n
+Action.c(47):                     }\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 var ____loginInterval;\n
+Action.c(47):                 $scope.miniTitleIn = function () {\n
+Action.c(47):                     if (____loginInterval) {\n
+Action.c(47):                         $timeout.cancel(____loginInterval);\n
+Action.c(47):                     }\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.miniTitleOut = function (miniTitleId) {\n
+Action.c(47):                     if ($("#" + miniTitleId).css('display') != 'none') {\n
+Action.c(47):                         ____loginInterval = $timeout(function () {\n
+Action.c(47):                             $("#" + miniTitleId).fadeOut(300);\n
+Action.c(47):                         }, 2000);\n
+Action.c(47):                     }\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 /* Cart section  */\n
+Action.c(47):     \n
+Action.c(47):                 $scope.removeProduct = function (index, event) {\n
+Action.c(47):     \n
+Action.c(47):                     if (event) {\n
+Action.c(47):                         event.stopPropagation();\n
+Action.c(47):                     }\n
+Action.c(47):                     productsCartService.removeProduct(index).then(function (cart) {\n
+Action.c(47):                         $scope.cart = cart;\n
+Action.c(47):                         $scope.checkCart();\n
+Action.c(47):                         fixToolTipCartHeight();\n
+Action.c(47):     \n
+Action.c(47):                         if ($(window).width() < 480) {\n
+Action.c(47):                             $("#toast a").html($filter("translate")("Product_removed"));\n
+Action.c(47):                             $("#toast").stop().fadeIn(500);\n
+Action.c(47):                             setTimeout(function () {\n
+Action.c(47):                                 $("#toast").stop().fadeOut(1500);\n
+Action.c(47):                             }, 1500)\n
+Action.c(47):                         }\n
+Action.c(47):     \n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.addProduct = function (product, quantity, hasWarranty, toastMessage) {\n
+Action.c(47):                     clearInterval(Helper.____closeTooTipCart);\n
+Action.c(47):                     var defer = $q.defer();\n
+Action.c(47):                     productsCartService.addProduct(product, quantity, hasWarranty).then(functi
+Action.c(47):     on (cart) {\n
+Action.c(47):                         $scope.cart = cart;\n
+Action.c(47):                         animateToolTipCart(toastMessage);\n
+Action.c(47):                         fixToolTipCartHeight();\n
+Action.c(47):                         defer.resolve(cart);\n
+Action.c(47):                     }, function(err){\n
+Action.c(47):                         defer.reject(err)\n
+Action.c(47):                     });\n
+Action.c(47):                     return defer.promise;\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.updateProduct = function (product, color, quantity, oldColor, toastMess
+Action.c(47):     age) {\n
+Action.c(47):                     var defer = $q.defer();\n
+Action.c(47):                     productsCartService.updateProduct(product, color, quantity, oldColor)\n
+Action.c(47):                         .then(function (cart) {\n
+Action.c(47):                             $scope.cart = cart;\n
+Action.c(47):                             animateToolTipCart(toastMessage);\n
+Action.c(47):                             defer.resolve(cart);\n
+Action.c(47):                         });\n
+Action.c(47):                     return defer.promise;\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 function animateToolTipCart(toastMessage) {\n
+Action.c(47):                     clearInterval(Helper.____closeTooTipCart);\n
+Action.c(47):     \n
+Action.c(47):                     if ($(window).width() < 480) {\n
+Action.c(47):                         $("#toast a").html(toastMessage);\n
+Action.c(47):                         $("#toast").stop().fadeIn(200);\n
+Action.c(47):                         setTimeout(function () {\n
+Action.c(47):                             $("#toast").stop().fadeOut(600);\n
+Action.c(47):                         }, 1500)\n
+Action.c(47):                     }\n
+Action.c(47):     \n
+Action.c(47):                     $('#toolTipCart').delay(100).slideDown(function () {\n
+Action.c(47):                         $('#toolTipCart tbody').stop().animate({\n
+Action.c(47):                             scrollTop: 0 + 'px'\n
+Action.c(47):                         }, 500, function () {\n
+Action.c(47):                             Helper.____closeTooTipCart = setTimeout(function () {\n
+Action.c(47):                                 $('#toolTipCart').stop().slideUp();\n
+Action.c(47):                             }, 4000)\n
+Action.c(47):                         });\n
+Action.c(47):                     });\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 var _____enterCart;\n
+Action.c(47):                 var enterInCart = false;\n
+Action.c(47):                 $scope.enterCart = function () {\n
+Action.c(47):                     clearInterval(Helper.____closeTooTipCart); // defined in categoryTypeProdu
+Action.c(47):     ctsDrtv -> addProduct\n
+Action.c(47):                     enterInCart = true;\n
+Action.c(47):                     _____enterCart = setTimeout(function () {\n
+Action.c(47):                         $('#toolTipCart').stop().slideDown();\n
+Action.c(47):                         fixToolTipCartHeight();\n
+Action.c(47):                     }, 500);\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 $scope.leaveCart = function () {\n
+Action.c(47):                     enterInCart = false;\n
+Action.c(47):                     clearInterval(_____enterCart);\n
+Action.c(47):                     closeToolTipCart();\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 function closeToolTipCart() {\n
+Action.c(47):     \n
+Action.c(47):                     var toolTipCart = $('#toolTipCart');\n
+Action.c(47):                     if (toolTipCart.length > 0) {\n
+Action.c(47):                         setTimeout(function () {\n
+Action.c(47):                             if (!enterInCart) {\n
+Action.c(47):                                 toolTipCart.stop().slideUp(function () {\n
+Action.c(47):                                     $('#toolTipCart tbody').animate({scrollTop: 0}, 500);\n
+Action.c(47):                                 });\n
+Action.c(47):                             }\n
+Action.c(47):                         }, 3000);\n
+Action.c(47):                     }\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 function fixToolTipCartHeight() {\n
+Action.c(47):                     var winHeight = $(window).height() - 200;\n
+Action.c(47):                     var prodsHeight = ($scope.cart.productsInCart.length * 104);\n
+Action.c(47):                     var heightToAsign = (Math.round(winHeight / 104) * 104);\n
+Action.c(47):                     if (winHeight < prodsHeight) {\n
+Action.c(47):                         $("#toolTipCart tbody").css({\n
+Action.c(47):                             "height": heightToAsign + "px",\n
+Action.c(47):                             "overflow-y": "auto"\n
+Action.c(47):                         });\n
+Action.c(47):                     }\n
+Action.c(47):                     else {\n
+Action.c(47):                         $("#toolTipCart tbody").css({\n
+Action.c(47):                             "height": prodsHeight + "px",\n
+Action.c(47):                             "overflow-y": "hidden"\n
+Action.c(47):                         });\n
+Action.c(47):                     }\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 /* END Cart section */\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 this.getRequire = function (nameRequire) {\n
+Action.c(47):                     return JSON.stringify({\n
+Action.c(47):                         error: $filter("translate")(nameRequire) + " " + $filter("translate")(
+Action.c(47):     "field_is_required")\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 this.getCompare = function (name, model) {\n
+Action.c(47):                     var nameAfterTranslate = $filter("translate")(name);\n
+Action.c(47):                     return JSON.stringify({\n
+Action.c(47):                         error: nameAfterTranslate + $filter("translate")('This_field_not_match
+Action.c(47):     _with'),\n
+Action.c(47):                         info: "- " + $filter("translate")("Same_as") + " " + nameAfterTranslat
+Action.c(47):     e,\n
+Action.c(47):                         model: model\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 this.getCardNumber = function (exactlyNum) {\n
+Action.c(47):                     return JSON.stringify({\n
+Action.c(47):                         error: $filter("translate")('Invalid_Card_number'),\n
+Action.c(47):                         info: "- " + $filter("translate")("Use_exactly") + " " + exactlyNum + 
+Action.c(47):     " " + $filter("translate")('numbers'),\n
+Action.c(47):                         exactly: exactlyNum,\n
+Action.c(47):                         regex: "^[0-9]*$"\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 this.getPattern = function (data) {\n
+Action.c(47):     \n
+Action.c(47):                     if (typeof data === 'string') {\n
+Action.c(47):                         switch (data) {\n
+Action.c(47):                             case 'Username':\n
+Action.c(47):                                 data = [\n
+Action.c(47):                                     ['letters_number_symbols_only', 'letters_number_symbols_on
+Action.c(47):     ly',\n
+Action.c(47):                                         '^[A-Za-z0-9_.-]{0,999}$']];\n
+Action.c(47):                                 break;\n
+Action.c(47):                             case 'Email':\n
+Action.c(47):                                 data = [['email_no_formatted_correctly', '',\n
+Action.c(47):                                     '^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[
+Action.c(47):     A-Za-z0-9]+)*(\\.[A-Za-z]{2,100})$']];\n
+Action.c(47):                                 break;\n
+Action.c(47):                             case 'Password':\n
+Action.c(47):                                 data = [\n
+Action.c(47):                                     ['one_lower_letter_required', 'Including_one_lower_letter'
+Action.c(47):     , '(?=.*[a-z])'],\n
+Action.c(47):                                     ['one_upper_letter_required', 'Including_one_upper_letter'
+Action.c(47):     , '(?=.*[A-Z])'],\n
+Action.c(47):                                     ['one_number_required', 'Including_one_number', '(?=.*[0-9
+Action.c(47):     ])']\n
+Action.c(47):                                 ];\n
+Action.c(47):                                 break;\n
+Action.c(47):                             case 'Compare':\n
+Action.c(47):                                 data = [\n
+Action.c(47):                                     ['letters_number_symbols_only', 'letters_number_symbols_on
+Action.c(47):     ly',\n
+Action.c(47):                                         '^[A-Za-z0-9_.-]{0,999}$']];\n
+Action.c(47):                                 break;\n
+Action.c(47):                             case 'CCV_Number':\n
+Action.c(47):                                 data = [\n
+Action.c(47):                                     ['Invalid_CCV_number', 'Valid_CCV_number_required', '^[0-9
+Action.c(47):     ]{3,3}$']];\n
+Action.c(47):                                 break;\n
+Action.c(47):                             default:\n
+Action.c(47):                                 throw "type of pattern not match (this.getPattern('" + data + 
+Action.c(47):     "');"\n
+Action.c(47):                         }\n
+Action.c(47):                     }\n
+Action.c(47):                     var arr = [];\n
+Action.c(47):                     for (var i = 0; i < data.length; i++) {\n
+Action.c(47):                         var info = $filter("translate")(data[i][1]);\n
+Action.c(47):                         arr.push({\n
+Action.c(47):                             error: $filter("translate")(data[i][0]),\n
+Action.c(47):                             info: info != '' ? "- " + info : '',\n
+Action.c(47):                             regex: data[i][2]\n
+Action.c(47):                         });\n
+Action.c(47):                     }\n
+Action.c(47):                     return JSON.stringify({\n
+Action.c(47):                         regexes: arr\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 this.getMin = function (min) {\n
+Action.c(47):                     return JSON.stringify({\n
+Action.c(47):                         error: $filter("translate")("Use_up_of") + " " + min + " " + $filter("
+Action.c(47):     translate")("character_or_longer"),\n
+Action.c(47):                         info: "- " + $filter("translate")("Use_up_of") + " " + min + " " + $fi
+Action.c(47):     lter("translate")("character_or_longer"),\n
+Action.c(47):                         min: min\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 this.getMax = function (max) {\n
+Action.c(47):                     return JSON.stringify({\n
+Action.c(47):                         error: $filter("translate")("Use_maximum") + " " + max + " " + $filter
+Action.c(47):     ("translate")("character"),\n
+Action.c(47):                         info: "- " + $filter("translate")("Use_maximum") + " " + max + " " + $
+Action.c(47):     filter("translate")("character"),\n
+Action.c(47):                         max: max\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 this.getAgreeAgreementRequire = function () {\n
+Action.c(47):                     return JSON.stringify({\n
+Action.c(47):                         error: $filter("translate")("AgreeAgreementRequire"),\n
+Action.c(47):                         info: $filter("translate")("AgreeAgreementRequire")\n
+Action.c(47):                     });\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 this.getNoticeInfo = function () {\n
+Action.c(47):                     return JSON.stringify([\n
+Action.c(47):                         $filter("translate")("This_is_a_demo"),\n
+Action.c(47):                         $filter("translate")("Please_enter_a_fake_data")\n
+Action.c(47):                     ]);\n
+Action.c(47):                 };\n
+Action.c(47):     \n
+Action.c(47):                 this.closeImgTeam = function () {\n
+Action.c(47):                     $("#teamIdToAnimate").addClass("hinge");\n
+Action.c(47):                     setTimeout(function () {\n
+Action.c(47):                         $("#team").fadeOut(1000);\n
+Action.c(47):                         setTimeout(function () {\n
+Action.c(47):                             $("#teamIdToAnimate").removeClass("hinge");\n
+Action.c(47):                             $("#teamIdToAnimate").css({\n
+Action.c(47):                                 display: "none"\n
+Action.c(47):                             });\n
+Action.c(47):                         }, 1000)\n
+Action.c(47):                     }, 2500)\n
+Action.c(47):                 }\n
+Action.c(47):             }\n
+Action.c(47):         ]);\n
+Action.c(47):     });\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):     /**\n
+Action.c(47):      * Created by kubany on 10/13/2015.\n
+Action.c(47):      */\n
+Action.c(47):     define('app/controllers/categoriesCtrl',['./module'], function (controllers) {\n
+Action.c(47):         'use strict';\n
+Action.c(47):         controllers.controller('categoriesCtrl', ['$scope', 'categoryService',\n
+Action.c(47):             'dealService', '$location', 'resolveParams', 'supportService', '$timeout',\n
+Action.c(47):             'userService',\n
+Action.c(47):             function (s, categoryService, dealService, $location, resolveParams,\n
+Action.c(47):                       supportService, $timeout, userService) {\n
+Action.c(47):     \n
+Action.c(47):                 for (var i = 0; i < resolveParams.categories.length; i++) {\n
+Action.c(47):                     var cate = [];\n
+Action.c(47):                     for (var index = 0; index < resolveParams.categories[i].categoryName.lengt
+Action.c(47):     h; index++) {\n
+Action.c(47):                         cate.push(index == 0 ? resolveParams.categories[i].categoryName[index]
+Action.c(47):      : resolveParams.categories[i].categoryName[index].toLowerCase());\n
+Action.c(47):                     }\n
+Action.c(47):                     resolveParams.categories[i].categoryName = cate.join("");\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 s.categories = resolveParams.categories;\n
+Action.c(47):                 s.specialOffer = resolveParams.specialOffer;\n
+Action.c(47):                 s.popularProducts = resolveParams.popularProducts;\n
+Action.c(47):     \n
+Action.c(47):                 /*\n
+Action.c(47):                 uncomment this line for UFT typo demo\n
+Action.c(47):                  */\n
+Action.c(47):                 //s.categories[3].categoryName = "Audio";\n
+Action.c(47):     \n
+Action.c(47):                 var _nv = userService.nv_slowPage() ? "_nv" : "";\n
+Action.c(47):                 var imagesBanner = [\n
+Action.c(47):                     'Banner1' + _nv + '.jpg',\n
+Action.c(47):                     'Banner2' + _nv + '.jpg',\n
+Action.c(47):                     'Banner3' + _nv + '.jpg',\n
+Action.c(47):                 ];\n
+Action.c(47):                 s.images = [\n
+Action.c(47):                     {\n
+Action.c(47):                         i
+Action.c(47): t=416571ms: 4229-byte DECODED response body for "https://www.advantageonlineshopping.com/main.min.js" (RelFrameId=, Internal ID=64)
+Action.c(47):     mageName: imagesBanner[0],\n
+Action.c(47):                         imageId: 0,\n
+Action.c(47):                         message: "ALL YOU WANT FROM A TABLET",\n
+Action.c(47):                         categoryId: 2},\n
+Action.c(47):                     {\n
+Action.c(47):                         imageName: imagesBanner[1],\n
+Action.c(47):                         imageId: 1,\n
+Action.c(47):                         message: "EXPLORE OUR LATEST <br />INNOVATIVE PRODUCTS",\n
+Action.c(47):                         categoryId: 3\n
+Action.c(47):                     },\n
+Action.c(47):                     {imageName: imagesBanner[2], imageId: 2, message: "START EXPLORING HP NOTE
+Action.c(47):     BOOKS", categoryId: 0}\n
+Action.c(47):                 ];\n
+Action.c(47):     \n
+Action.c(47):                 /* suport section */\n
+Action.c(47):     \n
+Action.c(47):                 s.supportSuccess = false;\n
+Action.c(47):                 s.registerAnswer = {class: "", message: ""}\n
+Action.c(47):                 s.supportModel = {\n
+Action.c(47):                     "category": {},\n
+Action.c(47):                     "email": "",\n
+Action.c(47):                     "product": {},\n
+Action.c(47):                     "subject": ""\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 s.products;\n
+Action.c(47):     \n
+Action.c(47):                 s.categoryChange = function (category) {\n
+Action.c(47):                     s.supportModel.category = category;\n
+Action.c(47):                     categoryService.getCategoryById(s.supportModel.category.categoryId).\n
+Action.c(47):                     then(function (category) {\n
+Action.c(47):                         s.products = category.products;\n
+Action.c(47):                         //s.supportModel.product = category.products[0];\n
+Action.c(47):                     });\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 s.productChange = function (product) {\n
+Action.c(47):                     s.supportModel.product = product;\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 var _____continueShopping;\n
+Action.c(47):                 s.sendSupportEmail = function () {\n
+Action.c(47):     \n
+Action.c(47):                     // if (s.supportModel.subject.trim().toLowerCase() == "who are you" ||\n
+Action.c(47):                     //     s.supportModel.subject.trim().toLowerCase() == "who are you?") {\n
+Action.c(47):                     //\n
+Action.c(47):                     //     $("#team").fadeIn(500).css("display", "table");\n
+Action.c(47):                     //     setTimeout(function () {\n
+Action.c(47):                     //         $("#teamIdToAnimate").css({\n
+Action.c(47):                     //             display: "block"\n
+Action.c(47):                     //         });\n
+Action.c(47):                     //         $("#teamIdToAnimate").addClass("zoomInDown");\n
+Action.c(47):                     //         setTimeout(function () {\n
+Action.c(47):                     //             $("#teamIdToAnimate").removeClass("zoomInDown");\n
+Action.c(47):                     //         }, 3000);\n
+Action.c(47):                     //     }, 300);\n
+Action.c(47):                     //     s.supportModel = {\n
+Action.c(47):                     //         "category": s.supportModel.category,\n
+Action.c(47):                     //         "email": "",\n
+Action.c(47):                     //         "product": s.supportModel.product,\n
+Action.c(47):                     //         "subject": ""\n
+Action.c(47):                     //     }\n
+Action.c(47):                     //     return;\n
+Action.c(47):                     // }\n
+Action.c(47):     \n
+Action.c(47):                     supportService.sendSupportEmail(s.supportModel).then(function (res) {\n
+Action.c(47):     \n
+Action.c(47):                         s.registerAnswer.class = res.success ? "valid" : "invalid";\n
+Action.c(47):                         s.registerAnswer.message = res.reason;\n
+Action.c(47):                         s.supportSuccess = res.success;\n
+Action.c(47):                         if (!res.success) {\n
+Action.c(47):                             _____continueShopping = $timeout(function () {\n
+Action.c(47):                                 s.registerAnswer = {class: "", message: ""}\n
+Action.c(47):                             }, 2000)\n
+Action.c(47):                         }\n
+Action.c(47):                         if (res.success) {\n
+Action.c(47):                             s.supportModel = {\n
+Action.c(47):                                 "category": {},\n
+Action.c(47):                                 "email": "",\n
+Action.c(47):                                 "product": {},\n
+Action.c(47):                                 "subject": ""\n
+Action.c(47):                             }\n
+Action.c(47):                             _____continueShopping = $timeout(function () {\n
+Action.c(47):                                 s.supportSuccess = false;\n
+Action.c(47):                                 s.registerAnswer = {class: "", message: ""}\n
+Action.c(47):                             }, 60000)\n
+Action.c(47):                         }\n
+Action.c(47):     \n
+Action.c(47):                     }, function (err) {\n
+Action.c(47):     \n
+Action.c(47):                     });\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 s.continueShopping = function () {\n
+Action.c(47):                     if (_____continueShopping) {\n
+Action.c(47):                         s.supportSuccess = false;\n
+Action.c(47):                         s.registerAnswer = {class: "", message: ""}\n
+Action.c(47):                         $timeout.cancel(_____continueShopping)\n
+Action.c(47):                     }\n
+Action.c(47):                     s.go_up();\n
+Action.c(47):                 }\n
+Action.c(47):     \n
+Action.c(47):                 /* end suport section */\n
+Action.c(47):     \n
+Action.c(47):     \n
+Action.c(47):                 Slider.AddSliderListener();\n
+Action.c(47):     \n
+Action.c(47):                 Helper.forAllPage();\n
+Action.c(47):     \n
+Action.c(47):                 $('#scrollToTop').click(function () {\n
+Action.c(47):                     $('body, html').animate({scrollTop: 0}, 1000);\n
+Action.c(47):                 });\n
+Action.c(47):     \n
+Action.c(47):                 $(document).ready(function () {\n
+Action.c(47):                     $(window).
+Action.c(47): t=416726ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" (RelFrameId=, Internal ID=92)
+Action.c(47): t=416726ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" (RelFrameId=, Internal ID=92)
+Action.c(47): t=416728ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" (RelFrameId=, Internal ID=92)
+Action.c(47): t=416728ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" (RelFrameId=, Internal ID=92)
+Action.c(47): t=416728ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" (RelFrameId=, Internal ID=92)
+Action.c(47): t=416728ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" (RelFrameId=, Internal ID=92)
+Action.c(47): t=416728ms: 1421-byte response body for "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" (RelFrameId=, Internal ID=92)
+Action.c(47): t=416879ms: 7251-byte response body for "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=1245" (RelFrameId=, Internal ID=102)
+Action.c(47): t=416879ms: Request done "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=1245"  	[MsgId: MMSG-26000]
+Action.c(47): t=416880ms: 8192-byte response body for "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=speakers" (RelFrameId=, Internal ID=72)
+Action.c(47): t=416880ms: 8174-byte response body for "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=speakers" (RelFrameId=, Internal ID=72)
+Action.c(47): t=416881ms: 18-byte response body for "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=speakers" (RelFrameId=, Internal ID=72)
+Action.c(47): t=416881ms: 8192-byte response body for "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=speakers" (RelFrameId=, Internal ID=72)
+Action.c(47): t=416881ms: 7711-byte response body for "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=speakers" (RelFrameId=, Internal ID=72)
+Action.c(47): t=417033ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=83)
+Action.c(47): t=417034ms: 8174-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=83)
+Action.c(47): t=417035ms: 18-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=83)
+Action.c(47): t=417035ms: 8192-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=83)
+Action.c(47): t=417035ms: 8156-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=83)
+Action.c(47): t=417035ms: 36-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=83)
+Action.c(47): t=417035ms: 480-byte response body for "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" (RelFrameId=, Internal ID=83)
+Action.c(47): Notify: Transaction "Home" ended with a "Stop" status (Duration: 8,3946 Wasted Time: 0,0051).	[MsgId: MMSG-16871]
+Action.c(47): Notify: Transaction "03_Buying_A_Laptop" ended with a "Stop" status (Duration: 8,3946 Wasted Time: 0,0051).	[MsgId: MMSG-16871]
+Abort was called from an action.	[MsgId: MMSG-10447]
+Ending Vuser...	[MsgId: MMSG-15966]
+Starting action vuser_end.	[MsgId: MMSG-15919]
+Ending action vuser_end.	[MsgId: MMSG-15918]
+Vuser Terminated.	[MsgId: MMSG-15963]
+Action.c(47): Warning -27760: Request "https://www.advantageonlineshopping.com/main.min.js" failed  	[MsgId: MWAR-27760]
+Action.c(47): Warning -27760: Request "https://www.advantageonlineshopping.com/css/images/category_banner_1.png" failed  	[MsgId: MWAR-27760]
+Action.c(47): Warning -27760: Request "https://www.advantageonlineshopping.com/catalog/fetchImage?image_id=speakers" failed  	[MsgId: MWAR-27760]
+Action.c(47): Warning -27760: Request "https://www.advantageonlineshopping.com/css/images/Banner1.jpg" failed  	[MsgId: MWAR-27760]
+Action.c(47): t=417038ms: Closed connection [0] to www.advantageonlineshopping.com:443 after completing 0 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 8 (thread 2644), ended OK."	[MsgId: MMSG-10695]
